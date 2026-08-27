@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>איך לבנות לכל ילד גב כלכלי של חצי מיליון ש"ח | הדרכה חיה 7.9 | אמא משקיעה</title>
+<meta name="description" content="הדרכה חיה של שעה, יום שני 7.9 ב-20:00, ללא עלות. מנגנון השקעות אוטומטי שבונה לכל ילד חצי מיליון ש\"ח מהכסף שכבר נכנס לכם הביתה.">
+<meta property="og:title" content="איך לבנות לכל ילד גב כלכלי של חצי מיליון ש&quot;ח">
+<meta property="og:description" content="הדרכה חיה, יום שני 7.9 ב-20:00, ללא עלות. מהכסף שכבר נכנס לכם הביתה.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%23EF55A5'/></svg>">
+<script>document.documentElement.className+=" js"</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --canvas:#FBFAF7; --ink:#191A2E; --ink-soft:#6B6B7B;
+    --pink:#EF55A5; --lime:#CCD537; --vista:#8C9EFF; --sky:#BEE0F2;
+    --pink-soft:#FCE1EF; --line:#ECE7DF;
+    --shadow-card:0 18px 40px -28px rgba(25,26,46,.18);
+    --ease:cubic-bezier(.22,.9,.3,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Heebo',sans-serif;background:var(--canvas);color:var(--ink);line-height:1.7;overflow-x:clip;-webkit-font-smoothing:antialiased}
+  ::selection{background:var(--pink-soft)}
+  img{max-width:100%;height:auto;display:block}
+  .wrap{max-width:900px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
+  .wrap-narrow{max-width:720px}
+  .num{font-variant-numeric:tabular-nums}
+  a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--vista);outline-offset:3px;border-radius:6px}
+
+  /* ---------- buttons ---------- */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--pink);color:var(--ink);border:none;border-radius:100px;padding:18px 44px;font-family:inherit;font-weight:800;font-size:clamp(1.02rem,2.2vw,1.16rem);line-height:1.25;text-decoration:none;cursor:pointer;transition:transform .2s var(--ease),box-shadow .2s var(--ease),filter .2s;box-shadow:0 6px 14px -8px rgba(239,85,165,.55),0 22px 44px -20px rgba(239,85,165,.4)}
+  .btn:hover{filter:brightness(.95);transform:translateY(-2px)}
+  .btn:active{transform:translateY(0) scale(.985)}
+  .btn svg{width:18px;height:18px;flex:none;transition:transform .2s var(--ease)}
+  .btn:hover svg{transform:translateX(-4px)}
+  .btn-sm{padding:11px 26px;font-size:.98rem;box-shadow:none}
+
+  /* ---------- sticky topbar ---------- */
+  .topbar{position:fixed;inset-inline:0;top:0;z-index:60;background:rgba(251,250,247,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transform:translateY(-110%);transition:transform .45s var(--ease)}
+  .topbar.on{transform:translateY(0)}
+  .topbar .in{max-width:900px;margin:0 auto;padding:10px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .topbar .when{font-weight:800;font-size:.95rem}
+  .topbar .when span{color:var(--pink)}
+  @media(max-width:560px){.topbar .when{display:none}.topbar .in{justify-content:center}}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;padding:clamp(56px,9vw,104px) 0 clamp(48px,7vw,80px);overflow:hidden}
+  .hero::before{content:"";position:absolute;width:640px;height:640px;border-radius:50%;background:var(--pink-soft);filter:blur(10px);opacity:.55;top:-320px;inset-inline-start:-220px;z-index:0}
+  .hero::after{content:"";position:absolute;width:400px;height:400px;border-radius:50%;background:var(--sky);filter:blur(30px);opacity:.5;bottom:-230px;inset-inline-end:-170px;z-index:0}
+  .eyebrow{display:inline-block;font-size:.86rem;font-weight:800;letter-spacing:.02em;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:100px;padding:9px 20px;margin-bottom:22px;box-shadow:var(--shadow-card)}
+  .kicker{font-size:clamp(1.05rem,2.6vw,1.3rem);font-weight:800;color:var(--pink);margin-bottom:14px;line-height:1.45}
+  h1{font-size:clamp(2rem,5.4vw,3.5rem);font-weight:900;letter-spacing:-.025em;line-height:1.18;margin-bottom:24px}
+  .h1-mark{position:relative;display:inline-block}
+  .h1-mark svg{position:absolute;inset-inline:-4px;bottom:-8px;width:calc(100% + 8px);height:12px;fill:none;stroke:var(--lime);stroke-width:7;stroke-linecap:round}
+  .lede{font-size:clamp(1.05rem,2.4vw,1.22rem);color:var(--ink-soft);max-width:640px;margin-bottom:14px;font-weight:500}
+  .lede strong{color:var(--ink);font-weight:700}
+  .withouts{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:34px}
+  .withouts li{list-style:none;background:#fff;border:1px solid var(--line);border-radius:100px;padding:8px 18px;font-size:.95rem;font-weight:600;color:var(--ink)}
+
+  /* portrait — הבלוק שגארי ביקש: תמונה סמכותית מעל שורת התאריך */
+  .portrait-band{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:clamp(24px,4vw,48px);align-items:center;margin-bottom:clamp(28px,4vw,40px)}
+  .portrait-band .txt{padding-block:4px}
+  .portrait{position:relative}
+  .portrait img{border-radius:26px;box-shadow:0 40px 80px -44px rgba(25,26,46,.5);width:100%}
+  .portrait .tag{position:absolute;inset-inline-start:-14px;bottom:24px;background:var(--lime);color:var(--ink);border-radius:14px;padding:10px 16px;font-weight:800;font-size:.9rem;line-height:1.35;box-shadow:0 14px 30px -18px rgba(25,26,46,.5)}
+  @media(max-width:760px){
+    .portrait-band{grid-template-columns:1fr;gap:26px}
+    .portrait{max-width:330px;margin:0 auto}
+    .portrait .tag{inset-inline-start:auto;inset-inline-end:-8px}
+  }
+
+  .when-card{background:var(--ink);color:#fff;border-radius:24px;padding:clamp(22px,3.4vw,30px) clamp(22px,4vw,36px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;box-shadow:0 34px 70px -40px rgba(25,26,46,.7)}
+  .when-card .date{font-size:clamp(1.15rem,3vw,1.5rem);font-weight:900;letter-spacing:-.01em}
+  .when-card .date span{color:var(--lime)}
+  .when-card .sub{font-size:.95rem;opacity:.82;margin-top:4px}
+  .countdown{display:flex;gap:10px}
+  .cd-box{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:9px 13px;min-width:62px;text-align:center}
+  .cd-box b{display:block;font-size:1.35rem;font-weight:900;line-height:1.1}
+  .cd-box i{font-style:normal;font-size:.72rem;opacity:.72;letter-spacing:.04em}
+  .hero-cta{margin-top:26px;text-align:center}
+  .hero-cta .note{margin-top:12px;font-size:.92rem;color:var(--ink-soft);font-weight:600}
+
+  /* ---------- proof bar ---------- */
+  .proof{border-block:1px solid var(--line);background:#fff}
+  .proof .in{max-width:900px;margin:0 auto;padding:26px 24px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center}
+  .proof b{display:block;font-size:clamp(1.5rem,4vw,2.1rem);font-weight:900;letter-spacing:-.02em;color:var(--pink)}
+  .proof span{font-size:.9rem;color:var(--ink-soft);font-weight:600;line-height:1.45;display:block}
+  @media(max-width:560px){.proof .in{grid-template-columns:1fr;gap:16px}}
+
+  /* ---------- sections ---------- */
+  section{padding:clamp(60px,8.5vw,110px) 0;position:relative}
+  h2{font-size:clamp(1.7rem,4.4vw,2.7rem);font-weight:900;letter-spacing:-.02em;line-height:1.24;margin-bottom:20px}
+  h3{font-size:clamp(1.1rem,2.4vw,1.32rem);font-weight:800;margin-bottom:8px;letter-spacing:-.01em}
+  .lead{font-size:clamp(1.03rem,2.2vw,1.15rem);color:var(--ink-soft);font-weight:500}
+  .lead strong{color:var(--ink);font-weight:800}
+  .center{text-align:center}
+  .center .lead{margin-inline:auto;max-width:640px}
+  .band-soft{background:#fff;border-block:1px solid var(--line)}
+  .band-vista{background:var(--vista)}
+  .band-vista .lead{color:rgba(25,26,46,.78)}
+
+  /* objection strip — השורה שגארי הוריד מהכותרת, במקום שבו היא עונה על התנגדות */
+  .objection{background:var(--pink-soft);border-block:1px solid #F5CFE3}
+  .objection .in{max-width:760px;margin:0 auto;padding:clamp(40px,6vw,64px) 24px;text-align:center}
+  .objection p{font-size:clamp(1.25rem,3.4vw,1.85rem);font-weight:900;letter-spacing:-.02em;line-height:1.35}
+  .objection .sm{margin-top:14px;font-size:1.02rem;font-weight:600;color:#8A4A70;letter-spacing:0}
+
+  /* story blocks */
+  .story p{font-size:clamp(1.03rem,2.2vw,1.14rem);margin-bottom:18px;color:#3C3D52}
+  .story p:last-child{margin-bottom:0}
+  .story .big{font-size:clamp(1.25rem,3.2vw,1.7rem);font-weight:900;color:var(--ink);letter-spacing:-.02em;line-height:1.35}
+  .hl{background:linear-gradient(transparent 62%,var(--lime) 62%);padding:0 3px;font-weight:800;color:var(--ink)}
+
+  /* takeaway cards */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:38px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px 26px;box-shadow:var(--shadow-card)}
+  .card .n{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:12px;background:var(--pink-soft);color:var(--pink);font-weight:900;font-size:1.05rem;margin-bottom:14px}
+  .card p{color:var(--ink-soft);font-size:1rem;font-weight:500}
+
+  /* fit list */
+  .fit{display:grid;gap:14px;margin-top:34px}
+  .fit li{list-style:none;background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 24px;display:flex;gap:16px;align-items:flex-start;box-shadow:var(--shadow-card)}
+  .fit svg{width:24px;height:24px;flex:none;margin-top:3px;stroke:var(--pink);fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+  .fit b{display:block;font-weight:800;margin-bottom:3px}
+  .fit span{color:var(--ink-soft);font-size:1rem;font-weight:500}
+
+  /* bio */
+  .bio{display:grid;grid-template-columns:300px minmax(0,1fr);gap:clamp(28px,5vw,56px);align-items:start}
+  .bio .pic img{border-radius:26px;box-shadow:0 40px 80px -46px rgba(25,26,46,.5)}
+  .bio .creds{display:grid;gap:10px;margin:22px 0 26px}
+  .bio .creds li{list-style:none;display:flex;gap:11px;align-items:flex-start;font-weight:600;font-size:1.02rem}
+  .bio .creds svg{width:20px;height:20px;flex:none;margin-top:5px;stroke:var(--pink);fill:none;stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round}
+  @media(max-width:760px){.bio{grid-template-columns:1fr}.bio .pic{max-width:280px;margin:0 auto}}
+
+  /* testimonials */
+  .tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:36px}
+  .tgrid figure{background:#fff;border:1px solid var(--line);border-radius:20px;padding:12px;box-shadow:var(--shadow-card)}
+  .tgrid img{border-radius:12px}
+
+  /* details */
+  .details{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:36px}
+  .detail{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px;text-align:center;box-shadow:var(--shadow-card)}
+  .detail .ic{display:block;margin-bottom:10px}
+  .detail .ic svg{width:30px;height:30px;margin:0 auto;stroke:var(--pink);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .detail b{display:block;font-size:1.08rem;font-weight:900;margin-bottom:4px}
+  .detail span{color:var(--ink-soft);font-size:.97rem;font-weight:500}
+
+  /* form */
+  .signup{background:var(--ink);color:#fff;padding:clamp(60px,8vw,96px) 0}
+  .signup h2{color:#fff;text-align:center}
+  .signup h2 span{color:var(--lime)}
+  .signup .lead{color:rgba(255,255,255,.75);text-align:center;margin-inline:auto;max-width:560px}
+  .form-card{max-width:560px;margin:36px auto 0;background:#fff;border-radius:28px;padding:clamp(28px,5vw,44px);box-shadow:0 40px 90px -40px rgba(0,0,0,.6)}
+  .form-card label{display:block;text-align:right;font-weight:800;font-size:.95rem;margin:18px 0 7px;color:var(--ink)}
+  .form-card label:first-of-type{margin-top:0}
+  .form-card input{width:100%;padding:15px 18px;border:1.5px solid var(--line);border-radius:16px;font-family:inherit;font-size:1.05rem;background:var(--canvas);color:var(--ink);transition:border-color .15s,box-shadow .15s}
+  .form-card input:hover{border-color:#D9D2C6}
+  .form-card input:focus{outline:none;border-color:var(--pink);box-shadow:0 0 0 4px var(--pink-soft)}
+  .form-card .btn{width:100%;margin-top:26px}
+  .form-err{margin-top:14px;font-size:.92rem;font-weight:700;color:#B4245F;display:none;text-align:center}
+  .consent{margin-top:16px;font-size:.82rem;color:var(--ink-soft);line-height:1.6;text-align:center}
+
+  /* footer */
+  footer{background:var(--ink);color:rgba(255,255,255,.65);padding:44px 0;text-align:center;border-top:1px solid rgba(255,255,255,.1)}
+  footer img{height:38px;margin:0 auto 18px;opacity:.9}
+  .foot-links{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;font-size:.9rem;margin-bottom:12px}
+  .foot-links button{background:none;border:none;color:rgba(255,255,255,.75);font-family:inherit;font-size:.9rem;cursor:pointer;text-decoration:underline;padding:2px}
+  .foot-links button:hover{color:#fff}
+  .foot-copy{font-size:.85rem;opacity:.6}
+
+  dialog{border:none;border-radius:24px;padding:0;max-width:600px;width:calc(100% - 40px);box-shadow:0 40px 90px -30px rgba(0,0,0,.5)}
+  dialog::backdrop{background:rgba(25,26,46,.6)}
+  .dlg{padding:clamp(26px,5vw,40px);text-align:right}
+  .dlg h3{margin-bottom:14px}
+  .dlg p{font-size:.97rem;color:var(--ink-soft);margin-bottom:12px;line-height:1.7}
+  .dlg a{color:var(--pink)}
+  .dlg-close{margin-top:10px;background:var(--ink);color:#fff;border:none;border-radius:100px;padding:12px 32px;font-family:inherit;font-weight:800;cursor:pointer}
+
+  /* reveal */
+  /* האנימציה קיימת רק כשיש JS. בלי הכלל הזה, כשל בסקריפט או חוסם סקריפטים
+     היה מותיר את רוב הטקסט בדף שקוף לגמרי. */
+  .js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+  .js .rv.on{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1820166155346211');fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1820166155346211&ev=PageView&noscript=1" alt=""></noscript>
+</head>
+<body>
+
+<div class="topbar" id="topbar">
+  <div class="in">
+    <p class="when">יום שני 7.9 · 20:00 · <span>ללא עלות</span></p>
+    <a class="btn btn-sm" href="#form">לשריין לי מקום</a>
+  </div>
+</div>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="wrap">
+
+    <!-- שורת קהל. מחליפה את "אחרי שמעל 4,000 אמהות קראו את המדריך" -->
+    <p class="eyebrow">לאמהות שמרוויחות יפה ועדיין לא מבינות לאן הכסף נעלם</p>
+
+    <p class="kicker">חצי מיליון ש"ח לכל ילד זו לא פנטזיה של עשירים.</p>
+
+    <!-- ==== הכותרת. זה החלק היחיד שדורש את האישור שלך. ==== -->
+    <h1>איך לבנות לכל ילד<br>גב כלכלי של <span class="h1-mark">חצי מיליון ש"ח<svg viewBox="0 0 260 12" preserveAspectRatio="none" aria-hidden="true"><path d="M4 9C70 3.5 180 3 256 6.5"/></svg></span><br>מהכסף שכבר נכנס לכם הביתה</h1>
+
+    <div class="portrait-band">
+      <div class="txt">
+        <p class="lede">הדרכה חיה של שעה, בלי פילטרים. אני מראה לך את <strong>מנגנון ההשקעות האוטומטי</strong> שבניתי לבנות שלי, ואיך להפעיל אותו אצלך כבר מחר בבוקר.</p>
+        <ul class="withouts">
+          <li>בלי עבודה נוספת</li>
+          <li>בלי ידע מוקדם בשוק ההון</li>
+          <li>בלי להרגיש אשמה על כל קנייה</li>
+        </ul>
+      </div>
+      <!-- התמונה הסמכותית, בדיוק מעל שורת התאריך, כמו שגארי סימן -->
+      <div class="portrait">
+        <img src="assets/portrait-authority.jpg" alt="עדי סומך, מייסדת אמא משקיעה" width="1000" height="1500" fetchpriority="high">
+        <p class="tag">עדי סומך<br>אמא משקיעה</p>
+      </div>
+    </div>
+
+    <div class="when-card">
+      <div>
+        <p class="date">יום שני, <span class="num">7.9.26</span> בשעה <span class="num">20:00</span></p>
+        <p class="sub">שעה בזום, ועוד זמן פתוח לשאלות בלייב</p>
+      </div>
+      <div class="countdown" id="cd" aria-label="הזמן שנותר עד ההדרכה">
+        <div class="cd-box"><b class="num" id="cd-d">--</b><i>ימים</i></div>
+        <div class="cd-box"><b class="num" id="cd-h">--</b><i>שעות</i></div>
+        <div class="cd-box"><b class="num" id="cd-m">--</b><i>דקות</i></div>
+      </div>
+    </div>
+
+    <div class="hero-cta">
+      <a class="btn" href="#form">לשריין לי מקום בהדרכה<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg></a>
+      <p class="note">ללא עלות, בשריון מקום מראש בלבד</p>
+    </div>
+
+  </div>
+</header>
+
+<!-- ============ PROOF BAR ============ -->
+<div class="proof">
+  <div class="in">
+    <div><b class="num">4,000+</b><span>אמהות הורידו את המדריכים שלי</span></div>
+    <div><b>מאות</b><span>בוגרות בתכניות ובקורסים</span></div>
+    <div><b class="num">6</b><span>שנים של למידה, מחקר ויישום</span></div>
+  </div>
+</div>
+
+<!-- ============ OBJECTION ============ -->
+<!-- השורה הזאת ישבה בכותרת. היא עונה על התנגדות, אז מקומה אחרי ההבטחה -->
+<div class="objection">
+  <div class="in">
+    <p>את לא צריכה לוותר על החוויות של היום<br>כדי שיהיה לך איך לעזור להם בעתיד.</p>
+    <p class="sm">אלה לא שני עולמות שצריך לבחור ביניהם. זה בדיוק מה שאני הולכת להראות.</p>
+  </div>
+</div>
+
+<!-- ============ הדרך השלישית ============ -->
+<section class="story">
+  <div class="wrap wrap-narrow">
+    <h2 class="rv">גדלנו על מיתוסים שפשוט לא עובדים יותר.</h2>
+    <p class="rv">אמרו לנו ש"כסף לא צומח על העצים" וצריך "לחסוך גרוש לבן ליום שחור". אבל אף אחד לא אמר לנו שבמשוואה הזו המחיר הכי גבוה הוא בכלל לא הכסף. הוא <span class="hl">החופש והשקט הנפשי שלנו</span>.</p>
+    <p class="rv">אנחנו תמיד יוצאות מזה מופסדות. אם את רוצה עתיד בטוח לילדים, את חייבת לעבוד הרבה יותר. ואם את רוצה זמן איתם, את נאלצת להפוך ל"אמא קדושה מעונה" שמצטמצמת ומוותרת, רק כדי שלא תצטרכי להגיד להם בעתיד "סליחה, אין לי איך לעזור לכם".</p>
+    <p class="rv">זה מרחף מעל הראש במחשבות לפני השינה. זה מכווץ בכל פעם שאת חושבת על חופשה, ועל עוד קנייה שצריך לעשות הביתה.</p>
+    <p class="big rv">אבל האמת היא שיש דרך שלישית.</p>
+    <p class="rv">היא לגרום לכספים הקטנים שכבר יש לך להתחיל לעבוד בשביל הילדים מוקדם, ולצבור ריבית דריבית. מנגנון אוטומטי פשוט שנותן לך את השקט לדעת שהעתיד שלהם נבנה, בזמן שאת פנויה להיות אמא בהווה.</p>
+    <p class="rv">אני יודעת כמה זה מפחיד להרגיש שאת מפספסת את שני העולמות, כי גם אני הייתי בתוך המירוץ הזה. והיום, אחרי שעזרתי למאות בוגרות של התכניות שלי לבנות מנגנון השקעות חכם, אני יכולה להגיד לך בוודאות: <span class="hl">זה אפשרי, זה עובד, וזה הרבה יותר פשוט ממה שהתרגלנו לחשוב.</span></p>
+  </div>
+</section>
+
+<!-- ============ מה תצאי איתו ============ -->
+<section class="band-soft">
+  <div class="wrap">
+    <div class="center">
+      <h2 class="rv">עם מה תצאי מההדרכה הזאת?</h2>
+      <p class="lead rv">שעה אחת, ארבעה חלקים, כולם על אותו דבר: <strong>איך המספר הזה נבנה</strong>.</p>
+    </div>
+    <div class="cards">
+      <div class="card rv">
+        <span class="n num">1</span>
+        <h3>מנגנון חצי מיליון לכל ילד</h3>
+        <p>איך בניתי לבנות שלי יעד של חצי מיליון ש"ח לכל אחת, בזמן ששאר הכסף שלנו ממשיך לעבוד ולגדול.</p>
+      </div>
+      <div class="card rv" style="transition-delay:.08s">
+        <span class="n num">2</span>
+        <h3>מאיפה מגיע הכסף שמזין אותו</h3>
+        <p>איך לאתר כספים שכבר קיימים אצלך ולא מממשים את הפוטנציאל שלהם, ולהעביר אותם לאפיקים שמניבים תשואה מהרגע הראשון.</p>
+      </div>
+      <div class="card rv" style="transition-delay:.16s">
+        <span class="n num">3</span>
+        <h3>למה זה לא בא על חשבון ההווה</h3>
+        <p>איך להבטיח את המקפצה של הילדים בלי לקצץ בחוויות ובזמן המשותף שלכם היום, ואיך זה מעביר להם יחסים בריאים עם כסף.</p>
+      </div>
+      <div class="card rv" style="transition-delay:.24s">
+        <span class="n num">4</span>
+        <h3>איך מפעילים את זה מחר בבוקר</h3>
+        <p>הצעד הראשון המדויק. שתצאי מההדרכה עם פעולה אחת שאפשר לעשות כבר מחר, ולא עם עוד רשימת מטלות.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ למי זה מתאים ============ -->
+<section>
+  <div class="wrap wrap-narrow">
+    <div class="center">
+      <h2 class="rv">למי ההדרכה הזאת מתאימה?</h2>
+    </div>
+    <ul class="fit">
+      <li class="rv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><b>לאמא שרוצה שהעתיד של הילדים ייבנה מעצמו</b><span>שחלק מהכסף יילך באופן קבוע למקפצה שלהם, בלי להילחץ מזה כל חודש מחדש.</span></div></li>
+      <li class="rv" style="transition-delay:.06s"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><b>למי שמבינה שחיסכון בבנק הוא לא הפתרון</b><span>ומחפשת את הדרך המקצועית והבטוחה לגרום לכסף לצמוח באמת, בלי להמר על העתיד שלהם.</span></div></li>
+      <li class="rv" style="transition-delay:.12s"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><b>לאמא שרוצה "גם וגם"</b><span>גם להשקיע בחוויות ובחופשות משפחתיות היום, וגם לדעת שיש לילדים פינה סגורה של חצי מיליון ש"ח ליום שבו יצטרכו אותה.</span></div></li>
+      <li class="rv" style="transition-delay:.18s"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><b>למי שרוצה להתחיל עכשיו, כשהם עדיין קטנים</b><span>כי הנוסחה הזאת עובדת על זמן. כל שנה שמתחילים מוקדם יותר שווה הרבה יותר מכל סכום שמוסיפים אחר כך.</span></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ נעים להכיר. פותח בסמכות ונשאר בסמכות ============ -->
+<section class="band-soft">
+  <div class="wrap">
+    <div class="bio">
+      <div class="pic rv"><img src="assets/portrait-warm.jpg" alt="עדי סומך" width="1000" height="1500" loading="lazy"></div>
+      <div class="story rv">
+        <h2>נעים להכיר, אני עדי סומך</h2>
+        <p>שש שנים אני עוסקת בדבר אחד: איך משפחה רגילה בישראל בונה לילדים שלה גב כלכלי אמיתי, בלי להעלות את ההכנסה ובלי להוריד את רמת החיים.</p>
+        <ul class="creds">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>מייסדת "אמא משקיעה", הבית של אלפי אמהות ישראליות</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>ליוויתי מאות בוגרות בתכניות ובקורסים שלי</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>מעל 4,000 אמהות הורידו את המדריכים שכתבתי</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>בניתי את המנגנון הזה קודם כל לשתי הבנות שלי</li>
+        </ul>
+        <p class="big">פיצחתי את הנוסחה שמאפשרת לכל ילד לקבל מקפצה של חצי מיליון ש"ח, והרבה יותר מזה, בלי לוותר על רמת החיים בכלל.</p>
+        <p>היא לא דורשת הכנסה גבוהה ולא ידע פיננסי. היא דורשת Reverse Engineering, ולהתחיל כשהם קטנים.</p>
+        <p>הגעתי לזה מצורך אמיתי. רציתי גם להיות נוכחת איתן בהווה, וגם לדעת שיש להן עתיד בטוח ומשגשג, ולא הסכמתי לבחור. חיפשתי את הנוסחה הזאת שנים, ומצאתי אותה.</p>
+        <p>עכשיו אני עולה לשידור חי כדי לשתף אותה במלואה, בלי פילטרים. אני רוצה לחסוך לכמה שיותר אמהות את שנות החיפוש, וללמד כמה שיותר מכן לבנות את המנגנון הזה לבד, בפשטות ובביטחון.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ מה אמרו קודם ============ -->
+<section>
+  <div class="wrap">
+    <div class="center">
+      <h2 class="rv">מה אמרו אמהות אחרי ההדרכות הקודמות</h2>
+      <p class="lead rv">כמה הודעות שקיבלתי, בדיוק כמו שהן נשלחו.</p>
+    </div>
+    <div class="tgrid">
+      <figure class="rv"><img src="assets/t1.jpg" alt="הודעת תודה מאמא שהשתתפה בהדרכה קודמת" loading="lazy"></figure>
+      <figure class="rv" style="transition-delay:.08s"><img src="assets/t2.jpg" alt="הודעת תודה מאמא שהשתתפה בהדרכה קודמת" loading="lazy"></figure>
+      <figure class="rv" style="transition-delay:.16s"><img src="assets/t3.jpg" alt="הודעת תודה מאמא שהשתתפה בהדרכה קודמת" loading="lazy"></figure>
+      <figure class="rv" style="transition-delay:.24s"><img src="assets/t4.jpg" alt="הודעת תודה מאמא שהשתתפה בהדרכה קודמת" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ פרטים ============ -->
+<section class="band-vista">
+  <div class="wrap">
+    <div class="center">
+      <h2 class="rv">הפרטים היבשים</h2>
+    </div>
+    <div class="details">
+      <div class="detail rv"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M2 20h20"/></svg></span><b>איפה</b><span>מפגש אונליין בזום. הלינק נשלח למייל ולנייד.</span></div>
+      <div class="detail rv" style="transition-delay:.08s"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span><b>מתי</b><span>יום שני, 7.9.26, בשעה 20:00. שעה ועוד זמן לשאלות.</span></div>
+      <div class="detail rv" style="transition-delay:.16s"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 12v9H4v-9M2 7h20v5H2zM12 22V7M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></span><b>כמה</b><span>ללא עלות, בשריון מקום מראש בלבד.</span></div>
+    </div>
+    <p class="lead center rv" style="margin-top:28px">המקומות בהדרכות האלה נתפסים מהר. שווה לשריין עכשיו ולא לחזור לזה אחר כך.</p>
+  </div>
+</section>
+
+<!-- ============ FORM ============ -->
+<section class="signup" id="form">
+  <div class="wrap">
+    <h2>אני שומרת לך מקום<br>ל<span>7.9 בשעה 20:00</span></h2>
+    <p class="lead">משאירה פרטים, ואני שולחת לך את הלינק לזום ותזכורת לפני שמתחילים.</p>
+    <form class="form-card" id="leadform" novalidate>
+      <label for="fname">שם</label>
+      <input id="fname" name="name" type="text" autocomplete="given-name" required>
+      <label for="femail">מייל</label>
+      <input id="femail" name="email" type="email" inputmode="email" autocomplete="email" required>
+      <label for="fphone">נייד</label>
+      <input id="fphone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required>
+      <button class="btn" type="submit">לשריין לי מקום בהדרכה<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></button>
+      <p class="form-err" id="form-err" role="alert"></p>
+      <p class="consent">בלחיצה על הכפתור את מאשרת קבלת הלינק להדרכה ותכנים במייל ובהודעה מאמא משקיעה. אפשר להסיר את עצמך בכל רגע, בקליק.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img src="assets/logo-white.png" alt="אמא משקיעה" width="200" height="76">
+    <nav class="foot-links" aria-label="קישורים משפטיים">
+      <button type="button" data-dlg="dlg-privacy">מדיניות פרטיות</button><span aria-hidden="true">·</span>
+      <button type="button" data-dlg="dlg-terms">תנאי שימוש</button><span aria-hidden="true">·</span>
+      <button type="button" data-dlg="dlg-a11y">הצהרת נגישות</button>
+    </nav>
+    <p class="foot-copy">© אמא משקיעה · עדי סומך</p>
+  </div>
+</footer>
+
+<dialog id="dlg-privacy"><div class="dlg">
+  <h3>מדיניות פרטיות</h3>
+  <p>הפרטים שאת משאירה (שם, כתובת מייל ומספר נייד) נשמרים אצלנו לצורך שליחת הלינק להדרכה, תזכורות ותכנים נוספים מאמא משקיעה, בהתאם לחוק הגנת הפרטיות ולתיקון 40 לחוק התקשורת. הפרטים לא נמסרים לצד שלישי.</p>
+  <p>אפשר להסיר את עצמך מהדיוור בכל רגע, בקליק בתחתית כל מייל, או בפנייה אלינו: <a href="mailto:mominvest10x@gmail.com">mominvest10x@gmail.com</a>.</p>
+  <p>הדף מודד כמה אנשים נכנסו אליו ומאיזה קישור הגיעו, באמצעות מזהה אנונימי שנשמר בדפדפן שלך. המדידה הזו נשמרת אצלנו בלבד, לא כוללת שם או כתובת מייל, ולא מועברת לצד שלישי.</p>
+  <p>הדף משתמש גם בפיקסל של מטא (פייסבוק ואינסטגרם) כדי למדוד את ביצועי הפרסום. הפיקסל אוסף נתוני שימוש אנונימיים בהתאם למדיניות הפרטיות של מטא, ואפשר לחסום אותו בהגדרות הדפדפן.</p>
+  <button class="dlg-close" type="button" data-close>סגירה</button>
+</div></dialog>
+
+<dialog id="dlg-terms"><div class="dlg">
+  <h3>תנאי שימוש</h3>
+  <p>התכנים בדף ובהדרכה הם מידע כללי בלבד ואינם מהווים ייעוץ השקעות, ייעוץ פנסיוני, ייעוץ מס או המלצה לביצוע פעולה כלשהי. כל החלטה היא באחריותך בלבד, ומומלץ להתייעץ עם בעל רישיון מתאים.</p>
+  <p>הסכומים המופיעים בדף הם דוגמה אישית ואינם הבטחה לתוצאה. התוצאה בפועל תלויה בסכומים, בתקופה, במסלולים ובתנאי השוק, ואין ודאות לגבי תשואות עתידיות.</p>
+  <p>אין להעתיק, לשכפל או להפיץ את תכני ההדרכה ללא אישור בכתב. כל הזכויות שמורות לאמא משקיעה · עדי סומך.</p>
+  <button class="dlg-close" type="button" data-close>סגירה</button>
+</div></dialog>
+
+<dialog id="dlg-a11y"><div class="dlg">
+  <h3>הצהרת נגישות</h3>
+  <p>אנחנו משתדלות שהדף יהיה נגיש לכולן. הוא נבנה בהתאם לעקרונות תקן ישראלי 5568 ברמת AA: ניווט מלא במקלדת, ניגודיות צבעים תקינה, טקסט חלופי לתמונות, והתאמה להקטנה והגדלה של הטקסט בדפדפן.</p>
+  <p>נתקלת בקושי או במשהו שלא עובד? נשמח שתספרי לנו ונתקן: <a href="mailto:mominvest10x@gmail.com">mominvest10x@gmail.com</a>.</p>
+  <button class="dlg-close" type="button" data-close>סגירה</button>
+</div></dialog>
+
+<script>
+  // ---- topbar
+  var topbar = document.getElementById('topbar');
+  var hero = document.querySelector('.hero');
+  addEventListener('scroll', function(){
+    topbar.classList.toggle('on', scrollY > hero.offsetHeight * .55);
+  }, {passive:true});
+
+  // ---- reveal
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); } });
+  }, {threshold:.01, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+
+  // רשת ביטחון. ה-IntersectionObserver לבדו לא מספיק: בגלילה מהירה הוא מפספס
+  // אלמנטים, ומה שיושב בתחתית המסמך יכול להישאר שקוף לנצח כי אי אפשר לגלול
+  // אותו מעלה יותר. הסריקה הזאת חושפת כל מה שנמצא בתוך המסך ועוד לא שוחרר.
+  function sweep(){
+    document.querySelectorAll('.rv:not(.on)').forEach(function(el){
+      var r = el.getBoundingClientRect();
+      if(r.top < innerHeight && r.bottom > 0) el.classList.add('on');
+    });
+  }
+  var sweepT;
+  addEventListener('scroll', function(){
+    clearTimeout(sweepT); sweepT = setTimeout(sweep, 120);
+  }, {passive:true});
+  addEventListener('resize', sweep, {passive:true});
+  addEventListener('load', sweep);
+  setTimeout(sweep, 1200);
+
+  // ---- dialogs
+  document.querySelectorAll('[data-dlg]').forEach(function(b){
+    b.addEventListener('click', function(){ document.getElementById(b.dataset.dlg).showModal(); });
+  });
+  document.querySelectorAll('dialog [data-close]').forEach(function(b){
+    b.addEventListener('click', function(){ b.closest('dialog').close(); });
+  });
+
+  // ---- countdown ל-7.9.2026 20:00 שעון ישראל (UTC+3 בקיץ)
+  (function(){
+    var target = new Date('2026-09-07T20:00:00+03:00').getTime();
+    var d=document.getElementById('cd-d'), h=document.getElementById('cd-h'), m=document.getElementById('cd-m');
+    function tick(){
+      var gap = target - Date.now();
+      if(gap <= 0){ document.getElementById('cd').style.display='none'; return; }
+      d.textContent = Math.floor(gap/86400000);
+      h.textContent = Math.floor(gap/3600000) % 24;
+      m.textContent = Math.floor(gap/60000) % 60;
+    }
+    tick(); setInterval(tick, 30000);
+  })();
+</script>
+
+<script>
+  // ---- הטופס. יעד: רשימת smoove ייעודית להדרכת 7.9, דרך endpoint פרוקסי
+  // בשרת course-portal (מפתח סמוב לא נחשף בדפדפן). הפרמטר w=w0709 הוא מה
+  // שמפריד בין ההדרכה הזאת לוובינר החשיפה שיושב על אותו endpoint.
+  var SIGNUP_ENDPOINT = "https://academy.mominvest.co.il/webinar-signup";
+  var WEBINAR_KEY     = "w0709";
+  var THANKS_PAGE     = "thanks/";
+  var form = document.getElementById('leadform');
+  var errEl = document.getElementById('form-err');
+
+  function showErr(msg){
+    errEl.textContent = msg; errEl.style.display = 'block';
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var email = document.getElementById('femail').value.trim();
+    var name  = document.getElementById('fname').value.trim();
+    var phone = document.getElementById('fphone').value.trim();
+    errEl.style.display = 'none';
+    if(!name){ showErr('רק שם, ואנחנו בפנים.'); return; }
+    if(email.indexOf('@') < 1){ showErr('נראה שנפלה טעות קטנה במייל. אפשר לבדוק?'); return; }
+    if(phone.replace(/\D/g,'').length < 9){ showErr('צריך מספר נייד תקין, לשם התזכורת לפני ההדרכה.'); return; }
+
+    var btn = form.querySelector('.btn');
+    var orig = btn.innerHTML;
+    btn.disabled = true; btn.textContent = 'רגע אחד, שומרת לך מקום…';
+
+    // גוף form-encoded (לא JSON) = "בקשה פשוטה" של CORS, בלי סבב preflight
+    // שנתקע בוובוויו של אינסטגרם ווואטסאפ על חיבור קר.
+    var params = new URLSearchParams();
+    params.set('name', name);
+    params.set('email', email);
+    params.set('phone', phone);
+    params.set('w', WEBINAR_KEY);
+    params.set('page', 'webinar-0709');
+    var qs = new URLSearchParams(location.search);
+    ['ref','utm_source','utm_medium','utm_campaign','utm_content'].forEach(function(k){
+      var v = qs.get(k) || (function(){ try { return localStorage.getItem('mi_'+k); } catch(err){ return ''; } })();
+      if(v) params.set(k, v);
+    });
+    try { params.set('vid', localStorage.getItem('mi_vid') || ''); } catch(err){}
+    var bodyStr = params.toString();
+
+    // רשת ביטחון: יורים את הלידה כבר ברגע הלחיצה, בשליחה שלא תלויה בקריאת תגובת CORS.
+    var beaconed = false;
+    try {
+      if (navigator.sendBeacon) {
+        beaconed = navigator.sendBeacon(SIGNUP_ENDPOINT,
+          new Blob([bodyStr], {type:'application/x-www-form-urlencoded'}));
+      }
+    } catch(err){}
+
+    // אירוע ה-Lead נורה בדף התודה ולא כאן: ניווט מיידי עלול לקטוע את בקשת
+    // הפיקסל, ובדף התודה הוא נספר פעם אחת בדיוק.
+    function toThanks(){ location.href = THANKS_PAGE; }
+    function fail(){
+      btn.disabled = false; btn.innerHTML = orig;
+      showErr('משהו נתקע רגע אצלנו. אפשר לנסות שוב, או לכתוב לי ואני משריינת ידנית.');
+    }
+
+    var delays = [0, 2500, 5000];
+    (function attempt(i){
+      var done = false;
+      var ctrl = ('AbortController' in window) ? new AbortController() : null;
+      function moveOn(){
+        if(done) return; done = true;
+        if(ctrl){ try{ ctrl.abort(); }catch(err){} }
+        if(beaconed){ toThanks(); return; }
+        if(i+1 < delays.length){ setTimeout(function(){ attempt(i+1); }, delays[i+1]); }
+        else { fail(); }
+      }
+      var t = setTimeout(moveOn, 8000);
+      fetch(SIGNUP_ENDPOINT, {
+        method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'},
+        body: bodyStr, signal: ctrl ? ctrl.signal : undefined
+      })
+      .then(function(r){ if(!r.ok){ throw new Error('http '+r.status); } return r.json(); })
+      .then(function(j){
+        if(done) return; done = true; clearTimeout(t);
+        if(j && j.ok){ toThanks(); } else { moveOn(); }
+      })
+      .catch(function(){ clearTimeout(t); moveOn(); });
+    })(0);
+  });
+</script>
+
+<script>
+  // ---- מדידה: כניסה לדף. הדף סטטי ואין לו לוגים, אז הספירה נעשית בשרת הפורטל.
+  // ה-vid הוא מזהה אנונימי בדפדפן (בלי שם, בלי מייל) כדי לספור אנשים ולא רענונים.
+  (function(){
+    var TRACK = "https://academy.mominvest.co.il/guide-hit";
+    var q = new URLSearchParams(location.search);
+    var vid;
+    try {
+      vid = localStorage.getItem('mi_vid');
+      if(!vid){ vid = (Date.now().toString(36) + Math.random().toString(36).slice(2,10)); localStorage.setItem('mi_vid', vid); }
+      ['ref','utm_source','utm_medium','utm_campaign','utm_content'].forEach(function(k){
+        if(q.get(k)) localStorage.setItem('mi_'+k, q.get(k));
+      });
+    } catch(e){ vid = 'nostore'; }
+    var p = new URLSearchParams();
+    p.set('page', 'webinar-0709');
+    p.set('guide', 'webinar0709');
+    p.set('vid', vid || '');
+    ['ref','utm_source','utm_medium','utm_campaign','utm_content'].forEach(function(k){
+      var v = q.get(k) || (function(){ try { return localStorage.getItem('mi_'+k); } catch(e){ return ''; } })();
+      if(v) p.set(k, v);
+    });
+    var body = p.toString();
+    try {
+      if(!navigator.sendBeacon || !navigator.sendBeacon(TRACK, new Blob([body], {type:'application/x-www-form-urlencoded'}))){
+        fetch(TRACK, {method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:body, keepalive:true}).catch(function(){});
+      }
+    } catch(e){}
+  })();
+</script>
+</body>
+</html>
