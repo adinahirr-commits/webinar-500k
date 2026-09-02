@@ -35,7 +35,17 @@
   .hero .grid{display:grid;grid-template-columns:1fr 396px;gap:44px;align-items:start}
   .eyebrow{display:inline-block;background:var(--pink-soft);color:#A32C6C;font-size:.92rem;
            font-weight:800;border-radius:100px;padding:7px 16px;margin-bottom:16px;line-height:1.4}
-  h1{font-size:clamp(2.05rem,7.4vw,2.9rem);font-weight:900;line-height:1.16;letter-spacing:-.025em;margin-bottom:18px}
+  .pre{font-size:clamp(1.15rem,4.4vw,1.4rem);font-weight:800;line-height:1.4;margin-bottom:14px}
+  .reveal-lead{font-size:clamp(1.02rem,3.6vw,1.12rem);font-weight:600;color:var(--soft);
+               line-height:1.5;margin-bottom:16px}
+  h1{font-size:clamp(1.95rem,7vw,2.75rem);font-weight:900;line-height:1.16;letter-spacing:-.025em;margin-bottom:20px}
+
+  /* עדות קצרה מיד מתחת לכותרת — בועת הודעה, קריאה ולא מעמיסה */
+  .proof-quote{background:#fff;border:1px solid var(--line);border-radius:16px 16px 16px 5px;
+               padding:16px 18px;margin-bottom:22px;box-shadow:0 10px 26px -20px rgba(26,27,46,.5);
+               position:relative}
+  .proof-quote p{font-size:1.04rem;line-height:1.55;font-weight:600}
+  .proof-quote .by{margin-top:10px;font-size:.86rem;color:var(--soft);font-weight:700}
   .mark{text-decoration:underline;text-decoration-color:var(--lime);
         text-decoration-thickness:8px;text-underline-offset:0;text-decoration-skip-ink:none}
 
@@ -160,7 +170,16 @@
       <div>
         <p class="eyebrow">לאמהות שמרוויחות יפה ועדיין לא מבינות לאן הכסף נעלם</p>
 
+        <p class="pre">חצי מיליון לכל ילד זאת לא פנטזיה של עשירים בלבד…</p>
+
+        <p class="reveal-lead">החלטתי לחשוף בשידור חי את השיטה המלאה לבניית רשת ביטחון כלכלית לילדים:</p>
+
         <h1>איך לבנות לכל ילד גב כלכלי של <span class="mark">חצי מיליון ש"ח</span> מהכסף שכבר נכנס לכם הביתה</h1>
+
+        <blockquote class="proof-quote">
+          <p>"וואי תקשיבי, איזה פיצוץ ידע מטורף. פתאום אני מבינה כמה אני לא מודעת, אם זה לכסף שלי ואם זה לכל עולם החיסכון וההשקעות."</p>
+          <p class="by">מתוך הודעה שקיבלתי אחרי הדרכה קודמת</p>
+        </blockquote>
 
         <figure class="shot">
           <img src="assets/portrait-authority.jpg" alt="עדי סומך, מייסדת אמא משקיעה" width="1000" height="1500" fetchpriority="high">
