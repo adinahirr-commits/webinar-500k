@@ -26,8 +26,12 @@
   .narrow{max-width:620px;margin-inline:auto}
   a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--pink);outline-offset:2px}
 
-  .strip{background:var(--ink);color:#fff;text-align:center;padding:12px 18px;font-size:1rem;font-weight:800;line-height:1.45}
-  .strip b{color:var(--lime);font-weight:900}
+  .strip{background:var(--ink);color:#fff;text-align:center;padding:14px 18px 12px;font-size:1.02rem;font-weight:700;line-height:1.5}
+  .strip q{quotes:'\201C' '\201D'}
+  .strip b{display:block;color:var(--lime);font-weight:900;font-size:.88rem;margin-top:2px}
+  /* הפרטים הטכניים: צמוד לטופס, לא בראש הדף */
+  .when-line{text-align:center;font-weight:800;font-size:1rem;margin-bottom:10px;color:var(--ink)}
+  .when-line b{color:var(--pink);font-weight:900}
 
   /* ---------- hero ---------- */
   .hero{padding:26px 0 30px}
@@ -44,7 +48,7 @@
   .byline b{display:block;font-size:.96rem;font-weight:900;line-height:1.3}
   .byline span{font-size:.85rem;color:var(--soft)}
 
-  .proof-shot{background:#fff;border:1px solid var(--line);border-radius:16px;padding:10px 10px 0;
+  .proof-shot{background:#fff;border:1px solid var(--line);border-radius:16px;padding:10px;
               margin-bottom:6px;box-shadow:0 12px 30px -22px rgba(26,27,46,.55)}
   .proof-shot img{border-radius:10px;width:100%}
   .proof-shot figcaption{font-size:.86rem;color:var(--soft);font-weight:700;padding:10px 4px 12px;text-align:center}
@@ -159,7 +163,7 @@
 </head>
 <body>
 
-<p class="strip">יום שני 7.9 · בשעה 20:30 · שעה בזום · <b>ללא עלות</b></p>
+<p class="strip"><q>את לא צריכה לוותר על החוויות של היום כדי שיהיה לך איך לעזור להם בעתיד.</q><b>עדי סומך</b></p>
 
 <header class="hero">
   <div class="wrap">
@@ -180,11 +184,12 @@
 
         <figure class="proof-shot">
           <img src="assets/proof-hero.jpg" alt="הודעה שקיבלתי: ואגב לא סיפרתי לך, נכנס לנו 27000 בזכות המענקים האלו שמילאתי אחרי הזום שלך" width="900" height="265" fetchpriority="high">
-          <figcaption>הודעה שקיבלתי אחרי אחת ההדרכות</figcaption>
         </figure>
       </div>
 
-      <div class="card" id="form-top">
+      <div>
+        <p class="when-line">יום שני 7.9 · בשעה 20:30 · שעה בזום · <b>ללא עלות</b></p>
+        <div class="card" id="form-top">
         <h2>אני שומרת לך מקום</h2>
         <p class="hint">הלינק לזום ותזכורת, ישר לנייד.</p>
         <form id="f1" novalidate>
@@ -198,6 +203,7 @@
           <p class="err" role="alert"></p>
           <p class="fine">בלחיצה את מאשרת קבלת הלינק ותכנים מאמא משקיעה. אפשר להסיר בכל רגע.</p>
         </form>
+        </div>
       </div>
 
     </div>
