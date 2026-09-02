@@ -33,34 +33,44 @@
   /* ---------- hero ---------- */
   .hero{padding:26px 0 34px}
   .hero .grid{display:grid;grid-template-columns:1fr 396px;gap:44px;align-items:start}
-  .eyebrow{display:inline-block;background:var(--pink-soft);color:#A32C6C;font-size:.92rem;
-           font-weight:800;border-radius:100px;padding:7px 16px;margin-bottom:16px;line-height:1.4}
-  .pre{font-size:clamp(1.15rem,4.4vw,1.4rem);font-weight:800;line-height:1.4;margin-bottom:14px}
-  .reveal-lead{font-size:clamp(1.02rem,3.6vw,1.12rem);font-weight:600;color:var(--soft);
-               line-height:1.5;margin-bottom:16px}
-  h1{font-size:clamp(1.95rem,7vw,2.75rem);font-weight:900;line-height:1.16;letter-spacing:-.025em;margin-bottom:20px}
+  .pre{font-size:clamp(1.1rem,4.2vw,1.3rem);font-weight:800;line-height:1.45;margin-bottom:12px}
+  .reveal-lead{font-size:1.02rem;font-weight:600;color:var(--soft);line-height:1.5;margin-bottom:14px}
+  h1{font-size:clamp(1.9rem,6.6vw,2.6rem);font-weight:900;line-height:1.18;letter-spacing:-.025em;margin-bottom:18px}
+  .mark{text-decoration:underline;text-decoration-color:var(--lime);
+        text-decoration-thickness:8px;text-underline-offset:0;text-decoration-skip-ink:none}
 
-  /* צילום מסך אמיתי מיד מתחת לכותרת — הוכחה לפני שממשיכים */
+  /* שורת זהות קטנה במקום פורטרט ענק — סמכות בלי עומס */
+  .byline{display:flex;align-items:center;gap:10px;margin-bottom:20px}
+  .byline img{width:46px;height:46px;border-radius:50%;object-fit:cover;object-position:50% 18%;flex:none}
+  .byline b{display:block;font-size:.98rem;font-weight:900;line-height:1.3}
+  .byline span{font-size:.87rem;color:var(--soft)}
+
+  /* צילום מסך אמיתי מיד מתחת לכותרת — ההוכחה */
   .proof-shot{background:#fff;border:1px solid var(--line);border-radius:16px;padding:10px 10px 0;
               margin-bottom:22px;box-shadow:0 12px 30px -22px rgba(26,27,46,.55)}
   .proof-shot img{border-radius:10px;width:100%}
   .proof-shot figcaption{font-size:.87rem;color:var(--soft);font-weight:700;
                          padding:11px 4px 12px;text-align:center}
-  .mark{text-decoration:underline;text-decoration-color:var(--lime);
-        text-decoration-thickness:8px;text-underline-offset:0;text-decoration-skip-ink:none}
 
-  /* התמונה הגדולה — הדבר הראשון שרואים אחרי הכותרת בטלפון */
-  .shot{position:relative;border-radius:20px;overflow:hidden;margin-bottom:22px;background:#EFEAE2}
-  .shot img{width:100%;aspect-ratio:16/11;object-fit:cover;object-position:50% 22%}
-  .shot .tag{position:absolute;inset-inline-start:14px;bottom:14px;background:#fff;border-radius:12px;
-             padding:9px 14px;font-size:.92rem;font-weight:800;line-height:1.35;box-shadow:0 8px 22px -10px rgba(0,0,0,.45)}
-  .shot .tag i{display:block;font-style:normal;font-weight:600;color:var(--soft);font-size:.85rem}
-  @media(min-width:861px){ .shot img{aspect-ratio:4/3} }
+  ul.points{list-style:none;display:grid;gap:11px;margin-bottom:24px}
+  ul.points li{display:flex;gap:10px;align-items:center;font-size:1.05rem;font-weight:600;
+               justify-content:flex-start}
+  ul.points svg{width:20px;height:20px;flex:none;stroke:var(--pink);fill:none;stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round}
 
-  .sub{font-size:1.1rem;color:var(--soft);margin-bottom:22px}
-  ul.points{list-style:none;display:grid;gap:13px;margin-bottom:24px}
-  ul.points li{display:flex;gap:11px;align-items:flex-start;font-size:1.07rem;font-weight:600}
-  ul.points svg{width:22px;height:22px;flex:none;margin-top:4px;stroke:var(--pink);fill:none;stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round}
+  /* ---- בטלפון הכל ממורכז ---- */
+  @media(max-width:860px){
+    .hero .grid > div:first-child{text-align:center}
+    .byline{justify-content:center}
+    ul.points{justify-items:center}
+    ul.points li{text-align:right}
+    .h3-ill{flex-direction:column;text-align:center;gap:10px}
+    .card{text-align:right}
+    .card h2,.card .hint{text-align:center}
+    .learn li{text-align:right}
+    .bio{text-align:center}
+    .facts div{justify-content:center;text-align:center}
+    .swipe{justify-content:center}
+  }
 
   /* ---------- form ---------- */
   .card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;
@@ -168,30 +178,26 @@
     <div class="grid">
 
       <div>
-        <p class="eyebrow">לאמהות שמרוויחות יפה ועדיין לא מבינות לאן הכסף נעלם</p>
-
         <p class="pre">חצי מיליון לכל ילד זאת לא פנטזיה של עשירים בלבד…</p>
 
         <p class="reveal-lead">החלטתי לחשוף בשידור חי את השיטה המלאה לבניית רשת ביטחון כלכלית לילדים:</p>
 
         <h1>איך לבנות לכל ילד גב כלכלי של <span class="mark">חצי מיליון ש"ח</span> מהכסף שכבר נכנס לכם הביתה</h1>
 
+        <div class="byline">
+          <img src="assets/portrait-warm.jpg" alt="עדי סומך" width="46" height="46">
+          <div><b>עדי סומך</b><span>מייסדת אמא משקיעה</span></div>
+        </div>
+
         <figure class="proof-shot">
-          <img src="assets/wa2.jpg" alt="הודעה שקיבלתי אחרי הדרכה קודמת: וואי תקשיבי איזה פיצוץ ידע מטורף, פתאום אני מבינה כמה אני לא מודעת, אם זה לכסף שלי ואם זה לכל עולם החיסכון וההשקעות" width="946" height="621" fetchpriority="high">
-          <figcaption>הודעה שקיבלתי אחרי הדרכה קודמת</figcaption>
+          <img src="assets/proof-hero.jpg" alt="הודעה מבוגרת: בזכות הקורס יצרתי קשר עם החזרי מס, ואתמול אני ובעלי קיבלנו 17,205 שח לחשבון" width="900" height="1043" fetchpriority="high">
+          <figcaption>הודעה שקיבלתי מבוגרת. וכמו תלמידה טובה, ישר לקרן כספית.</figcaption>
         </figure>
-
-        <figure class="shot">
-          <img src="assets/portrait-authority.jpg" alt="עדי סומך, מייסדת אמא משקיעה" width="1000" height="1500" fetchpriority="high">
-          <figcaption class="tag">עדי סומך<i>מייסדת אמא משקיעה</i></figcaption>
-        </figure>
-
-        <p class="sub">הדרכה חיה של שעה. אני מראה לך את מנגנון ההשקעות האוטומטי שבניתי לבנות שלי, ואיך הוא נראה כשמפעילים אותו אצלך.</p>
 
         <ul class="points">
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>כמה באמת צריך להפריש בחודש. המספר קטן ממה שאת חושבת</span></li>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>למה חיסכון בבנק לא יביא אתכם לשם, גם אחרי 20 שנה</span></li>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>מאיפה מגיע הכסף, בלי לעבוד יותר ובלי לצמצם בבית</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>כמה באמת צריך להפריש בחודש</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>למה חיסכון בבנק לא יביא אתכם לשם</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>מאיפה מגיע הכסף, בלי לעבוד יותר</span></li>
         </ul>
       </div>
 
@@ -262,15 +268,17 @@
   <div class="wrap">
     <div class="h3-ill narrow" style="max-width:620px">
       <img src="assets/illo-talk.jpg" alt="" loading="lazy">
-      <h3>מה כתבו לי אחרי הדרכות וקורסים קודמים</h3>
+      <h3>מה קרה לנשים אחרי הקורסים והליווי</h3>
     </div>
     <p class="swipe narrow" style="max-width:620px"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>אפשר להחליק הצידה</p>
     <div class="rail">
-      <figure><img src="assets/wa1.png" alt="הודעה מבוגרת: קורס מטריף ומדויק, יצאתי עם מלא רעיונות" loading="lazy"></figure>
+      <figure><img src="assets/r1-openacc.jpg" alt="הודעה מבוגרת: פתחתי קרן השתלמות, קרן פנסיה וקופת גמל להשקעה ממש היום, אך ורק בעקבות הקורס" loading="lazy"></figure>
+      <figure><img src="assets/r2-apartment.jpg" alt="הודעה מבוגרת: היום קנינו דירה להשקעה" loading="lazy"></figure>
+      <figure><img src="assets/r4-signed-apt.jpg" alt="הודעה מבוגרת: חתמנו על דירה להשקעה" loading="lazy"></figure>
+      <figure><img src="assets/r3-thailand.jpg" alt="הודעה מבוגרת: בעקבות הקורס השקענו כסף שסתם ישב, וסיימנו את רכישת הדירה" loading="lazy"></figure>
+      <figure><img src="assets/r5-kids.jpg" alt="הודעה מבוגרת: אני יכולה להעביר לילדים שלי התנהלות נכונה עם הכסף שלהם" loading="lazy"></figure>
+      <figure><img src="assets/r6-anat.jpg" alt="הודעה מבוגרת אחרי ההדרכה" loading="lazy"></figure>
       <figure><img src="assets/wa4.jpg" alt="הודעה מבוגרת: איזו הרצאה מדהימה" loading="lazy"></figure>
-      <figure><img src="assets/wa3.jpg" alt="הודעה מבוגרת: לא משנה כמה כסף שמתי על הקורס הזה" loading="lazy"></figure>
-      <figure><img src="assets/wa5.png" alt="הודעה מבוגרת: המוח שלי מתפוצץ ואני מתה על זה" loading="lazy"></figure>
-      <figure><img src="assets/wa6.png" alt="הודעה מבוגרת: היה מושלם, לא מתנשא ולא מבולבל" loading="lazy"></figure>
     </div>
   </div>
 </section>
