@@ -14,100 +14,139 @@
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 <style>
   :root{
-    --canvas:#FBFAF7; --ink:#1A1B2E; --soft:#63647A;
-    --pink:#EF55A5; --pink-soft:#FCE1EF; --lime:#CCD537; --line:#E7E2D9;
+    --canvas:#FBFAF7; --ink:#1A1B2E; --soft:#5E5F76;
+    --pink:#EF55A5; --pink-soft:#FCE1EF; --lime:#CCD537; --sky:#BEE0F2; --vista:#8C9EFF;
+    --line:#E7E2D9;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{font-family:'Heebo',sans-serif;background:var(--canvas);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  body{font-family:'Heebo',sans-serif;background:var(--canvas);color:var(--ink);
+       font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   img{max-width:100%;height:auto;display:block}
-  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-  .narrow{max-width:660px;margin-inline:auto}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 18px}
+  .narrow{max-width:620px;margin-inline:auto}
   a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--pink);outline-offset:2px}
 
-  /* ---- top strip ---- */
-  .strip{background:var(--ink);color:#fff;text-align:center;padding:11px 20px;font-size:.95rem;font-weight:700}
+  .strip{background:var(--ink);color:#fff;text-align:center;padding:12px 18px;font-size:1rem;font-weight:800;line-height:1.45}
   .strip b{color:var(--lime);font-weight:900}
 
-  /* ---- hero ---- */
-  .hero{padding:clamp(28px,5vw,52px) 0 clamp(32px,5vw,60px)}
-  .hero .grid{display:grid;grid-template-columns:1fr 400px;gap:clamp(28px,4vw,56px);align-items:start}
-  .eyebrow{font-size:.95rem;font-weight:700;color:var(--soft);margin-bottom:14px}
-  h1{font-size:clamp(1.9rem,4.6vw,2.9rem);font-weight:900;line-height:1.2;letter-spacing:-.02em;margin-bottom:20px}
+  /* ---------- hero ---------- */
+  .hero{padding:26px 0 34px}
+  .hero .grid{display:grid;grid-template-columns:1fr 396px;gap:44px;align-items:start}
+  .eyebrow{display:inline-block;background:var(--pink-soft);color:#A32C6C;font-size:.92rem;
+           font-weight:800;border-radius:100px;padding:7px 16px;margin-bottom:16px;line-height:1.4}
+  h1{font-size:clamp(2.05rem,7.4vw,2.9rem);font-weight:900;line-height:1.16;letter-spacing:-.025em;margin-bottom:18px}
   .mark{text-decoration:underline;text-decoration-color:var(--lime);
-        text-decoration-thickness:7px;text-underline-offset:1px;
-        text-decoration-skip-ink:none}
-  .sub{font-size:clamp(1.05rem,2.2vw,1.16rem);color:var(--soft);margin-bottom:26px}
-  ul.points{list-style:none;display:grid;gap:12px;margin-bottom:26px}
-  ul.points li{display:flex;gap:11px;align-items:flex-start;font-size:1.06rem;font-weight:500}
-  ul.points svg{width:21px;height:21px;flex:none;margin-top:4px;stroke:var(--pink);fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
-  .when{display:inline-flex;flex-wrap:wrap;gap:6px 14px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:12px;padding:13px 18px;font-weight:800;font-size:1.04rem}
-  .when .free{color:var(--pink)}
+        text-decoration-thickness:8px;text-underline-offset:0;text-decoration-skip-ink:none}
 
-  /* ---- form ---- */
-  .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:clamp(22px,3vw,28px);box-shadow:0 12px 30px -22px rgba(26,27,46,.4)}
-  .who{display:flex;align-items:center;gap:12px;margin-bottom:18px;padding-bottom:18px;border-bottom:1px solid var(--line)}
-  .who img{width:54px;height:54px;border-radius:50%;object-fit:cover;object-position:top center;flex:none}
-  .who b{display:block;font-size:1rem;font-weight:900;line-height:1.3}
-  .who span{font-size:.9rem;color:var(--soft)}
-  .card h2{font-size:1.24rem;font-weight:900;line-height:1.35;margin-bottom:6px}
-  .card .hint{font-size:.95rem;color:var(--soft);margin-bottom:16px}
-  label{display:block;font-weight:700;font-size:.92rem;margin:14px 0 6px}
+  /* התמונה הגדולה — הדבר הראשון שרואים אחרי הכותרת בטלפון */
+  .shot{position:relative;border-radius:20px;overflow:hidden;margin-bottom:22px;background:#EFEAE2}
+  .shot img{width:100%;aspect-ratio:16/11;object-fit:cover;object-position:50% 22%}
+  .shot .tag{position:absolute;inset-inline-start:14px;bottom:14px;background:#fff;border-radius:12px;
+             padding:9px 14px;font-size:.92rem;font-weight:800;line-height:1.35;box-shadow:0 8px 22px -10px rgba(0,0,0,.45)}
+  .shot .tag i{display:block;font-style:normal;font-weight:600;color:var(--soft);font-size:.85rem}
+  @media(min-width:861px){ .shot img{aspect-ratio:4/3} }
+
+  .sub{font-size:1.1rem;color:var(--soft);margin-bottom:22px}
+  ul.points{list-style:none;display:grid;gap:13px;margin-bottom:24px}
+  ul.points li{display:flex;gap:11px;align-items:flex-start;font-size:1.07rem;font-weight:600}
+  ul.points svg{width:22px;height:22px;flex:none;margin-top:4px;stroke:var(--pink);fill:none;stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round}
+
+  /* ---------- form ---------- */
+  .card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;
+        box-shadow:0 16px 40px -26px rgba(26,27,46,.5)}
+  .card h2{font-size:1.32rem;font-weight:900;line-height:1.3;margin-bottom:5px}
+  .card .hint{font-size:.98rem;color:var(--soft);margin-bottom:16px}
+  label{display:block;font-weight:800;font-size:.93rem;margin:14px 0 6px}
   label:first-of-type{margin-top:0}
-  input{width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:10px;font-family:inherit;font-size:1.05rem;background:var(--canvas);color:var(--ink)}
+  input{width:100%;padding:14px 15px;border:1.5px solid var(--line);border-radius:11px;
+        font-family:inherit;font-size:1.06rem;background:var(--canvas);color:var(--ink)}
   input:focus{outline:none;border-color:var(--pink);background:#fff}
-  .btn{display:block;width:100%;margin-top:20px;background:var(--pink);color:#fff;border:none;border-radius:10px;padding:17px 20px;font-family:inherit;font-weight:900;font-size:1.12rem;cursor:pointer;transition:filter .15s}
+  .btn{display:block;width:100%;margin-top:20px;background:var(--pink);color:#fff;border:none;
+       border-radius:11px;padding:18px 20px;font-family:inherit;font-weight:900;font-size:1.16rem;
+       cursor:pointer;transition:filter .15s;box-shadow:0 10px 24px -12px rgba(239,85,165,.9)}
   .btn:hover{filter:brightness(.94)}
   .btn:disabled{opacity:.7;cursor:default}
-  .err{margin-top:12px;font-size:.92rem;font-weight:700;color:#B4245F;display:none;text-align:center}
-  .fine{margin-top:13px;font-size:.82rem;color:var(--soft);text-align:center;line-height:1.55}
+  .err{margin-top:12px;font-size:.94rem;font-weight:700;color:#B4245F;display:none;text-align:center}
+  .fine{margin-top:13px;font-size:.84rem;color:var(--soft);text-align:center;line-height:1.55}
 
-  @media(max-width:860px){
-    .hero .grid{grid-template-columns:1fr;gap:26px}
-    .hero{padding-top:22px}
-  }
+  @media(max-width:860px){ .hero .grid{grid-template-columns:1fr;gap:24px} }
 
-  /* ---- sections ---- */
-  section{padding:clamp(38px,6vw,64px) 0}
+  /* ---------- the number band ---------- */
+  .band{background:var(--ink);color:#fff;padding:40px 0;text-align:center;overflow:hidden}
+  .band .lbl{font-size:1.02rem;opacity:.75;font-weight:700}
+  .band .row{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;margin:14px 0 10px}
+  .band .from{font-size:clamp(1.5rem,7vw,2rem);font-weight:900}
+  .band .arw{width:34px;height:34px;stroke:var(--lime);fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+  .band .to{font-size:clamp(2.5rem,12vw,3.6rem);font-weight:900;color:var(--lime);letter-spacing:-.03em;line-height:1}
+  .band .note{font-size:.92rem;opacity:.62;max-width:420px;margin:8px auto 0;line-height:1.55}
+
+  /* ---------- sections ---------- */
+  section{padding:44px 0}
   .bordered{border-top:1px solid var(--line)}
-  h3{font-size:clamp(1.35rem,3.2vw,1.8rem);font-weight:900;letter-spacing:-.02em;margin-bottom:22px;line-height:1.3}
-  .learn{list-style:none;display:grid;gap:16px}
-  .learn li{display:flex;gap:14px;align-items:flex-start}
-  .learn .n{flex:none;width:30px;height:30px;border-radius:8px;background:var(--pink-soft);color:var(--pink);font-weight:900;font-size:.95rem;display:flex;align-items:center;justify-content:center;margin-top:2px}
-  .learn b{display:block;font-weight:800;font-size:1.08rem;margin-bottom:2px}
-  .learn span{color:var(--soft);font-size:1rem}
+  h3{font-size:clamp(1.5rem,6vw,1.95rem);font-weight:900;letter-spacing:-.025em;margin-bottom:20px;line-height:1.25}
+  .h3-ill{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+  .h3-ill img{width:66px;height:66px;border-radius:14px;flex:none;object-fit:cover}
+  .h3-ill h3{margin:0}
 
-  .bio{display:grid;grid-template-columns:150px 1fr;gap:26px;align-items:start}
-  .bio img{border-radius:14px}
-  .bio p{margin-bottom:12px;color:#3A3B50}
+  .learn{list-style:none;display:grid;gap:14px}
+  .learn li{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px;
+            display:flex;gap:14px;align-items:flex-start}
+  .learn .n{flex:none;width:32px;height:32px;border-radius:9px;background:var(--pink);color:#fff;
+            font-weight:900;font-size:1rem;display:flex;align-items:center;justify-content:center}
+  .learn b{display:block;font-weight:900;font-size:1.1rem;margin-bottom:3px}
+  .learn span{color:var(--soft);font-size:1.02rem}
+
+  .bio{display:grid;grid-template-columns:190px 1fr;gap:26px;align-items:start}
+  .bio img{border-radius:16px}
+  .bio p{margin-bottom:13px;color:#35364B}
   .bio p:last-child{margin-bottom:0}
-  @media(max-width:600px){.bio{grid-template-columns:1fr;gap:18px}.bio img{max-width:170px}}
+  @media(max-width:640px){.bio{grid-template-columns:1fr;gap:18px}.bio img{max-width:230px;margin-inline:auto}}
 
-  .quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
-  .quotes figure{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px}
-  .quotes blockquote{font-size:1rem;line-height:1.6}
-  .quotes figcaption{margin-top:10px;font-size:.88rem;color:var(--soft);font-weight:700}
+  /* צילומי המסך האמיתיים מוואטסאפ — רצועה נגללת, כדי שיישארו קריאים */
+  .rail{display:flex;align-items:flex-start;gap:14px;overflow-x:auto;scroll-snap-type:x proximity;
+        padding:4px 18px 16px;margin-inline:-18px;-webkit-overflow-scrolling:touch;
+        scrollbar-width:thin}
+  .rail figure{flex:0 0 clamp(255px,76vw,300px);scroll-snap-align:start;background:#fff;
+               border:1px solid var(--line);border-radius:16px;padding:10px;
+               box-shadow:0 12px 28px -20px rgba(26,27,46,.55)}
+  .rail img{border-radius:10px;width:100%}
+  .swipe{font-size:.9rem;color:var(--soft);font-weight:700;margin-top:2px;display:flex;
+         align-items:center;gap:7px}
+  .swipe svg{width:17px;height:17px;stroke:var(--pink);fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
 
-  .facts{background:#fff;border:1px solid var(--line);border-radius:14px;padding:clamp(20px,3vw,26px);display:grid;gap:11px}
-  .facts div{display:flex;gap:12px;font-size:1.02rem}
-  .facts dt{font-weight:900;min-width:52px}
+  .facts{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;display:grid;gap:13px}
+  .facts div{display:flex;gap:13px;font-size:1.05rem}
+  .facts dt{font-weight:900;min-width:50px;flex:none}
   .facts dd{color:var(--soft)}
-  .heads-up{margin-top:16px;font-size:.98rem;color:var(--soft);line-height:1.6;background:var(--pink-soft);border-radius:12px;padding:16px 18px}
+  .heads-up{margin-top:16px;font-size:1rem;color:#5A3348;line-height:1.6;background:var(--pink-soft);border-radius:14px;padding:18px}
   .heads-up b{color:var(--ink)}
 
-  .closing{text-align:center;background:#fff;border-top:1px solid var(--line)}
-  .closing .card{max-width:440px;margin:22px auto 0;text-align:right}
+  .closing{background:#fff;border-top:1px solid var(--line);text-align:center}
+  .closing h3{margin-bottom:6px}
+  .closing .lead{color:var(--soft);margin-bottom:20px}
+  .closing .card{max-width:430px;margin-inline:auto;text-align:right}
 
-  footer{padding:26px 20px 34px;text-align:center;font-size:.86rem;color:var(--soft)}
+  /* פס דביק בטלפון — תמיד יש דרך להירשם */
+  .dock{position:fixed;inset-inline:0;bottom:0;z-index:40;background:rgba(255,255,255,.95);
+        backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 14px;
+        display:none;align-items:center;justify-content:space-between;gap:12px}
+  .dock span{font-weight:800;font-size:.93rem;line-height:1.3}
+  .dock span i{display:block;font-style:normal;color:var(--soft);font-weight:600;font-size:.84rem}
+  .dock a{background:var(--pink);color:#fff;border-radius:10px;padding:12px 20px;font-weight:900;
+          font-size:1rem;text-decoration:none;white-space:nowrap}
+  @media(max-width:860px){ .dock{display:flex} body{padding-bottom:74px} }
+
+  footer{padding:24px 18px 30px;text-align:center;font-size:.88rem;color:var(--soft)}
   footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:8px}
   footer button{background:none;border:none;font:inherit;color:var(--soft);text-decoration:underline;cursor:pointer;padding:2px}
   dialog{border:none;border-radius:16px;padding:0;max-width:560px;width:calc(100% - 36px)}
   dialog::backdrop{background:rgba(26,27,46,.55)}
-  .dlg{padding:28px;text-align:right}
+  .dlg{padding:26px;text-align:right}
   .dlg h4{font-size:1.15rem;margin-bottom:12px}
-  .dlg p{font-size:.95rem;color:var(--soft);margin-bottom:11px}
+  .dlg p{font-size:.96rem;color:var(--soft);margin-bottom:11px}
   .dlg a{color:var(--pink)}
-  .dlg button{margin-top:8px;background:var(--ink);color:#fff;border:none;border-radius:8px;padding:11px 26px;font:inherit;font-weight:800;cursor:pointer}
+  .dlg button{margin-top:8px;background:var(--ink);color:#fff;border:none;border-radius:9px;padding:12px 26px;font:inherit;font-weight:800;cursor:pointer}
 </style>
 </head>
 <body>
@@ -123,6 +162,11 @@
 
         <h1>איך לבנות לכל ילד גב כלכלי של <span class="mark">חצי מיליון ש"ח</span> מהכסף שכבר נכנס לכם הביתה</h1>
 
+        <figure class="shot">
+          <img src="assets/portrait-authority.jpg" alt="עדי סומך, מייסדת אמא משקיעה" width="1000" height="1500" fetchpriority="high">
+          <figcaption class="tag">עדי סומך<i>מייסדת אמא משקיעה</i></figcaption>
+        </figure>
+
         <p class="sub">הדרכה חיה של שעה. אני מראה לך את מנגנון ההשקעות האוטומטי שבניתי לבנות שלי, ואיך הוא נראה כשמפעילים אותו אצלך.</p>
 
         <ul class="points">
@@ -130,18 +174,9 @@
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>למה חיסכון בבנק לא יביא אתכם לשם, גם אחרי 20 שנה</span></li>
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>מאיפה מגיע הכסף, בלי לעבוד יותר ובלי לצמצם בבית</span></li>
         </ul>
-
-        <p class="when">
-          <span>יום שני, 7.9.26 בשעה 20:30</span>
-          <span class="free">ללא עלות</span>
-        </p>
       </div>
 
-      <div class="card" id="top-form">
-        <div class="who">
-          <img src="assets/portrait-warm.jpg" alt="עדי סומך" width="54" height="54">
-          <div><b>עדי סומך</b><span>אמא משקיעה</span></div>
-        </div>
+      <div class="card" id="form-top">
         <h2>אני שומרת לך מקום</h2>
         <p class="hint">משאירה פרטים ואני שולחת לך את הלינק לזום, ותזכורת לפני שמתחילים.</p>
         <form id="f1" novalidate>
@@ -161,9 +196,25 @@
   </div>
 </header>
 
-<section class="bordered">
+<div class="band">
+  <div class="wrap">
+    <p class="lbl">כדי שיהיה ברור על מה מדובר:</p>
+    <div class="row">
+      <span class="from">500 ₪ בחודש</span>
+      <svg class="arw" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+      <span class="to">475,000 ₪</span>
+    </div>
+    <p class="lbl">מהלידה ועד גיל 25</p>
+    <p class="note">בהנחת תשואה שנתית ממוצעת של 8 אחוזים. דוגמה להמחשה בלבד, לא הבטחה לתוצאה ולא ייעוץ השקעות.</p>
+  </div>
+</div>
+
+<section>
   <div class="wrap narrow">
-    <h3>מה נעשה בשעה הזאת</h3>
+    <div class="h3-ill">
+      <img src="assets/illo-keys.jpg" alt="" loading="lazy">
+      <h3>מה נעשה בשעה הזאת</h3>
+    </div>
     <ul class="learn">
       <li><span class="n">1</span><div><b>המספר</b><span>איך בניתי לבנות שלי יעד של חצי מיליון ש"ח לכל אחת, ומה זה דורש בפועל כל חודש.</span></div></li>
       <li><span class="n">2</span><div><b>מאיפה הכסף</b><span>איך לאתר כספים שכבר קיימים אצלך ולא עובדים, ולהעביר אותם למקום שמניב מהרגע הראשון.</span></div></li>
@@ -177,10 +228,11 @@
   <div class="wrap narrow">
     <h3>נעים להכיר</h3>
     <div class="bio">
-      <img src="assets/portrait-authority.jpg" alt="עדי סומך, מייסדת אמא משקיעה" width="300" height="450" loading="lazy">
+      <img src="assets/portrait-warm.jpg" alt="עדי סומך" width="300" height="450" loading="lazy">
       <div>
-        <p>אני עדי סומך, מייסדת אמא משקיעה. שש שנים אני עוסקת בדבר אחד: איך משפחה רגילה בישראל בונה לילדים שלה גב כלכלי אמיתי, בלי להעלות את ההכנסה ובלי להוריד את רמת החיים.</p>
-        <p>ליוויתי מאות בוגרות, ומעל 4,000 אמהות הורידו את המדריכים שכתבתי. את המנגנון שאני מראה בהדרכה בניתי קודם כל לשתי הבנות שלי, ורק אחר כך הבנתי שאפשר ללמד אותו.</p>
+        <p>אני עדי סומך, מייסדת אמא משקיעה.</p>
+        <p>שש שנים אני עוסקת בדבר אחד: איך משפחה רגילה בישראל בונה לילדים שלה גב כלכלי אמיתי, בלי להעלות את ההכנסה ובלי להוריד את רמת החיים.</p>
+        <p>ליוויתי מאות בוגרות, ומעל 4,000 אמהות הורידו את המדריכים שכתבתי. את המנגנון שאני מראה בהדרכה בניתי קודם כל לשתי הבנות שלי.</p>
         <p>הוא לא דורש הכנסה גבוהה ולא ידע פיננסי. הוא דורש להתחיל כשהם קטנים.</p>
       </div>
     </div>
@@ -188,19 +240,29 @@
 </section>
 
 <section class="bordered">
-  <div class="wrap narrow">
-    <h3>מה אמרו אחרי ההדרכות הקודמות</h3>
-    <div class="quotes">
-      <figure><blockquote>"באמת השתנו לנו החיים. פשוט תפיסה שהשתנתה 180 מעלות. ומה שכיף שזה גרם גם לבעלי להיות איתי בזה."</blockquote><figcaption>מתוך הודעה שקיבלתי</figcaption></figure>
-      <figure><blockquote>"היה מרתק מרתק מרתק. פתחת את המוח ממש. חלק מהמושגים לא הכרתי בכלל."</blockquote><figcaption>מתוך הודעה שקיבלתי</figcaption></figure>
-      <figure><blockquote>"כיף לדעת שזה עולם שאפשר לא לחשוש לגשת אליו כשיש את האנשים הנכונים שיכוונו ויסבירו."</blockquote><figcaption>מתוך הודעה שקיבלתי</figcaption></figure>
+  <div class="wrap">
+    <div class="h3-ill narrow" style="max-width:620px">
+      <img src="assets/illo-talk.jpg" alt="" loading="lazy">
+      <h3>מה כתבו לי אחרי הדרכות וקורסים קודמים</h3>
+    </div>
+    <p class="swipe narrow" style="max-width:620px"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>אפשר להחליק הצידה</p>
+    <div class="rail">
+      <figure><img src="assets/wa1.png" alt="הודעה מבוגרת: קורס מטריף ומדויק, יצאתי עם מלא רעיונות" loading="lazy"></figure>
+      <figure><img src="assets/wa2.jpg" alt="הודעה מבוגרת: איזה פיצוץ ידע, פתאום אני מבינה כמה אני לא מודעת" loading="lazy"></figure>
+      <figure><img src="assets/wa4.jpg" alt="הודעה מבוגרת: איזו הרצאה מדהימה" loading="lazy"></figure>
+      <figure><img src="assets/wa3.jpg" alt="הודעה מבוגרת: לא משנה כמה כסף שמתי על הקורס הזה" loading="lazy"></figure>
+      <figure><img src="assets/wa5.png" alt="הודעה מבוגרת: המוח שלי מתפוצץ ואני מתה על זה" loading="lazy"></figure>
+      <figure><img src="assets/wa6.png" alt="הודעה מבוגרת: היה מושלם, לא מתנשא ולא מבולבל" loading="lazy"></figure>
     </div>
   </div>
 </section>
 
 <section class="bordered">
   <div class="wrap narrow">
-    <h3>הפרטים</h3>
+    <div class="h3-ill">
+      <img src="assets/illo-door.jpg" alt="" loading="lazy">
+      <h3>הפרטים</h3>
+    </div>
     <dl class="facts">
       <div><dt>מתי</dt><dd>יום שני, 7.9.26, בשעה 20:30. שעה, ועוד זמן לשאלות.</dd></div>
       <div><dt>איפה</dt><dd>בזום. הלינק נשלח למייל ולנייד.</dd></div>
@@ -210,9 +272,10 @@
   </div>
 </section>
 
-<section class="closing">
+<section class="closing" id="form-bottom">
   <div class="wrap narrow">
     <h3>נתראה ביום שני ב-20:30</h3>
+    <p class="lead">שעה אחת. בלי עלות. עם הלינק במייל.</p>
     <div class="card">
       <form id="f2" novalidate>
         <label for="n2">שם</label>
@@ -228,6 +291,11 @@
     </div>
   </div>
 </section>
+
+<div class="dock" id="dock">
+  <span>יום שני 7.9 · 20:30<i>ללא עלות</i></span>
+  <a href="#form-bottom">שריינו לי מקום</a>
+</div>
 
 <footer>
   <nav aria-label="קישורים משפטיים">
@@ -268,8 +336,19 @@
     b.addEventListener('click', function(){ b.closest('dialog').close(); });
   });
 
-  // ---- הרשמה. שני הטפסים בדף מתנהגים זהה ושולחים לאותו endpoint:
-  // פרוקסי בשרת course-portal (מפתח סמוב לא נחשף בדפדפן) -> רשימה 1163758.
+  // הפס הדביק מוסתר כשטופס נמצא על המסך, כדי שלא יסתיר את הכפתור האמיתי
+  var dock = document.getElementById('dock');
+  if('IntersectionObserver' in window){
+    var vis = 0;
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ vis += e.isIntersecting ? 1 : -1; });
+      dock.style.visibility = vis > 0 ? 'hidden' : 'visible';
+    }, {threshold:0});   // מסתירים ברגע שחלק כלשהו מטופס נכנס למסך, שהפס לא יכסה את הכפתור
+    ['form-top','form-bottom'].forEach(function(id){ io.observe(document.getElementById(id)); });
+  }
+
+  // ---- הרשמה. שני הטפסים שולחים לאותו endpoint: פרוקסי בשרת course-portal
+  // (מפתח סמוב לא נחשף בדפדפן) -> רשימת סמוב 1163758.
   var ENDPOINT = "https://academy.mominvest.co.il/webinar-signup";
   var THANKS = "thanks/";
 
