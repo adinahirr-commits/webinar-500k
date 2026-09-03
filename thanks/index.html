@@ -33,6 +33,8 @@
   .act.wa{background:var(--wa)}
   .act.cal{background:var(--ink)}
   .act:hover{filter:brightness(.95)}
+  .alt{font-size:.88rem;color:var(--soft);margin:10px 0 0;text-align:center}
+  .alt a{color:var(--pink);font-weight:700}
   .fine{font-size:.86rem;margin:20px 0 0}
   .fine a{color:var(--pink)}
   footer{text-align:center;padding:22px;font-size:.85rem;color:var(--soft)}
@@ -60,10 +62,28 @@
     <div class="steps">
       <div class="step"><span class="n">2</span><div><b>הכניסי את ההדרכה ליומן</b><span>לחיצה אחת, ולא תפספסי.</span></div></div>
     </div>
-    <a class="act cal" href="https://calendar.app.google/6xAQUx8LrcV5EmML9" target="_blank" rel="noopener">
+    <!-- הוספה ליומן. הכפתור הישן הצביע על לינק שיתוף של אירוע ספציפי
+         (calendar.app.google/…) — וברגע שהאירוע ביומן נמחק ונוצר מחדש הלינק מת
+         והנרשמות קיבלו "הקישור לא עבד". כאן אין תלות באירוע חי: אייפון/מק מקבלים
+         קובץ .ics מתארח, השאר מקבלים לינק TEMPLATE של גוגל. שניהם עצמאיים לגמרי. -->
+    <a class="act cal" id="calBtn" href="webinar.ics" download="webinar.ics">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
       להוסיף ליומן
     </a>
+    <p class="alt">או <a id="calAlt" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=%D7%94%D7%96%D7%95%D7%9D%20%D7%A9%D7%9C%20%D7%90%D7%9E%D7%90%20%D7%9E%D7%A9%D7%A7%D7%99%D7%A2%D7%94%20%E2%80%94%20%D7%90%D7%99%D7%9A%20%D7%9C%D7%AA%D7%AA%20%D7%97%D7%A6%D7%99%20%D7%9E%D7%99%D7%9C%D7%99%D7%95%D7%9F%20%D7%9C%D7%9B%D7%9C%20%D7%99%D7%9C%D7%93&amp;dates=20260907T173000Z%2F20260907T183000Z&amp;details=%D7%A0%D7%A2%D7%99%D7%9D%20%D7%9E%D7%90%D7%95%D7%93%2C%20%D7%90%D7%A0%D7%99%20%D7%A9%D7%9E%D7%97%D7%94%20%D7%A9%D7%90%D7%AA%20%D7%90%D7%99%D7%AA%D7%99%20%F0%9F%92%97%0A%0A%D7%A7%D7%99%D7%A9%D7%95%D7%A8%20%D7%94%D7%96%D7%95%D7%9D%3A%0Ahttps%3A%2F%2Fus06web.zoom.us%2Fj%2F81295376022%3Fpwd%3DbNBJa0qR3DOeUcZeNoa0Ge3wFau091.1%0A%0AMeeting%20ID%3A%20812%209537%206022%0APasscode%3A%20343055%0A%0A%D7%94%D7%A7%D7%99%D7%A9%D7%95%D7%A8%20%D7%99%D7%99%D7%A9%D7%9C%D7%97%20%D7%92%D7%9D%20%D7%91%D7%9E%D7%99%D7%99%D7%9C%20%D7%95%D7%91%D7%A7%D7%91%D7%95%D7%A6%D7%AA%20%D7%94%D7%95%D7%95%D7%90%D7%98%D7%A1%D7%90%D7%A4%20%D7%9C%D7%A4%D7%A0%D7%99%20%D7%94%D7%94%D7%93%D7%A8%D7%9B%D7%94.%0A%D7%A0%D7%AA%D7%A8%D7%90%D7%94%2C%20%D7%A2%D7%93%D7%99%20%D7%A1%D7%95%D7%9E%D7%9A&amp;location=https%3A%2F%2Fus06web.zoom.us%2Fj%2F81295376022%3Fpwd%3DbNBJa0qR3DOeUcZeNoa0Ge3wFau091.1&amp;ctz=Asia%2FJerusalem" target="_blank" rel="noopener">ליומן גוגל</a></p>
+    <script>
+    (function(){
+      var ics="webinar.ics", g="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%D7%94%D7%96%D7%95%D7%9D%20%D7%A9%D7%9C%20%D7%90%D7%9E%D7%90%20%D7%9E%D7%A9%D7%A7%D7%99%D7%A2%D7%94%20%E2%80%94%20%D7%90%D7%99%D7%9A%20%D7%9C%D7%AA%D7%AA%20%D7%97%D7%A6%D7%99%20%D7%9E%D7%99%D7%9C%D7%99%D7%95%D7%9F%20%D7%9C%D7%9B%D7%9C%20%D7%99%D7%9C%D7%93&dates=20260907T173000Z%2F20260907T183000Z&details=%D7%A0%D7%A2%D7%99%D7%9D%20%D7%9E%D7%90%D7%95%D7%93%2C%20%D7%90%D7%A0%D7%99%20%D7%A9%D7%9E%D7%97%D7%94%20%D7%A9%D7%90%D7%AA%20%D7%90%D7%99%D7%AA%D7%99%20%F0%9F%92%97%0A%0A%D7%A7%D7%99%D7%A9%D7%95%D7%A8%20%D7%94%D7%96%D7%95%D7%9D%3A%0Ahttps%3A%2F%2Fus06web.zoom.us%2Fj%2F81295376022%3Fpwd%3DbNBJa0qR3DOeUcZeNoa0Ge3wFau091.1%0A%0AMeeting%20ID%3A%20812%209537%206022%0APasscode%3A%20343055%0A%0A%D7%94%D7%A7%D7%99%D7%A9%D7%95%D7%A8%20%D7%99%D7%99%D7%A9%D7%9C%D7%97%20%D7%92%D7%9D%20%D7%91%D7%9E%D7%99%D7%99%D7%9C%20%D7%95%D7%91%D7%A7%D7%91%D7%95%D7%A6%D7%AA%20%D7%94%D7%95%D7%95%D7%90%D7%98%D7%A1%D7%90%D7%A4%20%D7%9C%D7%A4%D7%A0%D7%99%20%D7%94%D7%94%D7%93%D7%A8%D7%9B%D7%94.%0A%D7%A0%D7%AA%D7%A8%D7%90%D7%94%2C%20%D7%A2%D7%93%D7%99%20%D7%A1%D7%95%D7%9E%D7%9A&location=https%3A%2F%2Fus06web.zoom.us%2Fj%2F81295376022%3Fpwd%3DbNBJa0qR3DOeUcZeNoa0Ge3wFau091.1&ctz=Asia%2FJerusalem",
+          apple=/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent),
+          btn=document.getElementById('calBtn'), alt=document.getElementById('calAlt');
+      if(apple) return;                      // ברירת המחדל בקובץ כבר מתאימה לאפל
+      btn.href=g; btn.removeAttribute('download');
+      btn.target='_blank'; btn.rel='noopener';
+      alt.href=ics; alt.download='webinar.ics';
+      alt.removeAttribute('target'); alt.removeAttribute('rel');
+      alt.textContent='ליומן אחר (אייפון, אאוטלוק)';
+    })();
+    </script>
 
     <p class="fine">משהו לא הגיע? כתבי לי ל־<a href="mailto:mominvest10x@gmail.com">mominvest10x@gmail.com</a> ואני מסדרת.</p>
   </div>

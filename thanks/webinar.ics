@@ -1,0 +1,36 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Mama Investor//Webinar 500K//HE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:webinar-500k-20260907@mominvest.co.il
+DTSTAMP:20260903T190000Z
+DTSTART:20260907T173000Z
+DTEND:20260907T183000Z
+SUMMARY:הזום של אמא משקיעה — איך לתת חצי מיל
+ יון לכל ילד
+DESCRIPTION:נעים מאוד\, אני שמחה שאת איתי 💗\n\n
+ קישור הזום:\nhttps://us06web.zoom.us/j/81295376022?pwd=bNBJa0qR
+ 3DOeUcZeNoa0Ge3wFau091.1\n\nMeeting ID: 812 9537 6022\nPasscode: 343055\
+ n\nהקישור יישלח גם במייל ובקבוצת הוואטסא
+ פ לפני ההדרכה.\nנתראה\, עדי סומך
+LOCATION:https://us06web.zoom.us/j/81295376022?pwd=bNBJa0qR3DOeUcZeNoa0Ge
+ 3wFau091.1
+URL:https://us06web.zoom.us/j/81295376022?pwd=bNBJa0qR3DOeUcZeNoa0Ge3wFau
+ 091.1
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:מחר ההדרכה של אמא משקיעה 💗
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT60M
+ACTION:DISPLAY
+DESCRIPTION:בעוד שעה מתחילים — איך לתת חצי מי
+ ליון לכל ילד
+END:VALARM
+END:VEVENT
+END:VCALENDAR
