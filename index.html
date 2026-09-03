@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>איך לבנות לכל ילד גב כלכלי של חצי מיליון ש"ח | הדרכה חיה 15.9 | אמא משקיעה</title>
-<meta name="description" content="הדרכה חיה של שעה, יום שלישי 15.9 ב-20:30, ללא עלות. איך לבנות לכל ילד חצי מיליון ש&quot;ח מהכסף שכבר נכנס לכם הביתה.">
+<title>איך לבנות לכל ילד גב כלכלי של חצי מיליון ש"ח | הדרכה חיה 7.9 | אמא משקיעה</title>
+<meta name="description" content="הדרכה חיה של שעה, יום שני 7.9 ב-20:30, ללא עלות. איך לבנות לכל ילד חצי מיליון ש&quot;ח מהכסף שכבר נכנס לכם הביתה.">
 <meta property="og:title" content="איך לבנות לכל ילד גב כלכלי של חצי מיליון ש&quot;ח">
-<meta property="og:description" content="הדרכה חיה, יום שלישי 15.9 ב-20:30, ללא עלות.">
+<meta property="og:description" content="הדרכה חיה, יום שני 7.9 ב-20:30, ללא עלות.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%23EF55A5'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,8 @@
     --pink:#EF55A5; --pink-soft:#FCE1EF; --lime:#CCD537; --line:#E7E2D9;
   }
   *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
+  html{scroll-behavior:smooth;scroll-padding-top:12px}
+  #f2{scroll-margin-top:16px}
   body{font-family:'Heebo',sans-serif;background:var(--canvas);color:var(--ink);
        font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   img{max-width:100%;height:auto;display:block}
@@ -30,22 +31,21 @@
   .strip q{quotes:'\201C' '\201D'}
   .strip b{display:block;color:var(--lime);font-weight:900;font-size:.88rem;margin-top:2px}
   /* הפרטים הטכניים: צמוד לטופס, לא בראש הדף */
-  .when-line{text-align:center;font-weight:800;font-size:1rem;margin-bottom:10px;color:var(--ink)}
+  .when-line{text-align:center;font-weight:900;font-size:clamp(1.12rem,4.6vw,1.3rem);line-height:1.45;margin-bottom:12px;color:var(--ink)}
   .when-line b{color:var(--pink);font-weight:900}
 
   /* ---------- hero ---------- */
   .hero{padding:26px 0 30px}
   .hero .grid{display:grid;grid-template-columns:1fr 396px;gap:44px;align-items:start}
-  .pre{font-size:clamp(1.1rem,4.2vw,1.3rem);font-weight:800;line-height:1.45;margin-bottom:10px}
+  .pre{font-size:clamp(1.3rem,5.2vw,1.6rem);font-weight:900;line-height:1.4;margin-bottom:10px;color:var(--pink)}
   .lead-in{font-size:1rem;font-weight:600;color:var(--soft);margin-bottom:14px}
   h1{font-size:clamp(1.9rem,6.6vw,2.6rem);font-weight:900;line-height:1.18;letter-spacing:-.025em;margin-bottom:14px}
   .mark{text-decoration:underline;text-decoration-color:var(--lime);
         text-decoration-thickness:8px;text-underline-offset:0;text-decoration-skip-ink:none}
   .sub{font-size:1.08rem;font-weight:600;color:var(--soft);margin-bottom:18px}
   /* התמונה עם התינוקת, מיד אחרי הכותרת */
-  .hero-photo{border-radius:20px;overflow:hidden;margin-bottom:18px}
-  .hero-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 30%}
-  @media(min-width:861px){ .hero-photo img{aspect-ratio:5/4} }
+  .hero-photo{width:min(300px,72vw);margin:0 auto 18px;border-radius:50%;overflow:hidden;box-shadow:0 18px 40px -22px rgba(26,27,46,.5)}
+  .hero-photo img{width:100%;aspect-ratio:1;object-fit:cover;object-position:50% 38%}
 
   .byline{display:flex;align-items:center;gap:10px;margin-bottom:18px}
   .byline img{width:44px;height:44px;border-radius:50%;object-fit:cover;object-position:50% 18%;flex:none}
@@ -106,10 +106,12 @@
             font-weight:900;font-size:1rem;display:flex;align-items:center;justify-content:center}
   .learn b{display:block;font-weight:900;font-size:1.08rem;line-height:1.3}
   .learn span{color:var(--soft);font-size:.98rem}
+  .learn li.reveal{background:var(--pink-soft);border-color:#F3C4DA}
+  .learn li.reveal .n{background:var(--ink)}
 
   .bio{text-align:center;max-width:560px;margin-inline:auto}
-  .bio .fam{border-radius:20px;overflow:hidden;margin:0 auto 22px;max-width:420px}
-  .bio .fam img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 35%}
+  .bio .fam{width:min(300px,72vw);border-radius:50%;overflow:hidden;margin:0 auto 22px;box-shadow:0 18px 40px -22px rgba(26,27,46,.5)}
+  .bio .fam img{width:100%;aspect-ratio:1;object-fit:cover;object-position:50% 45%}
   .bio p{margin-bottom:14px;color:#35364B;font-size:1.04rem;line-height:1.65}
   .bio p:last-child{margin-bottom:0}
   .bio b{font-weight:900;color:var(--ink)}
@@ -126,9 +128,6 @@
   .tgrid.open figure.more{display:block}
   @media(max-width:900px){.tgrid{columns:2}}
   @media(max-width:560px){.tgrid{columns:1}}
-  .more-btn{display:block;margin:6px auto 0;background:#fff;color:var(--ink);border:1.5px solid var(--ink);
-            border-radius:100px;padding:12px 26px;font:inherit;font-weight:800;font-size:1rem;cursor:pointer}
-  .more-btn:hover{background:var(--ink);color:#fff}
 
   .heads-up{margin:0 auto 22px;max-width:520px;font-size:.98rem;color:#5A3348;line-height:1.55;
             background:var(--pink-soft);border-radius:14px;padding:16px 18px;text-align:center}
@@ -183,10 +182,10 @@
         <h1>איך לבנות לכל ילד גב כלכלי של <span class="mark">חצי מיליון ש"ח</span> מהכסף שכבר נכנס לכם הביתה</h1>
 
         <figure class="hero-photo">
-          <img src="assets/hero-baby.jpg" alt="עדי סומך עם התינוקת" width="1000" height="1778" fetchpriority="high">
+          <img src="assets/hero-baby.jpg" alt="עדי סומך עם התינוקת" width="1200" height="2133" fetchpriority="high">
         </figure>
 
-        <p class="sub">בשעה אחת: כמה להפריש, איפה, ומאיפה הכסף.</p>
+        <p class="sub">בשעה אחת: כמה לשים לכל ילד, איפה, ומאיפה להביא את הכסף.</p>
 
 
         <figure class="proof-shot">
@@ -195,10 +194,10 @@
       </div>
 
       <div>
-        <p class="when-line">יום שלישי 15.9 · בשעה 20:30 · שעה בזום · <b>ללא עלות</b></p>
+        <p class="when-line">יום שני 7.9 · בשעה 20:30 · שעה בזום · <b>ללא עלות</b></p>
         <div class="card" id="form-top">
-        <h2>אני שומרת לך מקום</h2>
-        <p class="hint">הלינק לזום ותזכורת, ישר לנייד.</p>
+        <h2>שרייני כבר עכשיו את המקום שלך</h2>
+        <p class="hint">(מספר המקומות מוגבל)</p>
         <form id="f1" novalidate>
           <label for="n1">שם</label>
           <input id="n1" type="text" autocomplete="given-name" required>
@@ -218,7 +217,7 @@
 </header>
 
 <div class="contrast">
-  <p>רוב האמהות שומרות בבנק.<br>המנגנון הזה עובד אחרת:<br><b>הכסף עובד, גם כשאת ישנה.</b></p>
+  <p>רוב האמהות חוסכות לילדים.<br>המנגנון הזה עובד אחרת:<br><b>הכסף עובד וגדל גם כשאת ישנה.</b></p>
 </div>
 
 
@@ -233,25 +232,8 @@
       <li><span class="n">2</span><div><b>מאיפה הכסף</b><span>כספים שכבר יש לך ולא עובדים</span></div></li>
       <li><span class="n">3</span><div><b>בלי לוותר על היום</b><span>חופשות כן. אשמה לא.</span></div></li>
       <li><span class="n">4</span><div><b>ולמה זה לא נגמר בילדים</b><span>השאלה ששומרת לסוף</span></div></li>
+      <li class="reveal"><span class="n">★</span><div><b>בסוף ההדרכה אציג לראשונה את הליווי החדש של אמא משקיעה</b><span>ותהיה הזדמנות לראשונות לתפוס מקום</span></div></li>
     </ul>
-  </div>
-</section>
-
-<section class="bordered">
-  <div class="wrap narrow">
-    <h3>נעים להכיר</h3>
-    <div class="bio">
-      <figure class="fam"><img src="assets/family.jpg" alt="עדי סומך עם המשפחה" width="1000" height="1332" loading="lazy"></figure>
-      <p>אם עוד לא הכרנו, היי!<br>אני <b>עדי סומך</b>. נשואה למני ואמא של אלה ואביב.</p>
-      <p>בשנת 2020 ילדתי את אלה.<br>ועד היום, כשאני נזכרת בדיסוננס הזה שהרגשתי אז, <b>מתכווצת לי הבטן.</b><br>למה אף אחד לא מדבר על זה?</p>
-      <p>מצד אחד, ההוצאות מזנקות בבת אחת:<br>עגלה, מעון, בגדים, עוד אוטו...<br>פתאום אפילו לצאת מהבית לשעה זה בייביסיטר.</p>
-      <p>מצד שני, המחשבה על העתיד שלה לא הרפתה.<br>רציתי להיות מסוגלת לעזור לה עם דירה, חתונה, לימודים, רישיון...<br>שלא נדבר על זה שידעתי שארצה עוד ילדים.</p>
-      <p class="big">הבנתי שאין מצב שככה זה אמור להיות,<br>ידעתי שיש אנשים שחיים אחרת,<br>והחלטתי לצאת ולחפש את הסוד שלהם.</p>
-      <p>והיום, אחרי 6 שנים שבהן למדתי כל מה שיכולתי על השקעות,<br>ואחרי מאות בוגרות של אמא משקיעה,<br>אני יכולה להגיד את זה בוודאות:</p>
-      <p class="big">זה אפשרי. פיצחתי את הנוסחה<br>שמאפשרת לכל ילד לקבל מקפצה של חצי מיליון שקל<br>בלי לוותר על רמת החיים.</p>
-      <p>זה רק דורש לעבוד בשיטה ההפוכה ולהתחיל כשהם קטנים.</p>
-      <p>החלטתי לעלות להדרכה בשידור חי<br>ולשתף אתכן בשיטה המלאה שלי בלי פילטרים.<br><b>בפשטות ובביטחון.</b></p>
-    </div>
   </div>
 </section>
 
@@ -268,22 +250,39 @@
       <figure><img src="assets/g04-openacc.jpg" alt="פתחתי קרן השתלמות, קרן פנסיה וקופת גמל להשקעה" loading="lazy"></figure>
       <figure><img src="assets/g05-tal.jpg" alt="קיבלתי עבודה חדשה, 7 אלף שקל בחודש יותר, ביטחון שנבנה בקורס" loading="lazy"></figure>
       <figure><img src="assets/g06-180.jpg" alt="שינוי של 180 מעלות, מעין שליטה על הכסף שלי" loading="lazy"></figure>
-      <figure class="more"><img src="assets/g07-apartment.jpg" alt="היום קנינו דירה להשקעה" loading="lazy"></figure>
-      <figure class="more"><img src="assets/g08-kids.jpg" alt="מלמדת את הילדים שלי מה זו ריבית" loading="lazy"></figure>
-      <figure class="more"><img src="assets/g09-thailand.jpg" alt="השקענו כסף שסתם ישב, סיימנו רכישת דירה, ותאילנד" loading="lazy"></figure>
-      <figure class="more"><img src="assets/g10-signed.jpg" alt="חתמנו על דירה להשקעה" loading="lazy"></figure>
-      <figure class="more"><img src="assets/g11-haim.jpg" alt="באמת השתנו לנו החיים, גם בעלי איתי בזה" loading="lazy"></figure>
-      <figure class="more"><img src="assets/g12-aware.jpg" alt="פיצוץ ידע, פתאום אני מבינה כמה אני לא מודעת לכסף שלי" loading="lazy"></figure>
+      <figure><img src="assets/g07-apartment.jpg" alt="היום קנינו דירה להשקעה" loading="lazy"></figure>
+      <figure><img src="assets/g08-kids.jpg" alt="מלמדת את הילדים שלי מה זו ריבית" loading="lazy"></figure>
+      <figure><img src="assets/g09-thailand.jpg" alt="השקענו כסף שסתם ישב, סיימנו רכישת דירה, ותאילנד" loading="lazy"></figure>
+      <figure><img src="assets/g10-signed.jpg" alt="חתמנו על דירה להשקעה" loading="lazy"></figure>
+      <figure><img src="assets/g11-haim.jpg" alt="באמת השתנו לנו החיים, גם בעלי איתי בזה" loading="lazy"></figure>
+      <figure><img src="assets/g12-aware.jpg" alt="פיצוץ ידע, פתאום אני מבינה כמה אני לא מודעת לכסף שלי" loading="lazy"></figure>
     </div>
-    <button class="more-btn" type="button" id="more-btn">עוד 6 הודעות</button>
   </div>
 </section>
 
+<section class="bordered">
+  <div class="wrap narrow">
+    <h3>נעים להכיר</h3>
+    <div class="bio">
+      <figure class="fam"><img src="assets/family.jpg" alt="עדי סומך עם המשפחה" width="1200" height="1600" loading="lazy"></figure>
+      <p>אם עוד לא הכרנו, היי!<br>אני <b>עדי סומך</b>. נשואה למני ואמא של אלה ואביב.</p>
+      <p>בשנת 2020 ילדתי את אלה.<br>ועד היום, כשאני נזכרת בדיסוננס הזה שהרגשתי אז, <b>מתכווצת לי הבטן.</b><br>למה אף אחד לא מדבר על זה?</p>
+      <p>מצד אחד, ההוצאות מזנקות בבת אחת:<br>עגלה, מעון, בגדים, עוד אוטו...<br>פתאום אפילו לצאת מהבית לשעה זה בייביסיטר.</p>
+      <p>מצד שני, המחשבה על העתיד שלה לא הרפתה.<br>רציתי להיות מסוגלת לעזור לה עם דירה, חתונה, לימודים, רישיון...<br>שלא נדבר על זה שידעתי שארצה עוד ילדים.</p>
+      <p class="big">הבנתי שאין מצב שככה זה אמור להיות,<br>ידעתי שיש אנשים שחיים אחרת,<br>והחלטתי לצאת ולחפש את הסוד שלהם.</p>
+      <p>והיום, אחרי 6 שנים שבהן למדתי כל מה שיכולתי על השקעות,<br>ואחרי מאות בוגרות של אמא משקיעה,<br>אני יכולה להגיד את זה בוודאות:</p>
+      <p class="big">זה אפשרי. פיצחתי את הנוסחה<br>שמאפשרת לכל ילד לקבל מקפצה של חצי מיליון שקל<br>בלי לוותר על רמת החיים.</p>
+      <p>זה רק דורש לעבוד בשיטה ההפוכה ולהתחיל כשהם קטנים.</p>
+      <p>החלטתי לעלות להדרכה בשידור חי<br>ולשתף אתכן בשיטה המלאה שלי בלי פילטרים.<br><b>בפשטות ובביטחון.</b></p>
+    </div>
+  </div>
+</section>
+
+
 <section class="closing" id="form-bottom">
   <div class="wrap narrow">
-    <p class="heads-up">בסוף ההדרכה אני מציגה לראשונה את <b>הליווי החדש של אמא משקיעה</b>.</p>
     <img class="me" src="assets/portrait-authority.jpg" alt="עדי סומך" width="112" height="112" loading="lazy">
-    <h3>נתראה ביום שלישי ב-20:30</h3>
+    <h3>נתראה ביום שני ב-20:30</h3>
     <p class="lead">שעה אחת. בלי עלות. הלינק במייל.</p>
     <div class="card">
       <form id="f2" novalidate>
@@ -302,8 +301,8 @@
 </section>
 
 <div class="dock" id="dock">
-  <span>יום שלישי 15.9 · 20:30<i>ללא עלות</i></span>
-  <a href="#form-bottom">שריינו לי מקום</a>
+  <span>יום שני 7.9 · 20:30<i>ללא עלות</i></span>
+  <a href="#f2" id="dock-go">שריינו לי מקום</a>
 </div>
 
 <footer>
@@ -345,13 +344,14 @@
     b.addEventListener('click', function(){ b.closest('dialog').close(); });
   });
 
-  // עוד עדויות
-  var moreBtn = document.getElementById('more-btn');
-  moreBtn.addEventListener('click', function(){
-    document.getElementById('tgrid').classList.add('open');
-    moreBtn.style.display = 'none';
-  });
 
+  // הכפתור הצף: גלילה עד הטופס עצמו, לא רק לראש הסקשן
+  document.getElementById('dock-go').addEventListener('click', function(e){
+    e.preventDefault();
+    var f = document.getElementById('f2');
+    f.scrollIntoView({behavior:'smooth', block:'start'});
+    setTimeout(function(){ try{ document.getElementById('n2').focus({preventScroll:true}); }catch(x){} }, 700);
+  });
   // הפס הדביק נעלם כשטופס על המסך
   var dock = document.getElementById('dock');
   if('IntersectionObserver' in window){
