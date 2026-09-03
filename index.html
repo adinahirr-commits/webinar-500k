@@ -31,8 +31,11 @@
   .strip q{quotes:'\201C' '\201D'}
   .strip b{display:block;color:var(--lime);font-weight:900;font-size:.88rem;margin-top:2px}
   /* הפרטים הטכניים: צמוד לטופס, לא בראש הדף */
-  .when-line{text-align:center;font-weight:900;font-size:clamp(1.12rem,4.6vw,1.3rem);line-height:1.45;margin-bottom:12px;color:var(--ink)}
-  .when-line b{color:var(--pink);font-weight:900}
+  .when-bar{background:var(--ink);color:#fff;text-align:center;margin:-24px -24px 20px;padding:15px 16px 13px;
+            border-radius:18px 18px 0 0;line-height:1.3}
+  .when-bar b{display:block;font-size:clamp(1.18rem,5vw,1.36rem);font-weight:900;letter-spacing:-.01em}
+  .when-bar span{display:block;font-size:.98rem;font-weight:700;opacity:.9;margin-top:4px}
+  .when-bar span i{font-style:normal;color:var(--lime);font-weight:900}
 
   /* ---------- hero ---------- */
   .hero{padding:26px 0 30px}
@@ -73,7 +76,9 @@
   .btn:hover{filter:brightness(.94)}
   .btn:disabled{opacity:.7;cursor:default}
   .err{margin-top:12px;font-size:.94rem;font-weight:700;color:#B4245F;display:none;text-align:center}
-  .fine{margin-top:13px;font-size:.84rem;color:var(--soft);text-align:center;line-height:1.55}
+  .consent{display:flex;align-items:flex-start;gap:10px;margin-top:18px;text-align:right}
+  .consent input{width:22px;height:22px;flex:none;margin-top:1px;accent-color:var(--pink);cursor:pointer}
+  .consent label{margin:0;font-weight:600;font-size:.9rem;line-height:1.5;color:var(--soft);cursor:pointer}
 
   @media(max-width:860px){ .hero .grid{grid-template-columns:1fr;gap:20px} }
 
@@ -194,8 +199,8 @@
       </div>
 
       <div>
-        <p class="when-line">יום שני 7.9 · בשעה 20:30 · שעה בזום · <b>ללא עלות</b></p>
         <div class="card" id="form-top">
+        <div class="when-bar"><b>יום שני 7.9 · בשעה 20:30</b><span>שעה בזום · <i>ללא עלות</i></span></div>
         <h2>שרייני כבר עכשיו את המקום שלך</h2>
         <p class="hint">(מספר המקומות מוגבל)</p>
         <form id="f1" novalidate>
@@ -205,9 +210,12 @@
           <input id="e1" type="email" inputmode="email" autocomplete="email" required>
           <label for="p1">נייד</label>
           <input id="p1" type="tel" inputmode="tel" autocomplete="tel" required>
+          <div class="consent">
+            <input type="checkbox" id="c1" required>
+            <label for="c1">אני מאשרת לקבל תכנים מאמא משקיעה ויודעת שאוכל להסיר את עצמי בכל עת</label>
+          </div>
           <button class="btn" type="submit">שריינו לי מקום</button>
           <p class="err" role="alert"></p>
-          <p class="fine">בלחיצה את מאשרת קבלת הלינק ותכנים מאמא משקיעה. אפשר להסיר בכל רגע.</p>
         </form>
         </div>
       </div>
@@ -262,10 +270,10 @@
 
 <section class="bordered">
   <div class="wrap narrow">
-    <h3>נעים להכיר</h3>
+    <h3>אם עוד לא הכרנו - היי! נעים להכיר</h3>
     <div class="bio">
       <figure class="fam"><img src="assets/family.jpg" alt="עדי סומך עם המשפחה" width="1200" height="1600" loading="lazy"></figure>
-      <p>אם עוד לא הכרנו, היי!<br>אני <b>עדי סומך</b>. נשואה למני ואמא של אלה ואביב.</p>
+      <p>אני <b>עדי סומך</b>. נשואה למני ואמא של אלה ואביב.</p>
       <p>בשנת 2020 ילדתי את אלה.<br>ועד היום, כשאני נזכרת בדיסוננס הזה שהרגשתי אז, <b>מתכווצת לי הבטן.</b><br>למה אף אחד לא מדבר על זה?</p>
       <p>מצד אחד, ההוצאות מזנקות בבת אחת:<br>עגלה, מעון, בגדים, עוד אוטו...<br>פתאום אפילו לצאת מהבית לשעה זה בייביסיטר.</p>
       <p>מצד שני, המחשבה על העתיד שלה לא הרפתה.<br>רציתי להיות מסוגלת לעזור לה עם דירה, חתונה, לימודים, רישיון...<br>שלא נדבר על זה שידעתי שארצה עוד ילדים.</p>
@@ -292,9 +300,12 @@
         <input id="e2" type="email" inputmode="email" autocomplete="email" required>
         <label for="p2">נייד</label>
         <input id="p2" type="tel" inputmode="tel" autocomplete="tel" required>
+        <div class="consent">
+          <input type="checkbox" id="c2" required>
+          <label for="c2">אני מאשרת לקבל תכנים מאמא משקיעה ויודעת שאוכל להסיר את עצמי בכל עת</label>
+        </div>
         <button class="btn" type="submit">שריינו לי מקום</button>
         <p class="err" role="alert"></p>
-        <p class="fine">בלחיצה את מאשרת קבלת הלינק ותכנים מאמא משקיעה. אפשר להסיר בכל רגע.</p>
       </form>
     </div>
   </div>
@@ -367,7 +378,7 @@
   var ENDPOINT = "https://academy.mominvest.co.il/webinar-signup";
   var THANKS = "thanks/";
 
-  function wire(formId, nId, eId, pId){
+  function wire(formId, nId, eId, pId, cId){
     var form = document.getElementById(formId);
     var errEl = form.querySelector('.err');
     var btn = form.querySelector('.btn');
@@ -381,6 +392,7 @@
       if(!name){ bad('רק שם, ואנחנו בפנים.'); return; }
       if(email.indexOf('@') < 1){ bad('נראה שנפלה טעות קטנה במייל. אפשר לבדוק?'); return; }
       if(phone.replace(/\D/g,'').length < 9){ bad('צריך מספר נייד תקין, בשביל התזכורת לפני ההדרכה.'); return; }
+      if(!document.getElementById(cId).checked){ bad('צריך לסמן את האישור כדי שאוכל לשלוח לך את הלינק.'); return; }
 
       var orig = btn.textContent;
       btn.disabled = true; btn.textContent = 'רגע אחד, שומרת לך מקום…';
@@ -419,8 +431,28 @@
       })(0);
     });
   }
-  wire('f1','n1','e1','p1');
-  wire('f2','n2','e2','p2');
+  wire('f1','n1','e1','p1','c1');
+  wire('f2','n2','e2','p2','c2');
+
+  // ---- מילוי אוטומטי מהלינק. כשעדי שולחת את הדף מסמוב לאנשי קשר קיימים, היא
+  // מכניסה לכתובת את השדות האישיים: ?name=...&email=...&phone=...
+  // הדף ממלא את שני הטפסים, והנרשמת רק לוחצת. גם autocomplete של הטלפון פעיל.
+  (function(){
+    var q = new URLSearchParams(location.search);
+    function pick(){ for(var i=0;i<arguments.length;i++){ var v=q.get(arguments[i]); if(v && v.trim() && v.indexOf('{')<0 && v.indexOf('[')<0) return v.trim(); } return ''; }
+    var nm = pick('name','fname','firstname','firstName','first_name');
+    var em = pick('email','mail','e');
+    var ph = pick('phone','cell','cellphone','cellPhone','mobile','tel');
+    if(!nm && !em && !ph) return;
+    [['n1','n2',nm],['e1','e2',em],['p1','p2',ph]].forEach(function(t){
+      if(t[2]){ document.getElementById(t[0]).value = t[2]; document.getElementById(t[1]).value = t[2]; }
+    });
+    if(nm && em && ph){
+      document.querySelectorAll('.card h2').forEach(function(h){ h.textContent = 'הפרטים שלך כבר בפנים, רק לאשר'; });
+      document.querySelectorAll('.card .hint').forEach(function(h){ h.textContent = 'לחיצה אחת ואת רשומה'; });
+      document.querySelectorAll('.btn').forEach(function(b){ if(b.type==='submit') b.textContent = 'כן, שרייני לי מקום'; });
+    }
+  })();
 </script>
 
 <script>
