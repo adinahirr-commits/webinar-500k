@@ -404,7 +404,7 @@
       function bad(m){ errEl.textContent = m; errEl.style.display = 'block'; }
       if(!name){ bad('רק שם, ואנחנו בפנים.'); return; }
       if(email.indexOf('@') < 1){ bad('נראה שנפלה טעות קטנה במייל. אפשר לבדוק?'); return; }
-      if(phone.replace(/\D/g,'').length < 9){ bad('צריך מספר נייד תקין, בשביל התזכורת לפני ההדרכה.'); return; }
+      if(phone.replace(/\D/g,'').length < 9){ bad('צריך מספר נייד תקין, כדי שנוכל להשלים את ההרשמה.'); return; }
       if(!document.getElementById(cId).checked){ bad('צריך לסמן את האישור כדי שאוכל לשלוח לך את הלינק.'); return; }
 
       var orig = btn.textContent;
