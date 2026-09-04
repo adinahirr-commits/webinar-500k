@@ -79,6 +79,32 @@
 </main>
 <footer>© אמא משקיעה · עדי סומך</footer>
 
+<!-- מדידת שריון ביומן. בלי זה אין שום דרך לדעת אם הכפתור עובד: לינק
+     השיתוף של גוגל מוסיף מוזמנת אצל עדי, אבל ה-.ics לא — ולכן ספירת המוזמנות
+     ביומן לבדה לא מבדילה בין "אף אחת לא לחצה" לבין "לחצו והלינק שבור".
+     כאן נספרת כל לחיצה, ואפשר להשוות מולה. -->
+<script>
+(function(){
+  var TRACK="https://academy.mominvest.co.il/guide-hit", vid;
+  try{
+    vid=localStorage.getItem('mi_vid');
+    if(!vid){ vid=Date.now().toString(36)+Math.random().toString(36).slice(2,10); localStorage.setItem('mi_vid',vid); }
+  }catch(e){ vid='nostore'; }
+  function hit(page){
+    var b=new URLSearchParams({page:page,vid:vid}).toString();
+    try{ if(navigator.sendBeacon) navigator.sendBeacon(TRACK,new Blob([b],{type:'application/x-www-form-urlencoded'})); }catch(e){}
+    try{ fetch(TRACK,{method:'POST',mode:'no-cors',keepalive:true,
+      headers:{'Content-Type':'application/x-www-form-urlencoded'},body:b}); }catch(e){}
+  }
+  hit('thanks-0709');
+  var g=document.querySelector('a.act.cal'), i=document.querySelector('a[href="webinar.ics"]'),
+      w=document.querySelector('a.act.wa');
+  if(g) g.addEventListener('click',function(){ hit('cal-google'); });
+  if(i) i.addEventListener('click',function(){ hit('cal-ics'); });
+  if(w) w.addEventListener('click',function(){ hit('wa-group'); });
+})();
+</script>
+
 <!-- Meta Pixel — אירוע Lead נספר כאן פעם אחת בדיוק -->
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
