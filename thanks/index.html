@@ -62,12 +62,12 @@
     <div class="steps">
       <div class="step"><span class="n">2</span><div><b>הכניסי את ההדרכה ליומן</b><span>לחיצה אחת, ולא תפספסי.</span></div></div>
     </div>
-    <!-- הוספה ליומן. הכפתור הראשי הוא לינק TEMPLATE של גוגל — עצמאי מכל אירוע
-         ביומן של עדי, ולכן לא יכול למות כמו לינק שיתוף (תקרית 03/09/2026: לינק
-         calendar.app.google החזיר 200 עם "הקישור לא עבד" 11 שעות). המחיר: עדי לא
-         רואה ברשימת המוזמנות מי שריינה — מקור האמת הוא סמוב + מדידת הלחיצות למטה.
-         ה-.ics למטה הוא המסלול למי שאין לה יומן גוגל (אייפון, אאוטלוק). -->
-    <a class="act cal" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%D7%94%D7%96%D7%95%D7%9D%20%D7%A9%D7%9C%20%D7%90%D7%9E%D7%90%20%D7%9E%D7%A9%D7%A7%D7%99%D7%A2%D7%94%20%E2%80%94%20%D7%90%D7%99%D7%9A%20%D7%9C%D7%AA%D7%AA%20%D7%97%D7%A6%D7%99%20%D7%9E%D7%99%D7%9C%D7%99%D7%95%D7%9F%20%D7%9C%D7%9B%D7%9C%20%D7%99%D7%9C%D7%93&dates=20261004T170000Z/20261004T180000Z&details=%D7%94%D7%A7%D7%99%D7%A9%D7%95%D7%A8%20%D7%9C%D7%96%D7%95%D7%9D%20%D7%99%D7%92%D7%99%D7%A2%20%D7%91%D7%9E%D7%99%D7%99%D7%9C%20%D7%95%D7%91%D7%A7%D7%91%D7%95%D7%A6%D7%AA%20%D7%94%D7%95%D7%95%D7%90%D7%98%D7%A1%D7%90%D7%A4%20%D7%9C%D7%A4%D7%A0%D7%99%20%D7%94%D7%94%D7%93%D7%A8%D7%9B%D7%94%20%F0%9F%92%97%0A%D7%A0%D7%AA%D7%A8%D7%90%D7%94%2C%20%D7%A2%D7%93%D7%99%20%D7%A1%D7%95%D7%9E%D7%9A&ctz=Asia/Jerusalem" target="_blank" rel="noopener">
+    <!-- הוספה ליומן. הכפתור הראשי הוא לינק הפרסום של האירוע ביומן של עדי
+         (tmeid) — עדי בחרה בו כי כך היא רואה ברשימת המוזמנות מי שריינה.
+         אזהרה: לינק כזה מת ברגע שמוחקים ויוצרים מחדש את האירוע (תקרית 03/09/2026:
+         200 עם "הקישור לא עבד" 11 שעות). לכן ~/link-watch בודק אותו 4 פעמים ביום,
+         ואם מחליפים אירוע — מחליפים גם כאן. ה-.ics למטה למי שאין לה יומן גוגל. -->
+    <a class="act cal" href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=ajQ3Mzd0Z2QxdGhzOGNkNHU3czBuYWFqbGsg&amp;tmsrc=adinahirr%40gmail.com" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
       להוסיף ליומן
     </a>
