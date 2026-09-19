@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>איך לבנות לכל ילד גב כלכלי של חצי מיליון ש"ח | הדרכה חיה 7.9 | אמא משקיעה</title>
-<meta name="description" content="הדרכה חיה של שעה, יום שני 7.9 ב-20:30, ללא עלות. איך לבנות לכל ילד חצי מיליון ש&quot;ח מהכסף שכבר נכנס לכם הביתה.">
+<title>איך לבנות לכל ילד גב כלכלי של חצי מיליון ש"ח | הדרכה חיה 4.10 | אמא משקיעה</title>
+<meta name="description" content="הדרכה חיה של שעה, יום ראשון 4.10 ב-20:00, ללא עלות. איך לבנות לכל ילד חצי מיליון ש&quot;ח מהכסף שכבר נכנס לכם הביתה.">
 <meta property="og:title" content="איך לבנות לכל ילד גב כלכלי של חצי מיליון ש&quot;ח">
-<meta property="og:description" content="הדרכה חיה, יום שני 7.9 ב-20:30, ללא עלות. מהכסף שכבר נכנס לכם הביתה.">
+<meta property="og:description" content="הדרכה חיה, יום ראשון 4.10 ב-20:00, ללא עלות. מהכסף שכבר נכנס לכם הביתה.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="he_IL">
 <meta property="og:site_name" content="אמא משקיעה">
@@ -19,7 +19,7 @@
 <meta property="og:image:alt" content="עדי סומך עם התינוקת. הדרכה חיה: איך לבנות לכל ילד גב כלכלי של חצי מיליון שח">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="איך לבנות לכל ילד גב כלכלי של חצי מיליון ש&quot;ח">
-<meta name="twitter:description" content="הדרכה חיה, יום שני 7.9 ב-20:30, ללא עלות.">
+<meta name="twitter:description" content="הדרכה חיה, יום ראשון 4.10 ב-20:00, ללא עלות.">
 <meta name="twitter:image" content="https://adinahirr-commits.github.io/webinar-500k/assets/og.jpg?v=2">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%23EF55A5'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -213,7 +213,7 @@
 
       <div>
         <div class="card" id="form-top">
-        <div class="when-bar"><b>יום שני 7.9 · בשעה 20:30</b><span>שעה בזום · <i>ללא עלות</i></span></div>
+        <div class="when-bar"><b>יום ראשון 4.10 · בשעה 20:00</b><span>שעה בזום · <i>ללא עלות</i></span></div>
         <h2>שרייני כבר עכשיו את המקום שלך</h2>
         <p class="hint">(מספר המקומות מוגבל)</p>
         <form id="f1" novalidate>
@@ -303,7 +303,7 @@
 <section class="closing" id="form-bottom">
   <div class="wrap narrow">
     <img class="me" src="assets/portrait-authority.jpg" alt="עדי סומך" width="112" height="112" loading="lazy">
-    <h3>נתראה ביום שני ב-20:30</h3>
+    <h3>נתראה ביום ראשון ב-20:00</h3>
     <p class="lead">שעה אחת. בלי עלות. הלינק במייל.</p>
     <div class="card">
       <form id="f2" novalidate>
@@ -325,7 +325,7 @@
 </section>
 
 <div class="dock" id="dock">
-  <span>יום שני 7.9 · 20:30<i>ללא עלות</i></span>
+  <span>יום ראשון 4.10 · 20:00<i>ללא עלות</i></span>
   <a href="#f2" id="dock-go">שריינו לי מקום</a>
 </div>
 
@@ -387,7 +387,7 @@
     ['form-top','form-bottom'].forEach(function(id){ io.observe(document.getElementById(id)); });
   }
 
-  // ---- הרשמה. שני הטפסים -> פרוקסי בשרת course-portal -> רשימת סמוב 1163758.
+  // ---- הרשמה. שני הטפסים -> פרוקסי בשרת course-portal -> רשימת סמוב 1169997.
   var ENDPOINT = "https://academy.mominvest.co.il/webinar-signup";
   var THANKS = "thanks/";
 
@@ -413,7 +413,7 @@
       // form-encoded = בקשה פשוטה של CORS, בלי preflight שנתקע בוובוויו של אינסטגרם/וואטסאפ
       var p = new URLSearchParams();
       p.set('name', name); p.set('email', email); p.set('phone', phone);
-      p.set('w', 'w0709'); p.set('page', 'webinar-0709');
+      p.set('w', 'w0410'); p.set('page', 'webinar-0410');
       var qs = new URLSearchParams(location.search);
       ['ref','utm_source','utm_medium','utm_campaign','utm_content'].forEach(function(k){
         var v = qs.get(k) || (function(){ try { return localStorage.getItem('mi_'+k); } catch(e){ return ''; } })();
@@ -478,7 +478,7 @@
       ['ref','utm_source','utm_medium','utm_campaign','utm_content'].forEach(function(k){ if(q.get(k)) localStorage.setItem('mi_'+k, q.get(k)); });
     } catch(e){ vid = 'nostore'; }
     var p = new URLSearchParams();
-    p.set('page','webinar-0709'); p.set('guide','webinar0709'); p.set('vid', vid || '');
+    p.set('page','webinar-0410'); p.set('guide','webinar0410'); p.set('vid', vid || '');
     ['ref','utm_source','utm_medium','utm_campaign','utm_content'].forEach(function(k){
       var v = q.get(k) || (function(){ try { return localStorage.getItem('mi_'+k); } catch(e){ return ''; } })();
       if(v) p.set(k, v);
