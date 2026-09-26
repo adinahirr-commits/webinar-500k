@@ -158,10 +158,9 @@
   /* מה כתבו אחרי השידור הקודם */
   .wa-head{text-align:center;font-weight:900;font-size:1.15rem;color:var(--ink);margin:34px 0 16px}
   .wa-list{max-width:520px;margin-inline:auto;display:grid;gap:14px}
-  .wa-card{background:#fff;border:1px solid var(--line);border-inline-start:4px solid #E84D8A;
-           border-radius:14px;padding:16px 18px;box-shadow:0 10px 26px -20px rgba(26,27,46,.5)}
-  .wa-card p{margin:0;color:#35364B;font-size:1rem;line-height:1.7}
-  .blurname{filter:blur(5px);user-select:none}
+  .wa-shot{margin:0;background:#fff;border:1px solid var(--line);border-radius:14px;
+           padding:10px;box-shadow:0 10px 26px -20px rgba(26,27,46,.5)}
+  .wa-shot img{width:100%;border-radius:9px;display:block}
   .tgrid{columns:3;column-gap:14px}
   .tgrid figure{break-inside:avoid;margin-bottom:14px;background:#fff;border:1px solid var(--line);
                 border-radius:14px;padding:9px;box-shadow:0 10px 26px -20px rgba(26,27,46,.5)}
@@ -284,22 +283,12 @@
     <!-- עדויות על חוויית השידור עצמו, מהוובינר הקודם (עדי, 26/09). שמות מטושטשים ב-CSS. -->
     <div class="wa-head">מה כתבו לי אחרי השידור הקודם</div>
     <div class="wa-list">
-      <div class="wa-card">
-        <p>היי, קוראים לי <span class="blurname">הודיה</span> 🌸<br>
-        וחייבת קודם כל לומר שהזום היה ממש מועיל ונתן לי המון מוטיבציה!
-        הרבה זמן רציתי לעשות שינוי ולקבל ייעוץ פיננסי,
-        והמפגש איתך ממש נתן לי תחושה שאני יכולה להתחיל.</p>
-      </div>
-      <div class="wa-card">
-        <p><span class="blurname">יעל שטרית</span><br>
-        היי עדי תודה רבה לך על אתמול 💜 היה מעניין ולא רציתי שיגמר...
-        בכל אופן נרשמתי עכשיו, הלוואי ואצליח ליישם ולצאת מהבוץ שנקלענו אליו
-        בתקופה הזו... מחכה למפגשים הבאים 🙂🙌</p>
-      </div>
-      <div class="wa-card">
-        <p>ובלי קשר בתור מישהי שמגיעה מהעולם הפיננסי,
-        המצגת והמוצר וכל ההסבר נראה בנוי מהמם שאפו ובהצלחה!</p>
-      </div>
+      <figure class="wa-shot"><img src="assets/wa-01-hodaya.jpg"
+        alt="הזום היה ממש מועיל ונתן לי המון מוטיבציה, המפגש איתך נתן לי תחושה שאני יכולה להתחיל" loading="lazy"></figure>
+      <figure class="wa-shot"><img src="assets/wa-02-yael.jpg"
+        alt="תודה רבה על אתמול, היה מעניין ולא רציתי שיגמר, נרשמתי עכשיו" loading="lazy"></figure>
+      <figure class="wa-shot"><img src="assets/wa-03-pro.jpg"
+        alt="בתור מישהי שמגיעה מהעולם הפיננסי, המצגת והמוצר וכל ההסבר בנוי מהמם" loading="lazy"></figure>
     </div>
   </div>
 </section>
