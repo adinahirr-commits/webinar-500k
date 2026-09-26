@@ -28,7 +28,11 @@
   .step .n{flex:none;width:30px;height:30px;border-radius:9px;background:var(--pink);color:#fff;font-weight:900;font-size:.95rem;display:flex;align-items:center;justify-content:center}
   .step b{display:block;font-size:1.02rem;font-weight:800;line-height:1.3}
   .step span{font-size:.92rem;color:var(--soft)}
-  .act{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;border-radius:12px;padding:16px 18px;font-weight:900;font-size:1.08rem;text-decoration:none;color:#fff;margin-top:12px}
+  .act{display:flex;align-items:center;text-align:right;gap:13px;width:100%;border-radius:14px;padding:16px 18px;font-weight:900;font-size:1.08rem;text-decoration:none;color:#fff;margin-top:14px}
+  .act .n{flex:none;width:30px;height:30px;border-radius:9px;background:rgba(255,255,255,.28);color:#fff;font-weight:900;font-size:.95rem;display:flex;align-items:center;justify-content:center}
+  .act .tx{flex:1;min-width:0}
+  .act .tx b{display:block;font-size:1.05rem;line-height:1.3}
+  .act .tx small{display:block;font-weight:600;font-size:.88rem;opacity:.92;margin-top:2px}
   .act svg{width:22px;height:22px;flex:none}
   .act.wa{background:var(--wa)}
   .act.cal{background:var(--ink)}
@@ -51,25 +55,21 @@
 
     <p class="spam"><b>שימי לב:</b> ייתכן שההזמנה מתחבאת בתיקיית ספאם או "קידומי מכירות". ודאי שאת מעבירה אותה לתיקייה הראשית, כדי שתקבלי גם את הקישור ביום ההרצאה.</p>
 
-    <div class="steps">
-      <div class="step"><span class="n">1</span><div><b>הצטרפי לקבוצת הוואטסאפ של ההדרכה</b><span>שם יהיו הלינק, התזכורות, וכל מה שאשלח לפני.</span></div></div>
-    </div>
+    <!-- בקשת עדי (26/09): הצעד הוא הכפתור עצמו — בלי בלוק הסבר ואז כפתור נפרד -->
     <a class="act wa" href="https://chat.whatsapp.com/I59tLUyA1CoGnJ4wFFMPqE?mode=gi_t" target="_blank" rel="noopener">
+      <span class="n">1</span>
+      <span class="tx"><b>הצטרפי לקבוצת הוואטסאפ של ההדרכה</b><small>שם יהיו הלינק, התזכורות, וכל מה שאשלח לפני</small></span>
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.4 11.4 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6a2.6 2.6 0 0 0 1.7-1.2 2 2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3Z"/></svg>
-      להצטרף לקבוצה
     </a>
-
-    <div class="steps">
-      <div class="step"><span class="n">2</span><div><b>הכניסי את ההדרכה ליומן</b><span>לחיצה אחת, ולא תפספסי.</span></div></div>
-    </div>
     <!-- הוספה ליומן. הכפתור הראשי הוא לינק הפרסום של האירוע ביומן של עדי
          (tmeid) — עדי בחרה בו כי כך היא רואה ברשימת המוזמנות מי שריינה.
          אזהרה: לינק כזה מת ברגע שמוחקים ויוצרים מחדש את האירוע (תקרית 03/09/2026:
          200 עם "הקישור לא עבד" 11 שעות). לכן ~/link-watch בודק אותו 4 פעמים ביום,
          ואם מחליפים אירוע — מחליפים גם כאן. ה-.ics למטה למי שאין לה יומן גוגל. -->
     <a class="act cal" href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=ajQ3Mzd0Z2QxdGhzOGNkNHU3czBuYWFqbGsg&amp;tmsrc=adinahirr%40gmail.com" target="_blank" rel="noopener">
+      <span class="n">2</span>
+      <span class="tx"><b>הכניסי את ההדרכה ליומן</b><small>לחיצה אחת, ולא תפספסי</small></span>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-      להוסיף ליומן
     </a>
     <p class="alt">אין לך יומן גוגל? <a href="webinar.ics" download="webinar.ics">הוסיפי ליומן האייפון</a></p>
 
