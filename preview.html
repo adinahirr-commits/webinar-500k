@@ -148,6 +148,20 @@
   .tlist img{border-radius:9px;width:100%}
   .draft-ribbon{position:sticky;top:0;z-index:99;background:#1A1B2E;color:#fff;
                 text-align:center;font-size:.92rem;font-weight:700;padding:8px 14px}
+  .tmore{max-width:460px;margin:4px auto 0}
+  .tmore summary{list-style:none;cursor:pointer;text-align:center;font-weight:800;
+                 color:var(--ink);background:#fff;border:1px solid var(--line);
+                 border-radius:999px;padding:11px 22px;width:fit-content;margin:0 auto 20px;
+                 box-shadow:0 10px 26px -20px rgba(26,27,46,.5)}
+  .tmore summary::-webkit-details-marker{display:none}
+  .tmore[open] summary{display:none}
+  /* מה כתבו אחרי השידור הקודם */
+  .wa-head{text-align:center;font-weight:900;font-size:1.15rem;color:var(--ink);margin:34px 0 16px}
+  .wa-list{max-width:520px;margin-inline:auto;display:grid;gap:14px}
+  .wa-card{background:#fff;border:1px solid var(--line);border-inline-start:4px solid #E84D8A;
+           border-radius:14px;padding:16px 18px;box-shadow:0 10px 26px -20px rgba(26,27,46,.5)}
+  .wa-card p{margin:0;color:#35364B;font-size:1rem;line-height:1.7}
+  .blurname{filter:blur(5px);user-select:none}
   .tgrid{columns:3;column-gap:14px}
   .tgrid figure{break-inside:avoid;margin-bottom:14px;background:#fff;border:1px solid var(--line);
                 border-radius:14px;padding:9px;box-shadow:0 10px 26px -20px rgba(26,27,46,.5)}
@@ -266,6 +280,27 @@
       <li><span class="n">4</span><div><b>ולמה זה לא נגמר בילדים</b><span>השאלה ששומרת לסוף</span></div></li>
       <li class="reveal"><span class="n">★</span><div><b>בסוף ההדרכה אציג לראשונה את הליווי החדש של אמא משקיעה</b><span>ותהיה הזדמנות לראשונות לתפוס מקום</span></div></li>
     </ul>
+
+    <!-- עדויות על חוויית השידור עצמו, מהוובינר הקודם (עדי, 26/09). שמות מטושטשים ב-CSS. -->
+    <div class="wa-head">מה כתבו לי אחרי השידור הקודם</div>
+    <div class="wa-list">
+      <div class="wa-card">
+        <p>היי, קוראים לי <span class="blurname">הודיה</span> 🌸<br>
+        וחייבת קודם כל לומר שהזום היה ממש מועיל ונתן לי המון מוטיבציה!
+        הרבה זמן רציתי לעשות שינוי ולקבל ייעוץ פיננסי,
+        והמפגש איתך ממש נתן לי תחושה שאני יכולה להתחיל.</p>
+      </div>
+      <div class="wa-card">
+        <p><span class="blurname">יעל שטרית</span><br>
+        היי עדי תודה רבה לך על אתמול 💜 היה מעניין ולא רציתי שיגמר...
+        בכל אופן נרשמתי עכשיו, הלוואי ואצליח ליישם ולצאת מהבוץ שנקלענו אליו
+        בתקופה הזו... מחכה למפגשים הבאים 🙂🙌</p>
+      </div>
+      <div class="wa-card">
+        <p>ובלי קשר בתור מישהי שמגיעה מהעולם הפיננסי,
+        המצגת והמוצר וכל ההסבר נראה בנוי מהמם שאפו ובהצלחה!</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -279,19 +314,36 @@
          זה עושה משהו אחר. גוש — אני גולל את הכל ולא קורא כלום." -->
 
     <div class="tlist">
-      <figure><figcaption>קיבלנו 17,205 ש"ח לחשבון — וישר לקרן כספית</figcaption>
+      <figure><figcaption>קיבלנו 17,205 ש"ח לחשבון, וישר לקרן כספית</figcaption>
         <img src="assets/g03-taxback.jpg" alt="קיבלנו 17,205 שח לחשבון, וישר לקרן כספית" loading="lazy"></figure>
-      <figure><figcaption>עבודה חדשה, 7,000 ש"ח יותר בחודש — ביטחון שנבנה בקורס</figcaption>
+      <figure><figcaption>עבודה חדשה, 7,000 ש"ח יותר בחודש, ביטחון שנבנה בקורס</figcaption>
         <img src="assets/g05-tal.jpg" alt="קיבלתי עבודה חדשה, 7 אלף שקל בחודש יותר, ביטחון שנבנה בקורס" loading="lazy"></figure>
       <figure><figcaption>היום קנינו דירה להשקעה</figcaption>
         <img src="assets/g07-apartment.jpg" alt="היום קנינו דירה להשקעה" loading="lazy"></figure>
-      <figure><figcaption>סוף סוף יצאתי מהמינוס — ובתזרים חיובי</figcaption>
+      <figure><figcaption>סוף סוף יצאתי מהמינוס, ובתזרים חיובי</figcaption>
         <img src="assets/g02-minus.jpg" alt="סוף סוף יצאתי מהמינוס ואני בתזרים חיובי" loading="lazy"></figure>
-      <figure><figcaption>מאז ההרצאה — אומץ, ותיק פתוח בחברת השקעות</figcaption>
+      <figure><figcaption>מאז ההרצאה: אומץ, ותיק פתוח בחברת השקעות</figcaption>
         <img src="assets/g01-tik.jpg" alt="מאז ההרצאה קיבלתי אומץ ופתחתי תיק בחברת השקעות" loading="lazy"></figure>
-      <figure><figcaption>השקענו כסף שסתם ישב, סיימנו רכישת דירה — ותאילנד</figcaption>
+      <figure><figcaption>השקענו כסף שסתם ישב, סיימנו רכישת דירה, ותאילנד</figcaption>
         <img src="assets/g09-thailand.jpg" alt="השקענו כסף שסתם ישב, סיימנו רכישת דירה, ותאילנד" loading="lazy"></figure>
     </div>
+    <details class="tmore">
+      <summary>עוד עדויות מהבוגרות ✨</summary>
+      <div class="tlist">
+        <figure><figcaption>חתמנו על דירה להשקעה</figcaption>
+          <img src="assets/g10-signed.jpg" alt="חתמנו על דירה להשקעה" loading="lazy"></figure>
+        <figure><figcaption>פתחתי קרן השתלמות, קרן פנסיה וקופת גמל להשקעה</figcaption>
+          <img src="assets/g04-openacc.jpg" alt="פתחתי קרן השתלמות, קרן פנסיה וקופת גמל להשקעה" loading="lazy"></figure>
+        <figure><figcaption>שינוי של 180 מעלות, מעין שליטה על הכסף שלי</figcaption>
+          <img src="assets/g06-180.jpg" alt="שינוי של 180 מעלות, מעין שליטה על הכסף שלי" loading="lazy"></figure>
+        <figure><figcaption>באמת השתנו לנו החיים, גם בעלי איתי בזה</figcaption>
+          <img src="assets/g11-haim.jpg" alt="באמת השתנו לנו החיים, גם בעלי איתי בזה" loading="lazy"></figure>
+        <figure><figcaption>מלמדת את הילדים שלי מה זו ריבית</figcaption>
+          <img src="assets/g08-kids.jpg" alt="מלמדת את הילדים שלי מה זו ריבית" loading="lazy"></figure>
+        <figure><figcaption>פיצוץ ידע: פתאום אני מבינה כמה אני לא מודעת לכסף שלי</figcaption>
+          <img src="assets/g12-aware.jpg" alt="פיצוץ ידע, פתאום אני מבינה כמה אני לא מודעת לכסף שלי" loading="lazy"></figure>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -303,7 +355,10 @@
       <!-- ההערה של מור (23/09): להתחיל מהפיק, לא מהסיפור — "את לא ממצבת את עצמך".
            אותם משפטים של עדי, רק הסדר התהפך: קודם מאות הבוגרות והנוסחה, אחר כך 2020. -->
       <p>אני <b>עדי סומך</b>. נשואה למני ואמא של אלה ואביב.</p>
-      <p>אחרי 6 שנים שבהן למדתי כל מה שיכולתי על השקעות,<br>ואחרי <b>מאות בוגרות של אמא משקיעה</b>,<br>אני יכולה להגיד את זה בוודאות:</p>
+      <p>ב-6 השנים האחרונות<br><b>הכפלנו פי 8 את ההון העצמי שלנו.</b><br>קנינו 2 דירות בארץ, ואנחנו בדרך לשלישית.<br>השקעתי בשוק ההון, בקריפטו ובהשקעות אלטרנטיביות.<br>טסנו לחצי שנה בתאילנד.</p>
+      <p>מני בעלי עזב את העבודה שהוא לא אהב.<br>אני סגרתי את העסק ועברתי לעבוד מהבית,<br>כדי להיות אמא נוכחת יותר.</p>
+      <p class="big">ובעיקר: אני מתעסקת בזה<br>אולי 3 דקות בחודש.</p>
+      <p>אחרי כל זה, ואחרי <b>מאות בוגרות של אמא משקיעה</b>,<br>אני יכולה להגיד את זה בוודאות:</p>
       <p class="big">זה אפשרי. פיצחתי את הנוסחה<br>שמאפשרת לכל ילד לקבל מקפצה של חצי מיליון שקל<br>בלי לוותר על רמת החיים.</p>
       <p>ואיפה זה התחיל? בשנת 2020 ילדתי את אלה.<br>ועד היום, כשאני נזכרת בדיסוננס הזה שהרגשתי אז, <b>מתכווצת לי הבטן.</b><br>למה אף אחד לא מדבר על זה?</p>
       <p>מצד אחד, ההוצאות מזנקות בבת אחת:<br>עגלה, מעון, בגדים, עוד אוטו...<br>מצד שני, המחשבה על העתיד שלה לא הרפתה.<br>רציתי להיות מסוגלת לעזור לה עם דירה, חתונה, לימודים, רישיון...</p>
