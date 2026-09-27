@@ -1,0 +1,44 @@
+{
+ "code": "w0410",
+ "date": "2026-10-04",
+ "date_str": "4.10",
+ "day": "ראשון",
+ "time": "20:00",
+ "page_id": "webinar-0410",
+ "thanks_id": "thanks-0410",
+ "recording_id": "recording-0410",
+ "smoove_list_id": "1169997",
+ "smoove_list_key": "oqa4ggmbc97fk7rd",
+ "smoove_list_name": "וובינר חצי מליון לכל ילד 4/10/26",
+ "zoom": "https://us06web.zoom.us/j/86328918021?pwd=vtgG8frs4CtpxGZlfYgxq0GfVZJXTo.1",
+ "zoom_meeting": "863 2891 8021 / 189477",
+ "calendar_template": "https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=ajQ3Mzd0Z2QxdGhzOGNkNHU3czBuYWFqbGsg&tmsrc=adinahirr%40gmail.com",
+ "calendar_event_id": "j4737tgd1ths8cd4u7s0naajlk",
+ "whatsapp_group": "https://chat.whatsapp.com/I59tLUyA1CoGnJ4wFFMPqE",
+ "smoove": {
+  "automation_scheduled": "274421 (טיוטה)",
+  "automation_confirmation": "274530 (פעילה)",
+  "confirmation_email": "55583132",
+  "sequence_emails": [
+   55589952,
+   55589953,
+   55589954,
+   55589955,
+   55589956
+  ],
+  "whatsapp_5min_template": "20220 / oma4edfgdmjbiig (השעה מקובעת בטקסט)",
+  "old_automation_0709": "273280 (עדיין פעילה על רשימת 7/9)"
+ },
+ "meta": {
+  "campaign": "120254624625430558",
+  "adset": "120254624626500558",
+  "ads": {
+   "VID-1 בכל שנתיים · 4.10": "120254896780600558",
+   "pic_Dreams · 4.10": "120254896781330558"
+  },
+  "utm_campaign": "webinar0410"
+ },
+ "canva_deck": "DAHWYEdf6iQ",
+ "deck_name": "חצי מליון לכל ילד 4/10",
+ "sales_close": "2026-10-06 22:00"
+}
