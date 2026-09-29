@@ -5,14 +5,15 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:webinar-500k-20261004@mominvest.co.il
-DTSTAMP:20260919T173000Z
+DTSTAMP:20260929T120000Z
+SEQUENCE:1
 DTSTART:20261004T170000Z
 DTEND:20261004T181500Z
 SUMMARY:הזום של אמא משקיעה — איך לתת חצי מיל
  יון לכל ילד
-DESCRIPTION:נעים מאוד\, אני שמחה שאת איתי 💗\n\nקישור הזום:\nhttps://us06web.zoom.us/j/86328918021?pwd=vtgG8frs4CtpxGZlfYgxq0GfVZJXTo.1\n\nMeeting ID: 863 2891 8021\nPasscode: 189477\n\nהקישור יישלח גם במייל ובקבוצת הוואטסאפ לפני ההדרכה.\nנתראה\, עדי סומך
-LOCATION:https://us06web.zoom.us/j/86328918021?pwd=vtgG8frs4CtpxGZlfYgxq0GfVZJXTo.1
-URL:https://us06web.zoom.us/j/86328918021?pwd=vtgG8frs4CtpxGZlfYgxq0GfVZJXTo.1
+DESCRIPTION:נעים מאוד\, אני שמחה שאת איתי 💗\n\nקישור הזום:\nhttps://us06web.zoom.us/j/86365016542\n\nWebinar ID: 863 6501 6542\n\nהקישור יישלח גם במייל ובקבוצת הוואטסאפ לפני ההדרכה.\nנתראה\, עדי סומך
+LOCATION:https://us06web.zoom.us/j/86365016542
+URL:https://us06web.zoom.us/j/86365016542
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
