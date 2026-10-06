@@ -12,9 +12,9 @@
  "smoove_list_name": "וובינר חצי מליון לכל ילד 4/10/26",
  "zoom": "https://us06web.zoom.us/j/86365016542",
  "zoom_meeting": "863 6501 6542 (Zoom Webinar, בלי קוד)",
- "calendar_template": "https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=ajQ3Mzd0Z2QxdGhzOGNkNHU3czBuYWFqbGsg&tmsrc=adinahirr%40gmail.com",
+ "calendar_template": "https://calendar.app.google/PAuKCQV41i4Q7KAR9",
  "calendar_event_id": "j4737tgd1ths8cd4u7s0naajlk",
- "whatsapp_group": "https://chat.whatsapp.com/I59tLUyA1CoGnJ4wFFMPqE",
+ "whatsapp_group": "https://chat.whatsapp.com/IDnz4FoD36f4ei7n9L6pT4",
  "smoove": {
   "automation_scheduled": "274421 (טיוטה)",
   "automation_confirmation": "274530 (פעילה)",
@@ -36,9 +36,11 @@
    "VID-1 בכל שנתיים · 4.10": "120254896780600558",
    "pic_Dreams · 4.10": "120254896781330558"
   },
-  "utm_campaign": "webinar0410"
+  "utm_campaign": "webinar0410",
+  "since": "2026-09-08"
  },
  "canva_deck": "DAHWYEdf6iQ",
  "deck_name": "חצי מליון לכל ילד 4/10",
- "sales_close": "2026-10-06 22:00"
+ "sales_close": "2026-10-06 22:00",
+ "offer_min": 77
 }
