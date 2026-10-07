@@ -16,21 +16,42 @@
  "calendar_event_id": "ddvgkfah00oj86f8pgtc7o22v8",
  "whatsapp_group": "https://chat.whatsapp.com/IDnz4FoD36f4ei7n9L6pT4",
  "smoove": {
-  "automation_scheduled": "",
-  "automation_confirmation": "",
-  "confirmation_email": "",
-  "sequence_emails": [],
-  "whatsapp_5min_template": "20220 / oma4edfgdmjbiig (השעה מקובעת בטקסט)",
+  "automation_confirmation": "275442 (פעילה מ-07/10 11:00; ענף הווטסאפ הוסר עד שעדי מגישה נוסח חדש)",
+  "automation_scheduled": "275443 (טיוטה — מחכה לאישור עדי; צריכה להיות פעילה לפני 9.10 08:30)",
+  "smoove_list_key_in_275442": "oqa4ggmbp88fxb8d",
+  "smoove_list_key_in_275443": "oqa4ggmbq88fxb8d",
+  "confirmation_email": 55606018,
+  "chain_breaker_email": 55521435,
+  "sequence": {
+   "2026-10-09 08:30": 55606019,
+   "2026-10-11 09:30": 55606020,
+   "2026-10-12 20:30": 55606021,
+   "2026-10-13 07:30": 55606022,
+   "2026-10-13 09:30": 55606023
+  },
+  "post_webinar_drafts": {
+   "13.10 אחרי השידור": 55606078,
+   "14.10 בוקר": 55606079
+  },
+  "whatsapp_needed_from_adi": [
+   "ברוכה הבאה (13/10 10:00)",
+   "תזכורת אחרי מייל הבוקר (היום 10:00)",
+   "עוד 5 דקות (זום 82215872635)"
+  ],
   "previous_cycle": "w0410"
  },
  "meta": {
   "campaign": "120254624625430558",
-  "adset": "",
-  "ads": {},
-  "utm_campaign": "webinar1310"
+  "adset": "120255202426790558",
+  "ads": {
+   "pic_Dreams · 13.10": "120255202429240558",
+   "VID-1 בכל שנתיים · 13.10": "120255202431400558"
+  },
+  "utm_campaign": "webinar1310",
+  "status": "PAUSED — מחכה לאישור עדי (100₪/יום, נסגר 13.10 10:00)"
  },
  "canva_deck": "",
  "deck_name": "חצי מליון לכל ילד 13/10",
- "sales_close": "2026-10-15 22:00",
+ "sales_close": "2026-10-14 22:00 (הצעה, ממתין לאישור עדי)",
  "offer_min": 77
 }
