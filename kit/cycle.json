@@ -1,46 +1,36 @@
 {
- "code": "w0410",
- "date": "2026-10-04",
- "date_str": "4.10",
- "day": "ראשון",
- "time": "20:00",
- "page_id": "webinar-0410",
- "thanks_id": "thanks-0410",
- "recording_id": "recording-0410",
- "smoove_list_id": "1169997",
- "smoove_list_key": "oqa4ggmbc97fk7rd",
- "smoove_list_name": "וובינר חצי מליון לכל ילד 4/10/26",
- "zoom": "https://us06web.zoom.us/j/86365016542",
- "zoom_meeting": "863 6501 6542 (Zoom Webinar, בלי קוד)",
- "calendar_template": "https://calendar.app.google/PAuKCQV41i4Q7KAR9",
- "calendar_event_id": "j4737tgd1ths8cd4u7s0naajlk",
+ "code": "w1310",
+ "date": "2026-10-13",
+ "date_str": "13.10",
+ "day": "שלישי",
+ "time": "10:00",
+ "page_id": "webinar-1310",
+ "thanks_id": "thanks-1310",
+ "recording_id": "recording-1310",
+ "smoove_list_id": "1173786",
+ "smoove_list_key": "",
+ "smoove_list_name": "וובינר חצי מליון לכל ילד 13/10/26",
+ "zoom": "https://us06web.zoom.us/j/82215872635",
+ "zoom_meeting": "822 1587 2635 (Zoom Webinar, בלי קוד; טריאל עד ~14/10)",
+ "calendar_template": "https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=ZGR2Z2tmYWgwMG9qODZmOHBndGM3bzIydjgg&tmsrc=adinahirr%40gmail.com",
+ "calendar_event_id": "ddvgkfah00oj86f8pgtc7o22v8",
  "whatsapp_group": "https://chat.whatsapp.com/IDnz4FoD36f4ei7n9L6pT4",
  "smoove": {
-  "automation_scheduled": "274421 (טיוטה)",
-  "automation_confirmation": "274530 (פעילה)",
-  "confirmation_email": "55583132",
-  "sequence_emails": [
-   55589952,
-   55589953,
-   55589954,
-   55589955,
-   55589956
-  ],
+  "automation_scheduled": "",
+  "automation_confirmation": "",
+  "confirmation_email": "",
+  "sequence_emails": [],
   "whatsapp_5min_template": "20220 / oma4edfgdmjbiig (השעה מקובעת בטקסט)",
-  "old_automation_0709": "273280 (עדיין פעילה על רשימת 7/9)"
+  "previous_cycle": "w0410"
  },
  "meta": {
   "campaign": "120254624625430558",
-  "adset": "120254624626500558",
-  "ads": {
-   "VID-1 בכל שנתיים · 4.10": "120254896780600558",
-   "pic_Dreams · 4.10": "120254896781330558"
-  },
-  "utm_campaign": "webinar0410",
-  "since": "2026-09-08"
+  "adset": "",
+  "ads": {},
+  "utm_campaign": "webinar1310"
  },
- "canva_deck": "DAHWYEdf6iQ",
- "deck_name": "חצי מליון לכל ילד 4/10",
- "sales_close": "2026-10-06 22:00",
+ "canva_deck": "",
+ "deck_name": "חצי מליון לכל ילד 13/10",
+ "sales_close": "2026-10-15 22:00",
  "offer_min": 77
 }
