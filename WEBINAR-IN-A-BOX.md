@@ -94,3 +94,12 @@ git diff  →  git commit  →  git push          # הדף חי תוך דקה. �
 - **זום:** בוובינר שעבר אי אפשר לשנות תאריך → וובינר חדש (Safari). להגדיר צ'אט Everyone + מני Panelist.
 - **מכסת סמוב:** לבדוק `seq_audit.free_slots()` לפני שמפעילים מודעות. ב-07/10 היו 55 מקומות.
 - מיילי הציפייה הולכים **לנרשמות בלבד** (ב-4.10 המייל של 1.10 יצא לכל אנשי הקשר).
+
+## 5. מה למדנו בהרמת 25.10 (13/10/2026 — מחזור שהורם בבוקר של שידור קודם, בלי לכבות את הקמפיין)
+- **שכפול אוטומציה בלי דפדפן:** POST של טופס `BpmnEdit.aspx?iid=<מקור>` עם השדה `ctl00$BodyContentPlaceHolder$bpmnDuplicate` → נוצרת "עותק של …" (Draft, כל המפתחות ריקים). המזהה החדש: `api.admin.smoove.io/api/v1/bpmn?sort=-id`.
+- **שמירת גרף — השמות המלאים!** השדות הם `ctl00$BodyContentPlaceHolder$bpmnData` / `…$bpmnIsUnsaved` / `…$bpmnSave`. שליחה של `bpmnData` קצר לצד הישן = השרת שומר את הישן בשקט (זה כנראה מה שהפיל את hold_510_mail). הכלי: `kit/smoove/bpmn_tool.py` (get/save/postback, גיבוי לפני ואחרי).
+- **מפתח רשימה לאוטומציה:** `ViplusService.asmx/GetBpmnAssets` עובד רק עם הפיילוד המלא של העורך (`{bpmnId, apiKeys:true, managers:true, lists:true, dateFields:true, fields:true, emailKeys:[], smsKeys:[], omnichannelMessagesKeys:[], leadKeys:[], contactKeys:[]}`) → `Lists[].Id`. הנוסחה `oqa4ggmb+s2+ליבה+s1+s3+d` אומתה (ליבת 1176583 = `kqf1`).
+- **מפתח מייל:** טיוטות שנוצרו ב-REST מופיעות ב-`GetEmails {bpmnId}` של כל אוטומציה עם המלח שלה (`mail_<id>` ב-PreviewThumbUrl).
+- **מטא:** ה-MCP `meta-ads` במצב פיתוח ולא יוצר קריאייטיב (שגיאה 1885183); `meta-official ads_create_creative` כן. יצירת המודעה עצמה עם creative_id עובדת ב-`meta-ads` (PAUSED). `ads_create_ad` של meta-official = טיוטה שדורשת פרסום קמפיין — לא להשתמש.
+- **זום:** אחרי הטריאל אין Webinar; ה-API report-only; `/rest/meeting/save` של האתר דורש סשן שאינו בעוגיות. פתרון: כל הנכסים מצביעים על `/r/webinar-zoom` ורק היעד מתחלף (PMI → פגישה מתוזמנת).
+- **new-cycle.py:** נוספו `--list-id` (רשימה שכבר נפתחה) ו-`.get('whatsapp_5min_template')`.
