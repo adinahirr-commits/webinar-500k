@@ -51,7 +51,7 @@ def save(iid, new_bd, new_name=None):
 def postback(iid, label):
     """לחיצה על 'הפעלה' / 'עצירה' — ה-target נשלף מה-href של הקישור."""
     page, bd, st, nm, al = get(iid)
-    m = re.search(r'WebForm_PostBackOptions\("([^"]+)"[^)]*\)\)">\s*' + label, page)
+    m = re.search(r'WebForm_PostBackOptions\("([^"]+)"[^)]*\)\)">\s*' + label, html.unescape(page))
     if not m:
         # fallback: look for the anchor id patterns
         ids = re.findall(r"href=\"javascript:__doPostBack\(&#39;([^&]+)&#39;", page)

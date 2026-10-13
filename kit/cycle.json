@@ -8,35 +8,49 @@
  "thanks_id": "thanks-2510",
  "recording_id": "recording-2510",
  "smoove_list_id": "1176583",
- "smoove_list_key": "",
+ "smoove_list_key": "kqf1 (ליבה; מפתח = oqa4ggmb+s2+kqf1+s1+s3+d)",
  "smoove_list_name": "וובינר חצי מליון לכל ילד 25/10/26",
- "zoom": "https://academy.mominvest.co.il/r/webinar-zoom",
- "zoom_meeting": "822 1587 2635 (Zoom Webinar, בלי קוד; טריאל עד ~14/10)",
+ "zoom": "https://academy.mominvest.co.il/r/webinar-zoom (יעד: PMI 5110698373 עד שתיפתח פגישה מתוזמנת)",
+ "zoom_meeting": "PMI של עדי — להחליף ביעד של webinar-zoom במרכז הלינקים",
  "calendar_template": "https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=ZmJqM29icjg1bm9scnU3ZmprMGR2Y2twYmcg&tmsrc=adinahirr%40gmail.com",
- "calendar_event_id": "",
+ "calendar_event_id": "fbj3obr85nolru7fjk0dvckpbg",
  "whatsapp_group": "https://chat.whatsapp.com/IDnz4FoD36f4ei7n9L6pT4",
  "smoove": {
-  "automation_scheduled": "",
-  "automation_confirmation": "",
-  "confirmation_email": "",
-  "sequence_emails": [
-   55617607,
-   55617608,
-   55617609,
-   55617610,
-   55617611
-  ],
-  "whatsapp_5min_template": "",
-  "previous_cycle": "w1310"
+  "automation_confirmation": "275983 (Active מ-13/10 11:00; מייל 55617612 + ווטסאפ welcome 25.10 אחרי 2 דק׳)",
+  "automation_scheduled": "275984 (Active מ-13/10 11:00)",
+  "confirmation_email": 55617612,
+  "sequence": {
+   "2026-10-20 08:30": 55617607,
+   "2026-10-22 08:30": 55617608,
+   "2026-10-24 20:30": 55617609,
+   "2026-10-25 10:00": 55617610,
+   "2026-10-25 19:30": 55617611,
+   "2026-10-25 19:54 ווטסאפ": "5min (oxa4idfg8mkbwig)"
+  },
+  "whatsapp_welcome_message": "welcome 25.10 (20:00) — oqa46dfg8mkbpig בהקשר 275983",
+  "previous_cycle": "w1310",
+  "stopped": "275442 (אישור 13.10) נעצרה 13/10 11:00"
  },
  "meta": {
   "campaign": "120254624625430558",
-  "adset": "",
-  "ads": {},
-  "utm_campaign": "webinar2510"
+  "adset": "120255202426790558 (end 2026-10-25T20:00+0200, 200₪/יום)",
+  "ads": {
+   "pic_Dreams · 25.10": "120255291351960558",
+   "VID-1 בכל שנתיים · 25.10": "120255291352920558"
+  },
+  "creatives": {
+   "pic": "1643527687117065",
+   "vid": "1617327316593174"
+  },
+  "paused_1310_ads": [
+   "120255202429240558",
+   "120255202431400558"
+  ],
+  "utm_campaign": "webinar2510",
+  "status": "ACTIVE מ-13/10 11:00"
  },
  "canva_deck": "",
  "deck_name": "חצי מליון לכל ילד 25/10",
- "sales_close": "2026-10-27 22:00",
+ "sales_close": "2026-10-27 22:00 (ברירת מחדל — להחליט עם עדי)",
  "offer_min": 77
 }
