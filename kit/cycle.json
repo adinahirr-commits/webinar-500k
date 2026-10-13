@@ -1,59 +1,42 @@
 {
- "code": "w1310",
- "date": "2026-10-13",
- "date_str": "13.10",
- "day": "שלישי",
- "time": "10:00",
- "page_id": "webinar-1310",
- "thanks_id": "thanks-1310",
- "recording_id": "recording-1310",
- "smoove_list_id": "1173786",
+ "code": "w2510",
+ "date": "2026-10-25",
+ "date_str": "25.10",
+ "day": "ראשון",
+ "time": "20:00",
+ "page_id": "webinar-2510",
+ "thanks_id": "thanks-2510",
+ "recording_id": "recording-2510",
+ "smoove_list_id": "1176583",
  "smoove_list_key": "",
- "smoove_list_name": "וובינר חצי מליון לכל ילד 13/10/26",
- "zoom": "https://us06web.zoom.us/j/82215872635",
+ "smoove_list_name": "וובינר חצי מליון לכל ילד 25/10/26",
+ "zoom": "https://academy.mominvest.co.il/r/webinar-zoom",
  "zoom_meeting": "822 1587 2635 (Zoom Webinar, בלי קוד; טריאל עד ~14/10)",
- "calendar_template": "https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=ZGR2Z2tmYWgwMG9qODZmOHBndGM3bzIydjgg&tmsrc=adinahirr%40gmail.com",
- "calendar_event_id": "ddvgkfah00oj86f8pgtc7o22v8",
+ "calendar_template": "https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=ZmJqM29icjg1bm9scnU3ZmprMGR2Y2twYmcg&tmsrc=adinahirr%40gmail.com",
+ "calendar_event_id": "",
  "whatsapp_group": "https://chat.whatsapp.com/IDnz4FoD36f4ei7n9L6pT4",
  "smoove": {
-  "automation_confirmation": "275442 (פעילה מ-07/10 11:00; ענף הווטסאפ הוסר עד שעדי מגישה נוסח חדש)",
-  "automation_scheduled": "275443 (טיוטה — מחכה לאישור עדי; צריכה להיות פעילה לפני 9.10 08:30)",
-  "smoove_list_key_in_275442": "oqa4ggmbp88fxb8d",
-  "smoove_list_key_in_275443": "oqa4ggmbq88fxb8d",
-  "confirmation_email": 55606018,
-  "chain_breaker_email": 55521435,
-  "sequence": {
-   "2026-10-09 08:30": 55606019,
-   "2026-10-11 09:30": 55606020,
-   "2026-10-12 20:30": 55606021,
-   "2026-10-13 07:30": 55606022,
-   "2026-10-13 09:30": 55606023
-  },
-  "post_webinar_drafts": {
-   "13.10 12:00 הלינק להרשמה": 55606217,
-   "14.10 08:30 I got you": 55606218,
-   "14.10 20:30 השנתיים": 55606219,
-   "15.10 10:00 לא הרבה יודעים": 55606220
-  },
-  "whatsapp_needed_from_adi": [
-   "ברוכה הבאה (13/10 10:00)",
-   "תזכורת אחרי מייל הבוקר (היום 10:00)",
-   "עוד 5 דקות (זום 82215872635)"
+  "automation_scheduled": "",
+  "automation_confirmation": "",
+  "confirmation_email": "",
+  "sequence_emails": [
+   55617607,
+   55617608,
+   55617609,
+   55617610,
+   55617611
   ],
-  "previous_cycle": "w0410"
+  "whatsapp_5min_template": "",
+  "previous_cycle": "w1310"
  },
  "meta": {
   "campaign": "120254624625430558",
-  "adset": "120255202426790558",
-  "ads": {
-   "pic_Dreams · 13.10": "120255202429240558",
-   "VID-1 בכל שנתיים · 13.10": "120255202431400558"
-  },
-  "utm_campaign": "webinar1310",
-  "status": "PAUSED — מחכה לאישור עדי (100₪/יום, נסגר 13.10 10:00)"
+  "adset": "",
+  "ads": {},
+  "utm_campaign": "webinar2510"
  },
  "canva_deck": "",
- "deck_name": "חצי מליון לכל ילד 13/10",
- "sales_close": "2026-10-15 22:00 (הצעה: חמישי, 3 ימים אחרי כמו ב-4.10)",
+ "deck_name": "חצי מליון לכל ילד 25/10",
+ "sales_close": "2026-10-27 22:00",
  "offer_min": 77
 }

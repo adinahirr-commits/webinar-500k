@@ -59,7 +59,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--date', required=True, help='YYYY-MM-DD של השידור')
     ap.add_argument('--time', default='20:00')
-    ap.add_argument('--zoom'); ap.add_argument('--cal'); ap.add_argument('--wa')
+    ap.add_argument('--zoom'); ap.add_argument('--cal'); ap.add_argument('--wa'); ap.add_argument('--list-id', help='רשימת סמוב שכבר נפתחה (במקום לפתוח חדשה)')
     ap.add_argument('--apply', action='store_true'); ap.add_argument('--smoove', action='store_true'); ap.add_argument('--portal', action='store_true')
     a = ap.parse_args()
 
@@ -77,7 +77,7 @@ def main():
         'sales_close': (datetime.datetime.combine(d, datetime.time(22, 0)) + datetime.timedelta(days=2)).strftime('%Y-%m-%d %H:%M'),
         'smoove_list_id': '', 'smoove_list_key': '', 'calendar_event_id': '',
         'smoove': {'automation_scheduled': '', 'automation_confirmation': '', 'confirmation_email': '', 'sequence_emails': [],
-                   'whatsapp_5min_template': old['smoove']['whatsapp_5min_template'], 'previous_cycle': old['code']},
+                   'whatsapp_5min_template': old['smoove'].get('whatsapp_5min_template', ''), 'previous_cycle': old['code']},
         'meta': {'campaign': old['meta']['campaign'], 'adset': '', 'ads': {}, 'utm_campaign': 'webinar' + ddmm},
         'canva_deck': '',
     })
@@ -136,8 +136,11 @@ def main():
         def post(path, data):
             r = urllib.request.urlopen(urllib.request.Request('https://rest.smoove.io/v1' + path, data=json.dumps(data).encode(), headers=H), timeout=30)
             return json.load(r)
-        lst = post('/Lists', {'name': new['smoove_list_name'], 'description': f'נרשמות לשידור {new["date_str"]} (נוצר מ-kit/new-cycle.py)'})
-        new['smoove_list_id'] = str(lst.get('id') or lst.get('listId') or '')
+        if a.list_id:
+            new['smoove_list_id'] = a.list_id
+        else:
+            lst = post('/Lists', {'name': new['smoove_list_name'], 'description': f'נרשמות לשידור {new["date_str"]} (נוצר מ-kit/new-cycle.py)'})
+            new['smoove_list_id'] = str(lst.get('id') or lst.get('listId') or '')
         print(f'📋 רשימת סמוב נפתחה: {new["smoove_list_id"]} "{new["smoove_list_name"]}"')
         ids = []
         for e in emails:
