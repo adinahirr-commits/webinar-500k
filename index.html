@@ -89,6 +89,9 @@
   .btn:hover{filter:brightness(.94)}
   .btn:disabled{opacity:.7;cursor:default}
   .err{margin-top:12px;font-size:.94rem;font-weight:700;color:#B4245F;display:none;text-align:center}
+  /* הצעת תיקון למייל: שירלי נרשמה עם gmail.con ולא קיבלה אף מייל */
+  .mailfix{margin:8px 0 0;font-size:.92rem;font-weight:600;color:#7A3B00;background:#FFF5E6;border:1px solid #FFD9A8;border-radius:10px;padding:8px 10px;display:none}
+  .mailfix button{appearance:none;border:0;background:none;color:#B4245F;font:inherit;font-weight:800;text-decoration:underline;cursor:pointer;padding:0 2px}
   .consent{display:flex;align-items:flex-start;gap:10px;margin-top:18px;text-align:right}
   .consent input{width:22px;height:22px;flex:none;margin-top:1px;accent-color:var(--pink);cursor:pointer}
   .consent label{margin:0;font-weight:600;font-size:.9rem;line-height:1.5;color:var(--soft);cursor:pointer}
@@ -221,6 +224,7 @@
           <input id="n1" type="text" autocomplete="given-name" required>
           <label for="e1">מייל</label>
           <input id="e1" type="email" inputmode="email" autocomplete="email" required>
+          <p class="mailfix" id="fix-e1" role="status"></p>
           <label for="p1">נייד</label>
           <input id="p1" type="tel" inputmode="tel" autocomplete="tel" required>
           <div class="consent">
@@ -314,6 +318,7 @@
         <input id="n2" type="text" autocomplete="given-name" required>
         <label for="e2">מייל</label>
         <input id="e2" type="email" inputmode="email" autocomplete="email" required>
+          <p class="mailfix" id="fix-e2" role="status"></p>
         <label for="p2">נייד</label>
         <input id="p2" type="tel" inputmode="tel" autocomplete="tel" required>
         <div class="consent">
@@ -394,10 +399,87 @@
   var ENDPOINT = "https://academy.mominvest.co.il/webinar-signup";
   var THANKS = "thanks/";
 
+  // ---- טעות הקלדה במייל. שירלי, הרוכשת הוותיקה ביותר מ-13.10, לא קיבלה אף
+  // מייל במשך חודשים כי בכתובת שלה כתוב gmail.con. אותה רשימה בדיוק יושבת גם
+  // בשרת (mailfix.py), כרשת ביטחון למילוי אוטומטי ולדפדפנים ישנים.
+  var MAIL_HARD = {
+    'gmail.con':'gmail.com','gamil.com':'gmail.com','gmil.com':'gmail.com','gmail.cim':'gmail.com',
+    'gimal.com':'gmail.com','gnail.com':'gmail.com','gmai.com':'gmail.com','gmsil.com':'gmail.com',
+    'jimal.com':'gmail.com','gma.com':'gmail.com','gmial.com':'gmail.com','gmaill.com':'gmail.com',
+    'gmail.cpm':'gmail.com','gmail.cmo':'gmail.com','gmail.clm':'gmail.com','gmail.vom':'gmail.com',
+    'gmail.om':'gmail.com','gmail.cm':'gmail.com','gmail.c0m':'gmail.com','gmail.co':'gmail.com',
+    'gmail.co.il':'gmail.com','gmail.com.il':'gmail.com','gmaul.com':'gmail.com','gmail.ocm':'gmail.com',
+    'ggmail.com':'gmail.com','hmail.com':'gmail.com','hotmil.com':'hotmail.com','hotmai.com':'hotmail.com',
+    'hotmail.con':'hotmail.com','hotmail.co':'hotmail.com','uotlook.com':'outlook.com',
+    'outlok.com':'outlook.com','outlook.con':'outlook.com','yaho.com':'yahoo.com','yahoo.con':'yahoo.com',
+    'yhaoo.com':'yahoo.com','icloud.con':'icloud.com','iclod.com':'icloud.com','icoud.com':'icloud.com',
+    'wall.co.il':'walla.co.il','walla.con':'walla.com','wala.co.il':'walla.co.il','walla.co':'walla.co.il'
+  };
+  var MAIL_KNOWN = {'gmail.com':1,'walla.com':1,'walla.co.il':1,'hotmail.com':1,'hotmail.co.il':1,
+    'outlook.com':1,'outlook.co.il':1,'yahoo.com':1,'ymail.com':1,'icloud.com':1,'me.com':1,'mac.com':1,
+    'live.com':1,'msn.com':1,'aol.com':1,'mail.com':1,'bezeqint.net':1,'netvision.net.il':1,
+    'zahav.net.il':1,'012.net.il':1,'013.net':1,'014.net.il':1,'inter.net.il':1};
+  var MAIL_POPULAR = ['gmail.com','walla.com','walla.co.il','hotmail.com','yahoo.com','icloud.com','outlook.com'];
+
+  function mailSuggest(value){
+    var e = (value||'').trim().replace(/\s/g,'').replace(/[,;'"]+$/,'').toLowerCase();
+    var at = e.indexOf('@');
+    if(at < 1 || e.indexOf('@', at+1) > -1) return '';
+    var local = e.slice(0, at).replace(/\.+$/,''), dom = e.slice(at+1).replace(/^\.+|\.+$/g,'');
+    if(!local || !dom || MAIL_KNOWN[dom]) return '';
+    if(MAIL_HARD[dom]) return local + '@' + MAIL_HARD[dom];
+    if(dom.indexOf('.') < 0){
+      for(var i=0;i<MAIL_POPULAR.length;i++){ if(MAIL_POPULAR[i].split('.')[0] === dom) return local+'@'+MAIL_POPULAR[i]; }
+      return '';
+    }
+    // סיומת תקינה ואחריה אשפה: gmail.comm, gmail.comshar — אבל לא yahoo.com.au
+    var m = dom.match(/^([a-z0-9.\-]+\.(?:com|net|org|co\.il|net\.il|org\.il))([a-z.]{1,6})$/);
+    if(m && MAIL_KNOWN[m[1]] && !/^\.[a-z]{2}$/.test(m[2])) return local + '@' + m[1];
+    // בסיס מוכר + סיומת לא קיימת (תווית אחת בלבד, שלא נהרוס mail.huji.ac.il)
+    if(dom.split('.').length === 2){
+      var base = dom.split('.')[0];
+      for(var j=0;j<MAIL_POPULAR.length;j++){ if(MAIL_POPULAR[j].split('.')[0] === base) return local+'@'+MAIL_POPULAR[j]; }
+    }
+    return '';
+  }
+
+  function wireMailFix(eId){
+    var input = document.getElementById(eId);
+    var box = document.getElementById('fix-' + eId);
+    if(!input || !box) return function(){ return true; };
+    var dismissed = '';
+    function hide(){ box.style.display = 'none'; box.textContent = ''; }
+    function show(sug){
+      box.innerHTML = '';
+      box.appendChild(document.createTextNode('רק מוודאת, התכוונת ל־'));
+      var b = document.createElement('button');
+      b.type = 'button'; b.textContent = sug;
+      b.addEventListener('click', function(){ input.value = sug; hide(); });
+      box.appendChild(b);
+      box.appendChild(document.createTextNode('?\u00A0\u00A0·\u00A0\u00A0'));
+      var no = document.createElement('button');
+      no.type = 'button'; no.textContent = 'לא, הכתובת נכונה';
+      no.addEventListener('click', function(){ dismissed = input.value.trim().toLowerCase(); hide(); });
+      box.appendChild(no);
+      box.style.display = 'block';
+    }
+    function check(){
+      var v = input.value.trim().toLowerCase();
+      if(v === dismissed){ hide(); return true; }
+      var sug = mailSuggest(v);
+      if(sug && sug !== v){ show(sug); return false; }
+      hide(); return true;
+    }
+    input.addEventListener('blur', check);
+    input.addEventListener('input', function(){ if(box.style.display === 'block') hide(); });
+    return check;
+  }
+
   function wire(formId, nId, eId, pId, cId){
     var form = document.getElementById(formId);
     var errEl = form.querySelector('.err');
     var btn = form.querySelector('.btn');
+    var mailCheck = wireMailFix(eId);
     form.addEventListener('submit', function(ev){
       ev.preventDefault();
       var name = document.getElementById(nId).value.trim();
@@ -408,6 +490,8 @@
       if(!name){ bad('רק שם, ואנחנו בפנים.'); return; }
       if(email.indexOf('@') < 1){ bad('נראה שנפלה טעות קטנה במייל. אפשר לבדוק?'); return; }
       if(phone.replace(/\D/g,'').length < 9){ bad('צריך מספר נייד תקין, כדי שנוכל להשלים את ההרשמה.'); return; }
+      // טעות בדומיין = אפס מיילים. עוצרים פעם אחת ומציעים תיקון; "לא, הכתובת נכונה" ממשיך.
+      if(!mailCheck()){ return; }
       if(!document.getElementById(cId).checked){ bad('צריך לסמן את האישור כדי שאוכל לשלוח לך את הלינק.'); return; }
 
       var orig = btn.textContent;
