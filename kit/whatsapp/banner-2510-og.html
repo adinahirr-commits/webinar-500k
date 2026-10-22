@@ -2,39 +2,36 @@
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 <style>
 html,body{margin:0;padding:0;width:1200px;height:630px;overflow:hidden}
-body{background:#FBFAF7;font-family:'Heebo',sans-serif;color:#1A1B2E;position:relative}
-.txt{position:absolute;right:64px;top:58px;width:560px}
-.kicker{display:inline-block;background:#FCE1EF;color:#EF55A5;font-weight:800;font-size:22px;padding:7px 20px;border-radius:30px}
-h1{font-size:58px;line-height:1.1;font-weight:900;margin:20px 0 0;letter-spacing:-.5px}
+body{font-family:'Heebo',sans-serif;color:#1A1B2E;position:relative;background:#F6EEE4 url(kid-check.png) left center/1200px auto no-repeat}
+.txt{position:absolute;right:52px;top:44px;width:520px}
+.kicker{display:inline-block;background:#EF55A5;color:#fff;font-weight:800;font-size:21px;padding:7px 20px;border-radius:30px}
+h1{font-size:50px;line-height:1.1;font-weight:900;margin:16px 0 0;letter-spacing:-.5px}
 h1 em{font-style:normal;color:#EF55A5}
-.chart{position:absolute;left:60px;top:70px;width:500px;height:400px;display:flex;align-items:flex-end;justify-content:center;gap:50px;border-bottom:3px solid #1A1B2E}
-.col{width:200px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}
-.val{white-space:nowrap;font-weight:900;text-align:center;line-height:1.05;margin-bottom:12px}
-.val small{display:block;font-size:18px;font-weight:500;color:#5E5F76;margin-top:4px}
-.bar{width:100%;border-radius:16px 16px 0 0}
-.state .bar{height:30px;background:#D9D6CE}
-.state .val{color:#5E5F76;font-size:30px}
-.ours .bar{height:270px;background:#EF55A5}
-.ours .val{color:#EF55A5;font-size:42px}
-.labels{position:absolute;left:60px;top:482px;width:500px;display:flex;justify-content:center;gap:50px}
-.labels div{width:200px;text-align:center;font-size:20px;font-weight:700;line-height:1.2}
-.labels .l2{color:#EF55A5}
-.foot{position:absolute;right:64px;top:440px;background:#1A1B2E;color:#fff;border-radius:40px;height:64px;line-height:64px;padding:0 30px;font-size:26px;font-weight:800;white-space:nowrap}
-.foot b{color:#CCD537}
-.cta{position:absolute;right:64px;top:524px;font-size:24px;font-weight:800;color:#EF55A5}
+.card{margin-top:18px;width:430px;padding:14px 18px 10px;background:rgba(255,255,255,.92);border-radius:20px;box-shadow:0 8px 24px rgba(26,27,46,.12)}
+.chart{height:120px;display:flex;align-items:flex-end;justify-content:center;gap:40px;border-bottom:2px solid #1A1B2E}
+.col{width:150px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}
+.val{white-space:nowrap;font-weight:900;line-height:1;margin-bottom:6px}
+.bar{width:100%;border-radius:10px 10px 0 0}
+.state .bar{height:12px;background:#D9D6CE}.state .val{color:#5E5F76;font-size:19px}
+.ours .bar{height:78px;background:#EF55A5}.ours .val{color:#EF55A5;font-size:25px}
+.lab{display:flex;justify-content:center;gap:40px;margin-top:6px}
+.lab div{width:150px;text-align:center;font-size:15px;font-weight:700;line-height:1.15}
+.lab .l2{color:#EF55A5}
+.foot{position:absolute;right:52px;bottom:40px;display:flex;align-items:center;gap:14px}
+.pill{background:#1A1B2E;color:#fff;border-radius:40px;height:58px;line-height:58px;padding:0 24px;font-size:23px;font-weight:800;white-space:nowrap}
+.pill b{color:#CCD537}
+.go{background:#EF55A5;color:#fff;border-radius:40px;height:58px;line-height:58px;padding:0 24px;font-size:23px;font-weight:900;white-space:nowrap}
 </style></head><body>
 <div class="txt">
   <div class="kicker">הדרכה חינמית · אמא משקיעה</div>
-  <h1>מה יחכה לילד שלך<br>כשיגיע <em>לחתונה,</em><br><em>לדירה וללימודים?</em></h1>
+  <h1>מה יחכה לילד שלך<br><em>כשיגיע לחתונה,<br>לדירה וללימודים?</em></h1>
+  <div class="card">
+    <div class="chart">
+      <div class="col state"><div class="val">עשרות אלפים</div><div class="bar"></div></div>
+      <div class="col ours"><div class="val">חצי מיליון ₪</div><div class="bar"></div></div>
+    </div>
+    <div class="lab"><div>"חיסכון לכל ילד"</div><div class="l2">מכספים קטנים</div></div>
+  </div>
 </div>
-<div class="foot">ראשון · 25.10 · 20:00 · <b>בזום, ללא עלות</b></div>
-<div class="cta">לשריון מקום »</div>
-<div class="chart">
-  <div class="col state"><div class="val">עשרות אלפים<small>גם במקסימום</small></div><div class="bar"></div></div>
-  <div class="col ours"><div class="val">חצי מיליון ₪</div><div class="bar"></div></div>
-</div>
-<div class="labels">
-  <div>"חיסכון לכל ילד"<br>של המדינה</div>
-  <div class="l2">מכספים קטנים<br>שכבר מגיעים אלייך</div>
-</div>
+<div class="foot"><div class="go">לשריון מקום »</div><div class="pill">ראשון 25.10 · 20:00 · <b>בזום</b></div></div>
 </body></html>
