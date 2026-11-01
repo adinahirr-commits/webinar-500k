@@ -26,12 +26,13 @@
    55685331,
    55685332
   ],
-  "whatsapp_5min_template": "",
+  "whatsapp_5min_template": "5min 13.10 (09:54) — תבנית 22760 webinar_5min_link, בלי תאריך, לינק /r/webinar-zoom; מפתח oja4idfgjmkbwqg בהקשר 277598, צומת 15.11 19:55 (vip_277598_340100000001_1/2; 01/11)",
   "previous_cycle": "w2510",
   "list_keys": {
    "277597": "oqa4ggmbemsf3qjd",
    "277598": "oqa4ggmbjmsf3qjd"
-  }
+  },
+  "whatsapp_welcome_message": "welcome 15.11 (20:00) — תבנית 22749 webinar_welcome, פרמטרים 15/11 + 20:00; מפתח oea4qdfgjmpbiqg בהקשר 277597 (רשימה-חדשות → 2 דק׳ → ווטסאפ, צמתים vip_277597_340100000001_1-3; 01/11)"
  },
  "meta": {
   "campaign": "120254624625430558",
