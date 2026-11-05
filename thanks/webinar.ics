@@ -6,12 +6,12 @@ METHOD:PUBLISH
 BEGIN:VEVENT
 UID:webinar-500k-20261115@mominvest.co.il
 DTSTAMP:20261013T070000Z
-SEQUENCE:0
+SEQUENCE:1
 DTSTART:20261115T180000Z
 DTEND:20261115T191500Z
-SUMMARY:הזום של אמא משקיעה — איך לתת חצי מיל
+SUMMARY:השידור החי של אמא משקיעה — איך לתת חצי מיל
  יון לכל ילד
-DESCRIPTION:נעים מאוד\, אני שמחה שאת איתי 💗\n\nקישור הזום:\nhttps://academy.mominvest.co.il/r/webinar-zoom\n\nהקישור יישלח גם במייל ובקבוצת הוואטסאפ לפני ההדרכה.\nנתראה\, עדי סומך
+DESCRIPTION:נעים מאוד\, אני שמחה שאת איתי 💗\n\nהקישור לשידור החי:\nhttps://academy.mominvest.co.il/r/webinar-zoom\n\nהקישור יישלח גם במייל ובקבוצת הוואטסאפ לפני ההדרכה.\nנתראה\, עדי סומך
 LOCATION:https://academy.mominvest.co.il/r/webinar-zoom
 URL:https://academy.mominvest.co.il/r/webinar-zoom
 STATUS:CONFIRMED
