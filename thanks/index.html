@@ -56,7 +56,7 @@
     <p class="spam"><b>שימי לב:</b> ייתכן שההזמנה מתחבאת בתיקיית ספאם או "קידומי מכירות". ודאי שאת מעבירה אותה לתיקייה הראשית, כדי שתקבלי גם את הקישור ביום ההרצאה.</p>
 
     <!-- בקשת עדי (26/09): הצעד הוא הכפתור עצמו — בלי בלוק הסבר ואז כפתור נפרד -->
-    <a class="act wa" href="https://chat.whatsapp.com/IDnz4FoD36f4ei7n9L6pT4?mode=gi_t" target="_blank" rel="noopener">
+    <a class="act wa" href="https://chat.whatsapp.com/C8oD5UUjiyzJLFqw2WHe2k?mode=gi_t" target="_blank" rel="noopener">
       <span class="n">1</span>
       <span class="tx"><b>הצטרפי לקבוצת הוואטסאפ של ההדרכה</b><small>שם יהיו הלינק, התזכורות, וכל מה שאשלח לפני</small></span>
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.4 11.4 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6a2.6 2.6 0 0 0 1.7-1.2 2 2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3Z"/></svg>
@@ -72,6 +72,13 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
     </a>
     <p class="alt">אין לך יומן גוגל? <a href="webinar.ics" download="webinar.ics">הוסיפי ליומן האייפון</a></p>
+
+    <!-- תביאי חברה (07/11): הודעת ווטסאפ מוכנה עם קישור מדיד w1511-friend -->
+    <a class="act wa friend" href="https://wa.me/?text=%D7%97%D7%A9%D7%91%D7%AA%D7%99%20%D7%A2%D7%9C%D7%99%D7%99%D7%9A%20%F0%9F%A9%B7%20%D7%A2%D7%93%D7%99%20%D7%A1%D7%95%D7%9E%D7%9A%20%D7%A2%D7%95%D7%A9%D7%94%20%D7%A9%D7%99%D7%93%D7%95%D7%A8%20%D7%97%D7%99%20%D7%91%D7%99%D7%95%D7%9D%20%D7%A8%D7%90%D7%A9%D7%95%D7%9F%2015.11%20%D7%91%D7%A9%D7%A2%D7%94%2020%3A00%2C%20%D7%A2%D7%9C%20%D7%90%D7%99%D7%9A%20%D7%9C%D7%AA%D7%AA%20%D7%97%D7%A6%D7%99%20%D7%9E%D7%99%D7%9C%D7%99%D7%95%D7%9F%20%D7%9C%D7%9B%D7%9C%20%D7%99%D7%9C%D7%93.%20%D7%9C%D7%9C%D7%90%20%D7%A2%D7%9C%D7%95%D7%AA%2C%20%D7%94%D7%94%D7%A8%D7%A9%D7%9E%D7%94%20%D7%9B%D7%90%D7%9F%3A%20https%3A//academy.mominvest.co.il/r/w1511-friend" target="_blank" rel="noopener">
+      <span class="n">3</span>
+      <span class="tx"><b>מכירה עוד אמא שזה בשבילה?</b><small>שלחי לה את הקישור בווטסאפ. הכי כיף לעשות את זה ביחד 🩷</small></span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v8h16v-8M12 3v13M7 8l5-5 5 5"/></svg>
+    </a>
 
     <p class="fine">משהו לא הגיע? כתבי לי ל־<a href="mailto:mominvest10x@gmail.com">mominvest10x@gmail.com</a> ואני מסדרת.</p>
   </div>
@@ -97,10 +104,11 @@
   }
   hit('thanks-1511');
   var g=document.querySelector('a.act.cal'), i=document.querySelector('a[href="webinar.ics"]'),
-      w=document.querySelector('a.act.wa');
+      w=document.querySelector('a.act.wa:not(.friend)'), fr=document.querySelector('a.act.friend');
   if(g) g.addEventListener('click',function(){ hit('cal-google'); });
   if(i) i.addEventListener('click',function(){ hit('cal-ics'); });
   if(w) w.addEventListener('click',function(){ hit('wa-group'); });
+  if(fr) fr.addEventListener('click',function(){ hit('friend-share'); });
 })();
 </script>
 
