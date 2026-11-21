@@ -9,73 +9,119 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%23EF55A5'/></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 <style>
-  :root{--canvas:#FBFAF7;--ink:#1A1B2E;--soft:#5E5F76;--pink:#EF55A5;--lime:#CCD537;--pink-soft:#FCE1EF;--line:#E7E2D9;--wa:#25D366}
+  /* מבנה: לוח לילה עם קונפטי (אישור + תאריך) ← שני צעדים צבעוניים ← סרטון על רקע ורוד ← שיתוף לחברה בליים */
+  :root{--canvas:#FBF8F4;--ink:#1A1B2E;--ink2:#2A2550;--soft:#5E5F76;--pink:#EF55A5;--pink-deep:#D63C8C;--pink-soft:#FCE1EF;
+        --lime:#CCD537;--lime-soft:#F2F5C9;--sun:#FFC24B;--sun-soft:#FFF4DC;--sky:#8AA6FF;--line:#ECE5DC;--wa:#25D366;--wa-deep:#1DA851}
   *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:'Heebo',sans-serif;background:var(--canvas);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column;font-size:17px}
-  main{flex:1;display:flex;align-items:center;padding:clamp(28px,6vw,64px) 18px}
-  .card{max-width:560px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:24px;padding:clamp(26px,5vw,44px);box-shadow:0 30px 70px -44px rgba(26,27,46,.45);text-align:center}
-  .tick{width:66px;height:66px;border-radius:50%;background:var(--pink-soft);display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
-  .tick svg{width:32px;height:32px;stroke:var(--pink);fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
-  h1{font-size:clamp(1.6rem,5.6vw,2.2rem);font-weight:900;letter-spacing:-.02em;line-height:1.2;margin-bottom:8px}
-  .when{display:inline-block;background:var(--ink);color:#fff;border-radius:100px;padding:9px 22px;font-weight:900;font-size:1rem;margin-bottom:20px}
-  .when span{color:var(--lime)}
-  p{color:var(--soft);font-size:1.02rem;margin-bottom:14px}
-  .spam{background:#FFF6E3;border:1px solid #F0DFB8;border-radius:14px;padding:14px 16px;
-        text-align:right;font-size:.96rem;line-height:1.55;color:#6B5528;margin-bottom:4px}
-  .spam b{color:#1A1B2E;font-weight:900}
-  .steps{display:grid;gap:12px;margin:22px 0 4px;text-align:right}
-  .step{display:flex;gap:14px;align-items:center;background:var(--canvas);border:1px solid var(--line);border-radius:16px;padding:14px 16px}
-  .step .n{flex:none;width:30px;height:30px;border-radius:9px;background:var(--pink);color:#fff;font-weight:900;font-size:.95rem;display:flex;align-items:center;justify-content:center}
-  .step b{display:block;font-size:1.02rem;font-weight:800;line-height:1.3}
-  .step span{font-size:.92rem;color:var(--soft)}
-  .act{display:flex;align-items:center;text-align:right;gap:13px;width:100%;border-radius:14px;padding:16px 18px;font-weight:900;font-size:1.08rem;text-decoration:none;color:#fff;margin-top:14px}
-  .act .n{flex:none;width:30px;height:30px;border-radius:9px;background:rgba(255,255,255,.28);color:#fff;font-weight:900;font-size:.95rem;display:flex;align-items:center;justify-content:center}
+  body{font-family:'Heebo',Arial,sans-serif;background:var(--canvas);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column;font-size:17px;
+       background-image:radial-gradient(520px 320px at 100% 0,rgba(239,85,165,.13),transparent 70%),radial-gradient(460px 300px at 0 18%,rgba(204,213,55,.16),transparent 70%)}
+  main{flex:1;padding:clamp(18px,5vw,48px) 14px}
+  .wrap{max-width:540px;margin:0 auto;display:grid;gap:16px}
+
+  .hero{position:relative;overflow:hidden;background:linear-gradient(160deg,var(--ink2),var(--ink) 70%);color:#fff;border-radius:30px;padding:38px 24px 30px;text-align:center;box-shadow:0 30px 60px -36px rgba(26,27,46,.7)}
+  .hero::after{content:"";position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(239,85,165,.45),transparent 65%);top:-150px;left:50%;transform:translateX(-50%);pointer-events:none}
+  .dot{position:absolute;border-radius:3px;opacity:.9;animation:fl 5s ease-in-out infinite}
+  .d1{width:10px;height:10px;background:var(--pink);top:26px;right:30px;transform:rotate(20deg)}
+  .d2{width:8px;height:8px;background:var(--lime);border-radius:50%;top:70px;left:34px;animation-delay:-1.5s}
+  .d3{width:12px;height:5px;background:var(--sun);top:120px;right:52px;transform:rotate(-30deg);animation-delay:-3s}
+  .d4{width:7px;height:7px;background:var(--sky);border-radius:50%;bottom:44px;left:58px;animation-delay:-2s}
+  .d5{width:11px;height:4px;background:var(--pink);bottom:30px;right:40px;transform:rotate(40deg);animation-delay:-4s}
+  .d6{width:6px;height:6px;background:var(--lime);top:30px;left:96px;animation-delay:-.7s}
+  @keyframes fl{0%,100%{translate:0 0}50%{translate:0 -7px}}
+  .tick{position:relative;z-index:1;width:74px;height:74px;border-radius:50%;background:var(--pink);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;box-shadow:0 0 0 7px rgba(204,213,55,.9),0 14px 30px -10px rgba(239,85,165,.8);animation:pop .6s cubic-bezier(.2,1.6,.4,1) both}
+  .tick svg{width:36px;height:36px;stroke:#fff;fill:none;stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round}
+  @keyframes pop{from{transform:scale(.4);opacity:0}to{transform:scale(1);opacity:1}}
+  .hero h1{position:relative;z-index:1;font-size:clamp(1.75rem,6.4vw,2.4rem);font-weight:900;letter-spacing:-.02em;line-height:1.15;margin-bottom:14px;text-wrap:balance}
+  .hero .when{position:relative;z-index:1;display:inline-flex;align-items:center;gap:10px;background:var(--lime);color:var(--ink);border-radius:100px;padding:8px 20px;font-weight:900;font-size:1.02rem;margin-bottom:16px}
+  .when i{width:5px;height:5px;border-radius:50%;background:var(--ink);opacity:.5}
+  .hero p{position:relative;z-index:1;color:#D9D7EA;font-size:1rem;max-width:400px;margin:0 auto}
+
+  .spam{display:flex;gap:12px;align-items:flex-start;background:var(--sun-soft);border:1px solid #F3DCA6;border-radius:20px;padding:14px 16px;text-align:right;font-size:.95rem;line-height:1.55;color:#6B5528}
+  .spam .ic{flex:none;width:34px;height:34px;border-radius:11px;background:var(--sun);display:flex;align-items:center;justify-content:center}
+  .spam .ic svg{width:19px;height:19px;stroke:var(--ink);fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+  .spam b{color:var(--ink);font-weight:900}
+
+  .lbl{font-size:.82rem;font-weight:800;letter-spacing:.04em;color:var(--pink-deep);margin:6px 4px -6px}
+  .act{display:flex;align-items:center;text-align:right;gap:14px;width:100%;border-radius:22px;padding:17px 18px;text-decoration:none;color:#fff;transition:transform .15s,filter .15s}
+  .act .n{flex:none;width:34px;height:34px;border-radius:12px;background:rgba(255,255,255,.25);color:#fff;font-weight:900;font-size:1rem;display:flex;align-items:center;justify-content:center}
   .act .tx{flex:1;min-width:0}
-  .act .tx b{display:block;font-size:1.05rem;line-height:1.3}
-  .act .tx small{display:block;font-weight:600;font-size:.88rem;opacity:.92;margin-top:2px}
-  .act svg{width:22px;height:22px;flex:none}
-  .act.wa{background:var(--wa)}
-  .act.cal{background:var(--ink)}
-  .act:hover{filter:brightness(.95)}
-  .alt{font-size:.88rem;color:var(--soft);margin:10px 0 0;text-align:center}
-  .alt a{color:var(--pink);font-weight:700}
-  .fine{font-size:.86rem;margin:20px 0 0}
-  .fine a{color:var(--pink)}
+  .act .tx b{display:block;font-size:1.08rem;font-weight:900;line-height:1.3}
+  .act .tx small{display:block;font-weight:600;font-size:.88rem;opacity:.93;margin-top:2px}
+  .act svg{width:24px;height:24px;flex:none}
+  .act.wa{background:linear-gradient(135deg,#2EE07A,var(--wa-deep));box-shadow:0 16px 30px -18px rgba(29,168,81,.9)}
+  .act.cal{background:linear-gradient(135deg,#F86BB5,var(--pink-deep));box-shadow:0 16px 30px -18px rgba(214,60,140,.9)}
+  .act:hover{transform:translateY(-2px);filter:brightness(1.03)}
+  .alt{font-size:.88rem;color:var(--soft);text-align:center;margin-top:-6px}
+  .alt a{color:var(--pink-deep);font-weight:800}
+
+  .hi{position:relative;background:var(--pink-soft);border-radius:30px;padding:26px 20px 24px;text-align:center;overflow:hidden}
+  .hi::before{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:rgba(204,213,55,.35);bottom:-110px;right:-80px}
+  .hi>*{position:relative}
+  .hi b{display:block;font-size:1.3rem;font-weight:900;line-height:1.3;text-wrap:balance}
+  .hi span{display:block;font-size:.97rem;color:var(--soft);margin:3px 0 16px}
+  .frame{position:relative;width:100%;max-width:262px;margin:0 auto;padding:7px;border-radius:30px;background:var(--ink);box-shadow:0 26px 44px -24px rgba(26,27,46,.75)}
+  .frame video{display:block;width:100%;aspect-ratio:9/16;border-radius:24px;background:#000;object-fit:cover}
+  .sticker{position:absolute;top:18px;left:-14px;background:var(--lime);color:var(--ink);font-weight:900;font-size:.85rem;padding:5px 12px;border-radius:100px;transform:rotate(-8deg);box-shadow:0 8px 16px -8px rgba(26,27,46,.5);z-index:2}
+
+  .act.friend{background:var(--lime-soft);color:var(--ink);border:1.5px dashed #C2C944}
+  .act.friend .n{background:var(--ink);color:var(--lime)}
+  .act.friend .tx small{color:var(--soft);opacity:1}
+
+  .fine{font-size:.86rem;color:var(--soft);text-align:center;margin-top:4px}
+  .fine a{color:var(--pink-deep)}
   footer{text-align:center;padding:22px;font-size:.85rem;color:var(--soft)}
-  a:focus-visible{outline:3px solid var(--pink);outline-offset:3px;border-radius:8px}
+  a:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+  @media (max-width:380px){.hero{padding:32px 18px 26px}.sticker{left:-6px}}
+  @media (prefers-reduced-motion:reduce){.dot,.tick{animation:none}.act{transition:none}}
 </style>
 </head>
 <body>
 <main>
-  <div class="card">
-    <div class="tick"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div>
-    <h1>המקום שלך שמור 🎉</h1>
-    <p class="when">יום רביעי, <span>25.11</span> בשעה <span>20:00</span></p>
-    <p>שלחתי לך מייל אישור. הלינק לשידור החי יגיע אלייך למייל לפני ההדרכה, והוא גם יחכה לך בקבוצת הוואטסאפ.</p>
+  <div class="wrap">
+    <section class="hero">
+      <span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span><span class="dot d4"></span><span class="dot d5"></span><span class="dot d6"></span>
+      <div class="tick"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div>
+      <h1>המקום שלך שמור 🎉</h1>
+      <p class="when">יום רביעי <i></i> 25.11 <i></i> 20:00</p>
+      <p>שלחתי לך מייל אישור. הלינק להדרכה יגיע אלייך למייל לפני ההדרכה, והוא גם יחכה לך בקבוצת הוואטסאפ.</p>
+    </section>
 
-    <p class="spam"><b>שימי לב:</b> ייתכן שההזמנה מתחבאת בתיקיית ספאם או "קידומי מכירות". ודאי שאת מעבירה אותה לתיקייה הראשית, כדי שתקבלי גם את הקישור ביום ההרצאה.</p>
+    <p class="spam"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+      <span><b>שימי לב:</b> ייתכן שההזמנה מתחבאת בתיקיית ספאם או "קידומי מכירות". ודאי שאת מעבירה אותה לתיקייה הראשית, כדי שתקבלי גם את הקישור ביום ההרצאה.</span></p>
 
+    <p class="lbl">עוד שני צעדים קטנים</p>
     <!-- בקשת עדי (26/09): הצעד הוא הכפתור עצמו — בלי בלוק הסבר ואז כפתור נפרד -->
     <a class="act wa" href="https://chat.whatsapp.com/C8oD5UUjiyzJLFqw2WHe2k?mode=gi_t" target="_blank" rel="noopener">
       <span class="n">1</span>
       <span class="tx"><b>הצטרפי לקבוצת הוואטסאפ של ההדרכה</b><small>שם יהיו הלינק, התזכורות, וכל מה שאשלח לפני</small></span>
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.4 11.4 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6a2.6 2.6 0 0 0 1.7-1.2 2 2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3Z"/></svg>
     </a>
-    <!-- הוספה ליומן. מ-03/10 הכפתור הראשי הוא לינק השיתוף של היומן שעדי נתנה
-         (calendar.app.google) במקום לינק tmeid.
-         אזהרה: לינק כזה מת ברגע שמוחקים ויוצרים מחדש את האירוע (תקרית 03/09/2026:
-         200 עם "הקישור לא עבד" 11 שעות). לכן ~/link-watch בודק אותו 4 פעמים ביום,
-         ואם מחליפים אירוע — מחליפים גם כאן. ה-.ics למטה למי שאין לה יומן גוגל. -->
-    <a class="act cal" href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=aTM0MjI2aTIyZWFkZzkxZm1jMDl1Y2RxNWMgYWRpbmFoaXJyQG0&tmsrc=adinahirr%40gmail.com" target="_blank" rel="noopener">
+    <!-- 21/11: הכפתור עבר ל-/r/w2511-cal (תבנית אירוע 25.11; הקישור בתוך האירוע = /r/webinar-zoom שמנותב משם,
+         כך שזום/וובי מתחלפים בלי לגעת ביומן של אף אחת). לינק השיתוף הקודם (tmeid) הכניס את האירוע של 15.11.
+         ה-.ics למטה למי שאין לה יומן גוגל — לעדכן תאריך בכל מחזור. -->
+    <a class="act cal" href="https://academy.mominvest.co.il/r/w2511-cal" target="_blank" rel="noopener">
       <span class="n">2</span>
       <span class="tx"><b>הכניסי את ההדרכה ליומן</b><small>לחיצה אחת, ולא תפספסי</small></span>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
     </a>
     <p class="alt">אין לך יומן גוגל? <a href="webinar.ics" download="webinar.ics">הוסיפי ליומן האייפון</a></p>
 
+    <!-- סרטון ההיכרות (21/11): סרטון חימום 1, בלי תאריכים, ממוחזר לכל וובינר.
+         הקובץ יושב בפורטל (/static/hi/1.mp4). נטען רק בלחיצה על פליי. -->
+    <section class="hi">
+      <b>ועד שניפגש, בואי נכיר 🤍</b>
+      <span>הקלטתי לך סרטון קצר</span>
+      <div class="frame">
+        <span class="sticker">2 דק׳ ▶</span>
+        <video id="hiVid" controls playsinline preload="none" poster="https://academy.mominvest.co.il/static/hi/poster1.jpg">
+          <source src="https://academy.mominvest.co.il/static/hi/1.mp4" type="video/mp4">
+        </video>
+      </div>
+    </section>
+
     <!-- תביאי חברה (07/11): הודעת ווטסאפ מוכנה עם קישור מדיד w2511-friend -->
-    <a class="act wa friend" href="https://api.whatsapp.com/send?text=%D7%97%D7%A9%D7%91%D7%AA%D7%99%20%D7%A2%D7%9C%D7%99%D7%99%D7%9A%20%F0%9F%A9%B7%20%D7%A2%D7%93%D7%99%20%D7%A1%D7%95%D7%9E%D7%9A%20%D7%A2%D7%95%D7%A9%D7%94%20%D7%A9%D7%99%D7%93%D7%95%D7%A8%20%D7%97%D7%99%20%D7%91%D7%99%D7%95%D7%9D%20%D7%A8%D7%91%D7%99%D7%A2%D7%99%2025.11%20%D7%91%D7%A9%D7%A2%D7%94%2020:00%2C%20%D7%A2%D7%9C%20%D7%90%D7%99%D7%9A%20%D7%9C%D7%AA%D7%AA%20%D7%97%D7%A6%D7%99%20%D7%9E%D7%99%D7%9C%D7%99%D7%95%D7%9F%20%D7%9C%D7%9B%D7%9C%20%D7%99%D7%9C%D7%93.%20%D7%9C%D7%9C%D7%90%20%D7%A2%D7%9C%D7%95%D7%AA%2C%20%D7%94%D7%94%D7%A8%D7%A9%D7%9E%D7%94%20%D7%9B%D7%90%D7%9F:%20https://academy.mominvest.co.il/r/w2511-friend" target="_blank" rel="noopener">
-      <span class="n">3</span>
+    <a class="act friend" href="https://api.whatsapp.com/send?text=%D7%97%D7%A9%D7%91%D7%AA%D7%99%20%D7%A2%D7%9C%D7%99%D7%99%D7%9A%20%F0%9F%A9%B7%20%D7%A2%D7%93%D7%99%20%D7%A1%D7%95%D7%9E%D7%9A%20%D7%A2%D7%95%D7%A9%D7%94%20%D7%94%D7%93%D7%A8%D7%9B%D7%94%20%D7%91%D7%99%D7%95%D7%9D%20%D7%A8%D7%91%D7%99%D7%A2%D7%99%2025.11%20%D7%91%D7%A9%D7%A2%D7%94%2020:00%2C%20%D7%A2%D7%9C%20%D7%90%D7%99%D7%9A%20%D7%9C%D7%AA%D7%AA%20%D7%97%D7%A6%D7%99%20%D7%9E%D7%99%D7%9C%D7%99%D7%95%D7%9F%20%D7%9C%D7%9B%D7%9C%20%D7%99%D7%9C%D7%93.%20%D7%9C%D7%9C%D7%90%20%D7%A2%D7%9C%D7%95%D7%AA%2C%20%D7%94%D7%94%D7%A8%D7%A9%D7%9E%D7%94%20%D7%9B%D7%90%D7%9F:%20https://academy.mominvest.co.il/r/w2511-friend" target="_blank" rel="noopener">
+      <span class="n">💌</span>
       <span class="tx"><b>מכירה עוד אמא שזה בשבילה?</b><small>שלחי לה את הקישור בווטסאפ. הכי כיף לעשות את זה ביחד 🩷</small></span>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v8h16v-8M12 3v13M7 8l5-5 5 5"/></svg>
     </a>
@@ -109,6 +155,11 @@
   if(i) i.addEventListener('click',function(){ hit('cal-ics'); });
   if(w) w.addEventListener('click',function(){ hit('wa-group'); });
   if(fr) fr.addEventListener('click',function(){ hit('friend-share'); });
+  var hv=document.getElementById('hiVid'), played=false, done=false;
+  if(hv){
+    hv.addEventListener('play',function(){ if(!played){ played=true; hit('thanks-hi-play'); } });
+    hv.addEventListener('ended',function(){ if(!done){ done=true; hit('thanks-hi-end'); } });
+  }
 })();
 </script>
 
