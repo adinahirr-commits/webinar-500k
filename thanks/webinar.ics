@@ -4,15 +4,15 @@ PRODID:-//Mama Investor//Webinar 500K//HE
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-UID:webinar-500k-20261125@mominvest.co.il
-DTSTAMP:20261121T180000Z
+UID:webinar-500k-20261215@mominvest.co.il
+DTSTAMP:20261126T120000Z
 SEQUENCE:1
-DTSTART:20261125T180000Z
-DTEND:20261125T191500Z
+DTSTART:20261215T183000Z
+DTEND:20261215T194500Z
 SUMMARY:אמא משקיעה - איך לתת חצי מיליון לכל ילד
-DESCRIPTION:נעים מאוד\, אני שמחה שאת איתי 💗\n\nהקישור להדרכה:\nhttps://academy.mominvest.co.il/r/webinar-zoom\n\nהקישור יישלח גם במייל ובקבוצת הוואטסאפ לפני ההדרכה.\nנתראה\, עדי סומך
-LOCATION:https://academy.mominvest.co.il/r/webinar-zoom
-URL:https://academy.mominvest.co.il/r/webinar-zoom
+DESCRIPTION:נעים מאוד\, אני שמחה שאת איתי 💗\n\nהקישור להדרכה:\nhttps://academy.mominvest.co.il/r/hadracha\n\nהקישור יישלח גם במייל ובקבוצת הוואטסאפ לפני ההדרכה.\nנתראה\, עדי סומך
+LOCATION:https://academy.mominvest.co.il/r/hadracha
+URL:https://academy.mominvest.co.il/r/hadracha
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 BEGIN:VALARM
